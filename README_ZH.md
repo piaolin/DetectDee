@@ -1,6 +1,18 @@
 # DetectDee
+<font color="red">*严正声明：本文与本工具仅限于技术讨论与分享，严禁用于非法途径。</font>
+
 神探狄仁杰: 在[社交网络](site.md)上通过用户名搜索社交媒体账户
 ![example.gif](https://s2.loli.net/2023/04/30/FZ1QtKoGud4xVPW.gif)
+## 安装
+### 直接下载运行(推荐)
+https://github.com/piaolin/DetectDee/releases
+### 编译运行
+```shell
+git clone https://github.com/piaolin/DetectDee.git
+cd DetectDee
+go mod tidy
+go run .
+```
 ## 用法
 [English](README.md)
 

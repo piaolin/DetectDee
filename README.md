@@ -1,6 +1,19 @@
 # DetectDee
+<font color="red">*Disclaimer: This article and this tool are for technical discussion and sharing only. Illegal use is strictly prohibited.</font>
+
 DetectDee: Hunt down social media accounts by username across [social networks](site.md)
 ![example.gif](https://s2.loli.net/2023/04/30/FZ1QtKoGud4xVPW.gif)
+
+## Install
+### Download(recommend)
+https://github.com/piaolin/DetectDee/releases
+### Compile
+```shell
+git clone https://github.com/piaolin/DetectDee.git
+cd DetectDee
+go mod tidy
+go run .
+```
 ## Usage
 [English](README.md)
 
