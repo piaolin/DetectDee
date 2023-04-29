@@ -1,0 +1,27 @@
+{
+  "Some Cool Site That Everyone Loves": {
+    "url": "https://somecoolsitethateveryoneloves.com",
+    "nameCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
+    "type": "",
+    "isNFSW": false,
+    "sleep": 3,
+    "detect": [
+      {
+        "statusCode": "status_code",
+        "existRegex": "",
+        "nonExistRegex": "",
+        "url": "https://somecoolsitethateveryoneloves.com/members/{}",
+        "body": {},
+        "header": {},
+        "existUsername": "blue",
+        "nonExistUsername": "noonewouldeverusethis7"
+      }
+    ],
+    "login": {
+      "url": "",
+      "header": "",
+      "body": "",
+      "successRegex": ""
+    }
+  }
+}
