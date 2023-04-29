@@ -216,7 +216,11 @@ func detectSite(name, site string, siteBody gjson.Result) {
 		}
 	}
 	if flag {
-		userPage := fmt.Sprintf(siteBody.Get("userPage").String(), name)
+		userPage := siteBody.Get("userPage").String()
+		if strings.Contains(userPage, "%s") {
+			userPage = fmt.Sprintf(siteBody.Get("userPage").String(), name)
+		}
+
 		log.Infof(existInfo, name, site, userPage)
 	} else {
 		log.Debugf(nonExistInfo, name, site)

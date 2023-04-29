@@ -1105,7 +1105,7 @@
     }
   },
   "bugcrowd": {
-    "url": "https://bugcrowd.com/%s",
+    "url": "https://bugcrowd.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
     "userPage": "https://bugcrowd.com/%s",
@@ -1124,5 +1124,98 @@
       "url": "",
       "successRegex": ""
     }
-  }
+  },
+  "track": {
+    "url": "https://bbs.zkaq.cn/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "userPage": "https://bbs.zkaq.cn/u/%s.html",
+    "detect": [
+      {
+        "nonExistRegex": "不存在该用户",
+        "url": "https://bbs.zkaq.cn/u/%s.html",
+        "existUsername": "nocircle",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        }
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "mozhe": {
+    "url": "https://www.mozhe.cn/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "userPage": "https://www.mozhe.cn/",
+    "detect": [
+      {
+        "nonExistRegex": "\\\\u53ef\\\\u4ee5\\\\u4f7f\\\\u7528",
+        "url": "https://www.mozhe.cn/check/nickname/exist",
+        "existUsername": "openkali",
+        "nonExistUsername": "youga777888",
+        "body": "nickname=%s&_token=UMXd6Cx41xzTBoZqU70SxTcOkc8heH7FomvsjOkN",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Cookie": "mozhe-xsrf-token=eyJpdiI6InNNeXlxZjY0VktmXC9pcTBCeXU3d0VRPT0iLCJ2YWx1ZSI6IjdOUVF0OG5lSU92SmI3N1doVjZFY2dLUGZwUTFqS2tpQm9KMnVjS0NvRXRrWFlsUjN5RURUMnZQWmxRSCtDOVg1Wk45em9SWTg5cWxBMkNOdkl5TnVBPT0iLCJtYWMiOiJhM2ZkMmQ3YWRhZTkzNWYzMTI2ZTUzNzUxNTZjNzMyYTc1N2I0ZjQ5YzQ0MGY4M2Y2ZDhhMTcyZTRkZmUzOWY2In0%3D; mz_session=eyJpdiI6IlcrQU9FNlVPZ21Rak9nS2s5VzdsZ1E9PSIsInZhbHVlIjoidWVpNzc1ME9ad3RkQWFjRDV6RnRFWTJOQ1A3eG8wd0t6WVVMcEtMUlwvcEhOcmRvY1BEYkl5S0pjSEJTNGozT05cL2FOZDh4bUJtR1BoQ3hobitDV29yUT09IiwibWFjIjoiZDgwNmU5YTMzYWM2ODI5NTljMzFmNWE2ZjQ1NzUyYzY4MjIwYTkwMjMyMDFmMzU1MzJjNTQyNmY2ZGUxMDY1ZSJ9; Hm_lvt_9e72691775fe3271a38b32ad33975d5e=1682861764; Hm_lpvt_9e72691775fe3271a38b32ad33975d5e=1682861764",
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "X-Requested-With": "XMLHttpRequest"
+        }
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "jarvisoj": {
+    "url": "https://www.jarvisoj.com/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "userPage": "https://www.jarvisoj.com/scoreboard",
+    "detect": [
+      {
+        "existRegex": "This username has been used!!",
+        "url": "https://www.jarvisoj.com/api/register.json",
+        "existUsername": "kira",
+        "nonExistUsername": "youga777888",
+        "body": "email=155785154@qq.com&username=%s&organize=1&mobilephone=1&countryid=7&captcha=J871&agree=true&checkid=5e3f986d-0584-47d6-ad5b-cec7c825876b",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+        }
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "vulfocus": {
+    "url": "https://vulfocus.cn/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "userPage": "https://vulfocus.cn/#/userrank/list",
+    "detect": [
+      {
+        "existRegex": "\\\\u8be5\\\\u7528\\\\u6237\\\\u5df2\\\\u88ab\\\\u6ce8\\\\u518c",
+        "url": "https://vulfocus.cn/api/user/register/",
+        "existUsername": "qianxiao324",
+        "nonExistUsername": "youga777888",
+        "body": "{\"username\":\"%s\",\"password\":\"123456\",\"email\":\"1@qq.com\",\"checkpass\":\"123456\",\"captcha_code\":\"1111\",\"hashkey\":\"f73d55f51cb61f2a69d085cea36b1ff11da052f3\"}",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Content-Type": "application/json"
+        }
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+
 }
