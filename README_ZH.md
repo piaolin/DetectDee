@@ -1,8 +1,13 @@
 # DetectDee
 <font color="red">*严正声明：本文与本工具仅限于技术讨论与分享，严禁用于非法途径。</font>
 
-神探狄仁杰: 在[社交网络](site.md)上通过用户名搜索社交媒体账户
+神探狄仁杰: 在[社交网络](site.md)上通过**用户名，电子邮件或电话**搜索社交媒体账户
 ![example.gif](https://s2.loli.net/2023/04/30/FZ1QtKoGud4xVPW.gif)
+## 特性
+- 集成**网络安全从业者**常用网站
+- 通过**用户名，电子邮件或电话**查找社交媒体账户
+- 可拓展，简单易用的模板
+- 集成社交网站的移动端版本
 ## 安装
 ### 直接下载运行(推荐)
 https://github.com/piaolin/DetectDee/releases

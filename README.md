@@ -1,8 +1,14 @@
 # DetectDee
 <font color="red">*Disclaimer: This article and this tool are for technical discussion and sharing only. Illegal use is strictly prohibited.</font>
 
-DetectDee: Hunt down social media accounts by username across [social networks](site.md)
+DetectDee: Hunt down social media accounts by **username, email or phone** across [social networks](site.md)
 ![example.gif](https://s2.loli.net/2023/04/30/FZ1QtKoGud4xVPW.gif)
+## Feat
+- Includes sites frequently used by **CyberSecurity practitioners**
+- Hunt down social media accounts by **username, email or phone**
+- Precise thread control and custom request headers are used to prevent WAF recognition
+- Extensible, simple, and easy-to-use template
+- Integration of mobile versions of social networking sites
 
 ## Install
 ### Download(recommend)
