@@ -120,7 +120,7 @@ func detectSite(name, site string, siteBody gjson.Result) {
 
 	detectReq := siteBody.Get("detect").Array()
 
-	for _, detectData := range detectReq {
+	for index, detectData := range detectReq {
 
 		// set header
 		header := make(map[string]string)
@@ -206,24 +206,23 @@ func detectSite(name, site string, siteBody gjson.Result) {
 			flag = true
 		}
 
-		// precisely mode
-		if !flag {
-			break
-		} else if !detectArgs.precisely {
-			break
-		} else {
-			continue
-		}
-	}
-	if flag {
-		userPage := siteBody.Get("userPage").String()
+		userPage := detectData.Get("userPage").String()
 		if strings.Contains(userPage, "%s") {
-			userPage = fmt.Sprintf(siteBody.Get("userPage").String(), name)
+			userPage = fmt.Sprintf(userPage, name)
 		}
 
-		log.Infof(existInfo, name, site, userPage)
-	} else {
-		log.Debugf(nonExistInfo, name, site)
+		// precisely mode
+		if !flag {
+			log.Debugf(nonExistInfo, name, site)
+			break
+		} else if !detectArgs.precisely {
+			// flag=true && precisely=false
+			log.Infof(existInfo, name, site, userPage)
+			break
+		} else if index == len(detectReq)-1 {
+			// flag=true && precisely=true
+			log.Infof(existInfo, name, site, userPage)
+		}
 	}
 
 }

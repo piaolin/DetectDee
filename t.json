@@ -7,7 +7,9 @@
     "sleep": 3,
     "detect": [
       {
+        "type": "username",
         "statusCode": "status_code",
+        "userPage": "https://www.iteye.com/blog/user/%s",
         "existRegex": "",
         "nonExistRegex": "",
         "url": "https://somecoolsitethateveryoneloves.com/members/{}",

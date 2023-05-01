@@ -4,7 +4,6 @@
     "nameCheck": "^[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://github.com/%s",
     "detect": [
       {
         "statusCode": "200",
@@ -13,7 +12,9 @@
         },
         "url": "https://github.com/%s",
         "existUsername": "piaolin",
-        "nonExistUsername": "4554456464646546654"
+        "nonExistUsername": "4554456464646546654",
+        "userPage": "https://github.com/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -26,13 +27,14 @@
     "nameCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://gitlab.com/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://gitlab.com/%s",
         "existUsername": "blue",
-        "nonExistUsername": "noonewouldeverusethis7"
+        "nonExistUsername": "noonewouldeverusethis7",
+        "userPage": "https://gitlab.com/%s",
+        "type": "username"
       },
       {
         "nonExistRegex": "\\[\\]",
@@ -50,13 +52,14 @@
     "url": "https://gitee",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://gitee.com/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://gitee.com/%s",
         "existUsername": "log4j",
-        "nonExistUsername": "4554456464646546654"
+        "nonExistUsername": "4554456464646546654",
+        "userPage": "https://gitee.com/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -68,13 +71,14 @@
     "url": "https://play.google.com",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://play.google.com/store/apps/developer?id=%s",
     "detect": [
       {
         "nonExistRegex": "We're sorry, the requested URL was not found on this server.",
         "url": "https://play.google.com/store/apps/developer?id=%s",
         "existUsername": "GitHub",
-        "nonExistUsername": "GitHubeeeeee"
+        "nonExistUsername": "GitHubeeeeee",
+        "userPage": "https://play.google.com/store/apps/developer?id=%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -86,13 +90,14 @@
     "url": "https://github.io",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://%s.github.io",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://%s.github.io",
         "existUsername": "kongkongye",
-        "nonExistUsername": "kongkongyeeeee"
+        "nonExistUsername": "kongkongyeeeee",
+        "userPage": "https://%s.github.io",
+        "type": "username"
       }
     ],
     "login": {
@@ -104,13 +109,14 @@
     "url": "https://v2ex.com",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://v2ex.com/member/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://v2ex.com/member/%s",
         "existUsername": "kongkongye",
-        "nonExistUsername": "kongkongyeeeee"
+        "nonExistUsername": "kongkongyeeeee",
+        "userPage": "https://v2ex.com/member/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -122,13 +128,14 @@
     "url": "https://www.zhihu.com/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://www.zhihu.com/people/%s",
     "detect": [
       {
         "url": "https://www.zhihu.com/people/%s",
         "existUsername": "bule",
-        "nonExistRegex": "404 - 知乎",
-        "nonExistUsername": "buleeeeeeeeeeeee"
+        "nonExistRegex": "404 - \u77e5\u4e4e",
+        "nonExistUsername": "buleeeeeeeeeeeee",
+        "userPage": "https://www.zhihu.com/people/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -140,13 +147,14 @@
     "url": "https://www.freebuf.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://www.freebuf.com/author/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://www.freebuf.com/author/%s",
         "existUsername": "Alpha_h4ck",
-        "nonExistUsername": "Alpha_h4ckeeeeeee"
+        "nonExistUsername": "Alpha_h4ckeeeeeee",
+        "userPage": "https://www.freebuf.com/author/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -158,13 +166,14 @@
     "url": "https://www.bugbank.cn/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://www.bugbank.cn/u/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://www.bugbank.cn/api/user/%s",
         "existUsername": "carry_pan",
-        "nonExistUsername": "carry_panxzxxxxx"
+        "nonExistUsername": "carry_panxzxxxxx",
+        "userPage": "https://www.bugbank.cn/u/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -176,13 +185,14 @@
     "url": "https://hackerone.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://hackerone.com/%s?type=user",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://hackerone.com/%s?type=user",
         "existUsername": "ooooooo_q",
-        "nonExistUsername": "ooooooo_qaaaaaaa"
+        "nonExistUsername": "ooooooo_qaaaaaaa",
+        "userPage": "https://hackerone.com/%s?type=user",
+        "type": "username"
       }
     ],
     "login": {
@@ -194,7 +204,6 @@
     "url": "https://www.vulbox.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://www.vulbox.com/whitehats/%s",
     "sleep": 3,
     "detect": [
       {
@@ -211,7 +220,9 @@
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
         },
         "existUsername": "ooooooo_q",
-        "nonExistUsername": "ooooooo_qaaaaaaa"
+        "nonExistUsername": "ooooooo_qaaaaaaa",
+        "userPage": "https://www.vulbox.com/whitehats/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -223,13 +234,14 @@
     "url": "https://www.bugku.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://www.bugku.com/space-username-%s.html",
     "detect": [
       {
-        "nonExistRegex": "抱歉，您指定的用户空间不存在",
+        "nonExistRegex": "\u62b1\u6b49\uff0c\u60a8\u6307\u5b9a\u7684\u7528\u6237\u7a7a\u95f4\u4e0d\u5b58\u5728",
         "url": "https://www.bugku.com/space-username-%s.html",
         "existUsername": "Jimmy",
-        "nonExistUsername": "ooooooo_qaaaaaaa"
+        "nonExistUsername": "ooooooo_qaaaaaaa",
+        "userPage": "https://www.bugku.com/space-username-%s.html",
+        "type": "username"
       }
     ],
     "login": {
@@ -241,13 +253,14 @@
     "url": "https://new.bugku.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://new.bugku.com/users/profile/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://new.bugku.com/users/profile/%s",
         "existUsername": "gabriel",
-        "nonExistUsername": "ooooooo_qaaaaaaa"
+        "nonExistUsername": "ooooooo_qaaaaaaa",
+        "userPage": "https://new.bugku.com/users/profile/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -259,17 +272,18 @@
     "url": "https://www.52pojie.cn/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://www.52pojie.cn/home.php?mod=space&username=%s",
     "sleep": 1,
     "detect": [
       {
-        "nonExistRegex": "抱歉，您指定的用户空间不存在",
+        "nonExistRegex": "\u62b1\u6b49\uff0c\u60a8\u6307\u5b9a\u7684\u7528\u6237\u7a7a\u95f4\u4e0d\u5b58\u5728",
         "url": "https://new.bugku.com/forum.php?mod=ajax&inajax=yes&infloat=register&handlekey=register&ajaxmenu=1&action=checkusername&username=%s",
         "existUsername": "youga777",
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://www.52pojie.cn/home.php?mod=space&username=%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -281,7 +295,6 @@
     "url": "https://www.youtube.com/",
     "type": "Video",
     "isNFSW": false,
-    "userPage": "https://www.youtube.com/user/%s",
     "sleep": 1,
     "detect": [
       {
@@ -291,7 +304,9 @@
           "Cookie": "CONSENT=YES+cb.20210418-17-p0.it+FX+917; "
         },
         "existUsername": "pewdiepie",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://www.youtube.com/user/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -303,13 +318,14 @@
     "url": "https://www.wikipedia.org/",
     "type": "Video",
     "isNFSW": false,
-    "userPage": "https://en.wikipedia.org/wiki/User:%s",
     "detect": [
       {
         "nonExistRegex": "centralauth-admin-nonexistent:",
         "url": "https://en.wikipedia.org/wiki/Special:CentralAuth/%s?uselang=qqx",
         "existUsername": "Hoadlck",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://en.wikipedia.org/wiki/User:%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -321,13 +337,14 @@
     "url": "https://wordpress.com/",
     "type": "Video",
     "isNFSW": false,
-    "userPage": "https://%s.wordpress.com/",
     "detect": [
       {
         "nonExistRegex": "wordpress.com</em> doesn&apos;t&nbsp;exist",
         "url": "https://%s.wordpress.com/",
         "existUsername": "Hoadlck",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://%s.wordpress.com/",
+        "type": "username"
       }
     ],
     "login": {
@@ -339,7 +356,6 @@
     "url": "https://www.reddit.com/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://www.reddit.com/user/%s",
     "detect": [
       {
         "nonExistRegex": "Sorry, nobody on Reddit goes by that name.",
@@ -348,7 +364,9 @@
         "headers": {
           "accept-language": "en-US,en;q=0.9"
         },
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://www.reddit.com/user/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -360,17 +378,18 @@
     "url": "https://www.aqniu.com/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://www.aqniu.com/author/%s",
     "detect": [
       {
-        "existRegex": "未能发送电子邮件。您的主机可能未获正确配置。",
+        "existRegex": "\u672a\u80fd\u53d1\u9001\u7535\u5b50\u90ae\u4ef6\u3002\u60a8\u7684\u4e3b\u673a\u53ef\u80fd\u672a\u83b7\u6b63\u786e\u914d\u7f6e\u3002",
         "url": "https://www.aqniu.com/wp-login.php?action=lostpassword",
         "existUsername": "liuchaoyang",
         "nonExistUsername": "youga777888",
         "header": {
           "Content-Type": "application/x-www-form-urlencoded"
         },
-        "body": "user_login=%s&redirect_to=&wp-submit=%E8%8E%B7%E5%8F%96%E6%96%B0%E5%AF%86%E7%A0%81"
+        "body": "user_login=%s&redirect_to=&wp-submit=%E8%8E%B7%E5%8F%96%E6%96%B0%E5%AF%86%E7%A0%81",
+        "userPage": "https://www.aqniu.com/author/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -382,14 +401,15 @@
     "url": "https://www.quora.com/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://www.quora.com/profile/%s",
     "detect": [
       {
         "statusCode": "200",
         "existRegex": "Answers\": false, \"Questions\": false, \"Posts\":",
         "url": "https://www.quora.com/profile/%s",
         "existUsername": "Laura-Mitchell-5",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://www.quora.com/profile/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -401,13 +421,14 @@
     "url": "https://www.virustotal.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://www.virustotal.com/gui/user/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://www.virustotal.com/ui/users/%s/avatar",
         "existUsername": "blue",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://www.virustotal.com/gui/user/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -420,14 +441,15 @@
     "type": "Social",
     "isNFSW": false,
     "nameCheck": "^[a-zA-Z0-9_]{1,15}$",
-    "userPage": "https://twitter.com/%s",
     "sleep": 3,
     "detect": [
       {
         "nonExistRegex": "<div class=\"error-panel\"><span>User ",
         "url": "https://nitter.net/%s",
         "existUsername": "blue",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://twitter.com/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -439,13 +461,14 @@
     "url": "https://www.twitch.tv/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://www.twitch.tv/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://m.twitch.tv/%s",
         "existUsername": "jenny",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://www.twitch.tv/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -458,13 +481,14 @@
     "type": "CyberSecurity",
     "isNFSW": false,
     "nameCheck": "^[a-zA-Z0-9.]{1,16}$",
-    "userPage": "https://tryhackme.com/p/%s",
     "detect": [
       {
         "nonExistRegex": "{\"success\":false}",
         "url": "https://tryhackme.com/api/user/exist/%s",
         "existUsername": "ashu",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://tryhackme.com/p/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -476,13 +500,14 @@
     "url": "https://tiktok.com/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://tiktok.com/@%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://tiktok.com/@%s",
         "existUsername": "red",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://tiktok.com/@%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -494,14 +519,15 @@
     "url": "https://t.me/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://t.me/%s",
     "nameCheck": "^[a-zA-Z0-9_]{5,32}$",
     "detect": [
       {
         "nonExistRegex": "<meta property=\"og:description\" content=\"\">",
         "url": "https://t.me/%s",
         "existUsername": "piaolin",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://t.me/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -513,13 +539,14 @@
     "url": "https://steamcommunity.com/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://steamcommunity.com/groups/%s",
     "detect": [
       {
         "nonExistRegex": "No group could be retrieved for the given URL",
         "url": "https://steamcommunity.com/groups/%s",
         "existUsername": "blue",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://steamcommunity.com/groups/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -531,13 +558,14 @@
     "url": "https://forum.sublimetext.com/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://forum.sublimetext.com/u/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://forum.sublimetext.com/u/%s",
         "existUsername": "blue",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://forum.sublimetext.com/u/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -549,7 +577,6 @@
     "url": "https://open.spotify.com/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://open.spotify.com/user/%s",
     "detect": [
       {
         "statusCode": "200",
@@ -558,7 +585,9 @@
         "nonExistUsername": "youga777888",
         "headers": {
           "user-agent": "PostmanRuntime/7.29.2"
-        }
+        },
+        "userPage": "https://open.spotify.com/user/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -570,13 +599,14 @@
     "url": "https://sourceforge.net/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://sourceforge.net/u/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://sourceforge.net/u/%s",
         "existUsername": "blue",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://sourceforge.net/u/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -589,13 +619,14 @@
     "type": "Social",
     "isNFSW": false,
     "nameCheck": "^[a-z][a-z-_.]{3,15}",
-    "userPage": "https://www.snapchat.com/add/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://www.snapchat.com/add/%s",
         "existUsername": "blue",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://www.snapchat.com/add/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -608,13 +639,14 @@
     "type": "Programmer",
     "isNFSW": false,
     "nameCheck": "^[a-zA-Z][a-zA-Z0-9_-]{1,40}",
-    "userPage": "https://rubygems.org/profiles/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://rubygems.org/profiles/%s",
         "existUsername": "blue",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://rubygems.org/profiles/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -626,13 +658,14 @@
     "url": "https://pypi.org/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://pypi.org/user/%s",
     "detect": [
       {
         "statusCode": "200",
         "url": "https://pypi.org/user/%s",
         "existUsername": "blue",
-        "nonExistUsername": "youga777888"
+        "nonExistUsername": "youga777888",
+        "userPage": "https://pypi.org/user/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -644,7 +677,6 @@
     "url": "https://quizlet.com/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://quizlet.com/%s",
     "detect": [
       {
         "statusCode": "200",
@@ -653,7 +685,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://quizlet.com/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -665,7 +699,6 @@
     "url": "https://pastebin.com/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://pastebin.com/u/%s",
     "detect": [
       {
         "nonExistRegex": "Pastebin.com - Not Found \(#404\)",
@@ -674,7 +707,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://pastebin.com/u/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -686,7 +721,6 @@
     "url": "https://packagist.org/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://packagist.org/packages/%s/",
     "detect": [
       {
         "nonExistRegex": "reason=vendor_not_found",
@@ -695,7 +729,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://packagist.org/packages/%s/",
+        "type": "username"
       }
     ],
     "login": {
@@ -707,7 +743,6 @@
     "url": "https://community.oracle.com/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://community.oracle.com/people/%s",
     "detect": [
       {
         "statusCode": "200",
@@ -716,7 +751,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://community.oracle.com/people/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -728,7 +765,6 @@
     "url": "https://opensource.com/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://opensource.com/users/%s",
     "detect": [
       {
         "statusCode": "200",
@@ -737,7 +773,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://opensource.com/users/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -749,7 +787,6 @@
     "url": "https://nextcloud.com/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://help.nextcloud.com/u/%s/summary",
     "detect": [
       {
         "statusCode": "200",
@@ -758,7 +795,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://help.nextcloud.com/u/%s/summary",
+        "type": "username"
       }
     ],
     "login": {
@@ -770,7 +809,6 @@
     "url": "https://minecraft.net/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://api.mojang.com/users/profiles/minecraft/%s",
     "detect": [
       {
         "nonExistRegex": "Couldn't find any profile with name",
@@ -779,7 +817,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://api.mojang.com/users/profiles/minecraft/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -791,7 +831,6 @@
     "url": "https://lolchess.gg/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://lolchess.gg/profile/na/%s",
     "detect": [
       {
         "nonExistRegex": "No search results",
@@ -800,7 +839,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://lolchess.gg/profile/na/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -812,7 +853,6 @@
     "url": "https://gitbook.com/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://%s.gitbook.io/",
     "detect": [
       {
         "statusCode": "200",
@@ -821,7 +861,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://%s.gitbook.io/",
+        "type": "username"
       }
     ],
     "login": {
@@ -833,7 +875,6 @@
     "url": "https://news.ycombinator.com/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://news.ycombinator.com/user?id=%s",
     "detect": [
       {
         "nonExistRegex": "No such user.",
@@ -842,7 +883,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://news.ycombinator.com/user?id=%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -854,7 +897,6 @@
     "url": "https://hackerrank.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://hackerrank.com/%s",
     "detect": [
       {
         "nonExistRegex": "Something went wrong",
@@ -863,7 +905,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://hackerrank.com/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -875,7 +919,6 @@
     "url": "https://leetcode.com/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://leetcode.com/%s",
     "detect": [
       {
         "statusCode": "200",
@@ -884,7 +927,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://leetcode.com/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -896,7 +941,6 @@
     "url": "https://leetcode.cn/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://leetcode.cn/u/%s/",
     "detect": [
       {
         "nonExistRegex": "https://certify.alexametrics.com/atrk.gif",
@@ -905,7 +949,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://leetcode.cn/u/%s/",
+        "type": "username"
       }
     ],
     "login": {
@@ -917,7 +963,6 @@
     "url": "https://www.9gag.com/",
     "type": "Social",
     "isNFSW": false,
-    "userPage": "https://www.9gag.com/u/%s",
     "detect": [
       {
         "statusCode": "200",
@@ -926,7 +971,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://www.9gag.com/u/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -938,7 +985,6 @@
     "url": "https://blog.csdn.net/",
     "type": "Blog",
     "isNFSW": false,
-    "userPage": "https://blog.csdn.net/%s",
     "detect": [
       {
         "statusCode": "200",
@@ -947,7 +993,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://blog.csdn.net/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -959,7 +1007,6 @@
     "url": "https://www.cnblogs.com/",
     "type": "Blog",
     "isNFSW": false,
-    "userPage": "https://www.cnblogs.com/%s/",
     "detect": [
       {
         "statusCode": "200",
@@ -968,7 +1015,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://www.cnblogs.com/%s/",
+        "type": "username"
       }
     ],
     "login": {
@@ -980,7 +1029,6 @@
     "url": "https://my.oschina.net/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://my.oschina.net/%s",
     "detect": [
       {
         "statusCode": "200",
@@ -989,7 +1037,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://my.oschina.net/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -1001,16 +1051,17 @@
     "url": "https://segmentfault.com/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://segmentfault.com/u/%s",
     "detect": [
       {
-        "nonExistRegex": "微信扫码登录",
+        "nonExistRegex": "\u5fae\u4fe1\u626b\u7801\u767b\u5f55",
         "url": "https://segmentfault.com/u/%s",
         "existUsername": "h_jm",
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://segmentfault.com/u/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -1022,7 +1073,6 @@
     "url": "https://trello.com/",
     "type": "Programmer",
     "isNFSW": false,
-    "userPage": "https://trello.com/%s",
     "detect": [
       {
         "nonExistRegex": "model not found",
@@ -1031,7 +1081,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
-        }
+        },
+        "userPage": "https://trello.com/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -1043,7 +1095,6 @@
     "url": "https://www.seebug.org/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://www.seebug.org/accounts/profile/%s",
     "detect": [
       {
         "statusCode": "200",
@@ -1053,7 +1104,9 @@
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
           "Cookie": "__jsluid_s=eea1cbf32a1f7e963c1aa33e29d33fb8; __jsl_clearance_s=1682778037.072|0|7DZXEgV4Oiq%2BI312i0Rr0bpHAUQ%3D"
-        }
+        },
+        "userPage": "https://www.seebug.org/accounts/profile/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -1065,7 +1118,6 @@
     "url": "https://www.sec-wiki.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://www.sec-wiki.com/user/view/%s",
     "sleep": 3,
     "detect": [
       {
@@ -1075,7 +1127,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
-        }
+        },
+        "userPage": "https://www.sec-wiki.com/user/view/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -1087,7 +1141,6 @@
     "url": "https://www.secrss.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://www.secrss.com/articles?author=%s",
     "detect": [
       {
         "nonExistRegex": "404 Not Found",
@@ -1096,7 +1149,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
-        }
+        },
+        "userPage": "https://www.secrss.com/articles?author=%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -1108,7 +1163,6 @@
     "url": "https://bugcrowd.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://bugcrowd.com/%s",
     "detect": [
       {
         "statusCode": "200",
@@ -1117,7 +1171,9 @@
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
-        }
+        },
+        "userPage": "https://bugcrowd.com/%s",
+        "type": "username"
       }
     ],
     "login": {
@@ -1129,16 +1185,17 @@
     "url": "https://bbs.zkaq.cn/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://bbs.zkaq.cn/u/%s.html",
     "detect": [
       {
-        "nonExistRegex": "不存在该用户",
+        "nonExistRegex": "\u4e0d\u5b58\u5728\u8be5\u7528\u6237",
         "url": "https://bbs.zkaq.cn/u/%s.html",
         "existUsername": "nocircle",
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
-        }
+        },
+        "userPage": "https://bbs.zkaq.cn/u/%s.html",
+        "type": "username"
       }
     ],
     "login": {
@@ -1150,7 +1207,6 @@
     "url": "https://www.mozhe.cn/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://www.mozhe.cn/",
     "detect": [
       {
         "nonExistRegex": "\\\\u53ef\\\\u4ee5\\\\u4f7f\\\\u7528",
@@ -1163,7 +1219,9 @@
           "Cookie": "mozhe-xsrf-token=eyJpdiI6InNNeXlxZjY0VktmXC9pcTBCeXU3d0VRPT0iLCJ2YWx1ZSI6IjdOUVF0OG5lSU92SmI3N1doVjZFY2dLUGZwUTFqS2tpQm9KMnVjS0NvRXRrWFlsUjN5RURUMnZQWmxRSCtDOVg1Wk45em9SWTg5cWxBMkNOdkl5TnVBPT0iLCJtYWMiOiJhM2ZkMmQ3YWRhZTkzNWYzMTI2ZTUzNzUxNTZjNzMyYTc1N2I0ZjQ5YzQ0MGY4M2Y2ZDhhMTcyZTRkZmUzOWY2In0%3D; mz_session=eyJpdiI6IlcrQU9FNlVPZ21Rak9nS2s5VzdsZ1E9PSIsInZhbHVlIjoidWVpNzc1ME9ad3RkQWFjRDV6RnRFWTJOQ1A3eG8wd0t6WVVMcEtMUlwvcEhOcmRvY1BEYkl5S0pjSEJTNGozT05cL2FOZDh4bUJtR1BoQ3hobitDV29yUT09IiwibWFjIjoiZDgwNmU5YTMzYWM2ODI5NTljMzFmNWE2ZjQ1NzUyYzY4MjIwYTkwMjMyMDFmMzU1MzJjNTQyNmY2ZGUxMDY1ZSJ9; Hm_lvt_9e72691775fe3271a38b32ad33975d5e=1682861764; Hm_lpvt_9e72691775fe3271a38b32ad33975d5e=1682861764",
           "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
           "X-Requested-With": "XMLHttpRequest"
-        }
+        },
+        "userPage": "https://www.mozhe.cn/",
+        "type": "username"
       }
     ],
     "login": {
@@ -1175,7 +1233,6 @@
     "url": "https://www.jarvisoj.com/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://www.jarvisoj.com/scoreboard",
     "detect": [
       {
         "existRegex": "This username has been used!!",
@@ -1186,7 +1243,9 @@
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
           "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
-        }
+        },
+        "userPage": "https://www.jarvisoj.com/scoreboard",
+        "type": "username"
       }
     ],
     "login": {
@@ -1198,7 +1257,6 @@
     "url": "https://vulfocus.cn/",
     "type": "CyberSecurity",
     "isNFSW": false,
-    "userPage": "https://vulfocus.cn/#/userrank/list",
     "detect": [
       {
         "existRegex": "\\\\u8be5\\\\u7528\\\\u6237\\\\u5df2\\\\u88ab\\\\u6ce8\\\\u518c",
@@ -1209,7 +1267,9 @@
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
           "Content-Type": "application/json"
-        }
+        },
+        "userPage": "https://vulfocus.cn/#/userrank/list",
+        "type": "username"
       }
     ],
     "login": {
@@ -1217,5 +1277,26 @@
       "successRegex": ""
     }
   },
-
+  "iteye": {
+    "url": "https://www.iteye.com/",
+    "type": "Programmer",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.iteye.com/blog/user/%s",
+        "existUsername": "kristy-yy",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.iteye.com/blog/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  }
 }
