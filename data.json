@@ -701,7 +701,7 @@
     "isNFSW": false,
     "detect": [
       {
-        "nonExistRegex": "Pastebin.com - Not Found \(#404\)",
+        "nonExistRegex": "Pastebin.com - Not Found ",
         "url": "https://pastebin.com/u/%s",
         "existUsername": "blue",
         "nonExistUsername": "youga777888",
@@ -1292,6 +1292,561 @@
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
         },
         "userPage": "https://www.iteye.com/blog/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "unsplash": {
+    "url": "https://unsplash.com/",
+    "type": "Programmer",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://unsplash.com/@%s",
+        "existUsername": "jenny",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://unsplash.com/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "seebug-paper": {
+    "url": "https://paper.seebug.org/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://paper.seebug.org/users/author/?nickname=%s",
+        "existUsername": "Y4tacker",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://paper.seebug.org/users/author/?nickname=%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "douban": {
+    "url": "https://www.douban.com/",
+    "type": "Social",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.douban.com/people/%s/",
+        "existUsername": "michellemou",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.douban.com/people/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "infoq": {
+    "url": "https://www.infoq.cn/",
+    "type": "Programmer",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.infoq.cn/u/%s/",
+        "existUsername": "tiamozhang",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.infoq.cn/u/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "threatpost": {
+    "url": "https://threatpost.com/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://threatpost.com/author/%s/",
+        "existUsername": "natenelson",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://threatpost.com/author/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "infosecurity-magazine": {
+    "url": "https://www.infosecurity-magazine.com/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.infosecurity-magazine.com/profile/%s/",
+        "existUsername": "alessandro-mascellino",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.infosecurity-magazine.com/profile/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "xsssql": {
+    "url": "http://www.xsssql.com/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "sleep": 3,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "http://www.xsssql.com/article/author/%s",
+        "existUsername": "weblcx",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "http://www.xsssql.com/article/author/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "studygolang": {
+    "url": "https://studygolang.com/",
+    "type": "Programmer",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "位会员加入了 Go语言中文网。",
+        "url": "https://studygolang.com/user/%s",
+        "existUsername": "polaris",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://studygolang.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "0x00sec": {
+    "url": "https://0x00sec.org/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://0x00sec.org/u/%s",
+        "existUsername": "risklimit",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://0x00sec.org/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "ruby-china": {
+    "url": "https://ruby-china.org/",
+    "type": "Programmer",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://ruby-china.org/%s",
+        "existUsername": "Rei",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://ruby-china.org/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "tttang": {
+    "url": "https://tttang.com/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "404 Not Found",
+        "url": "https://tttang.com/user/%s",
+        "existUsername": "巴斯.zznQ",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://tttang.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "t00ls": {
+    "url": "https://www.t00ls.com/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "用户名已经被他人使用",
+        "url": "https://www.t00ls.com/ajax.php?infloat=register&handlekey=register&action=checkusername&username=%s&inajax=1&ajaxtarget=returnmessage4",
+        "existUsername": "Bypass",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.t00ls.com/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "90sec": {
+    "url": "https://forum.90sec.com/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "true",
+        "url": "https://forum.90sec.com/u/check_username?username=%s&email=",
+        "existUsername": "admin05",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "X-Requested-With": "XMLHttpRequest"
+        },
+        "userPage": "https://forum.90sec.com/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "thehackerworld": {
+    "url": "https://www.thehackerworld.com/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.thehackerworld.com/profile/%s/",
+        "existUsername": "1-this-cht",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.thehackerworld.com/profile/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "sspai": {
+    "url": "https://sspai.com/",
+    "type": "Programmer",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "用户数据不存在",
+        "url": "https://sspai.com/api/v1/information/user/activity/page/get?limit=10&offset=0&slug=%s",
+        "existUsername": "waychane",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://sspai.com/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "ld246": {
+    "url": "https://ld246.com/",
+    "type": "Programmer",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://ld246.com/member/%s",
+        "existUsername": "hyggge",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://ld246.com/member/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "qyer": {
+    "url": "https://bbs.qyer.com",
+    "type": "Social",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "510001",
+        "url": "https://bbs.qyer.com/qcross/passport/register/mobile/checkname",
+        "existUsername": "fbird22",
+        "nonExistUsername": "youga777888",
+        "body": "username=%s",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+        },
+        "userPage": "https://bbs.qyer.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "jandan": {
+    "url": "http://jandan.net/",
+    "type": "Social",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "http://jandan.net/p/author/%s",
+        "existUsername": "Diehard",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "http://jandan.net/p/author/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "ifanr": {
+    "url": "https://www.ifanr.com/",
+    "type": "Social",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.ifanr.com/author/%s",
+        "existUsername": "aifan",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.ifanr.com/author/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "twle": {
+    "url": "https://www.twle.cn/",
+    "type": "Programmer",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "Member Not Found",
+        "url": "https://www.twle.cn/member/%s",
+        "existUsername": "yufei",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.twle.cn/member/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "chouti": {
+    "url": "https://dig.chouti.com/",
+    "type": "Social",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "收到进入热榜消息",
+        "url": "https://dig.chouti.com/users/profile?jid=%s",
+        "existUsername": "meigancai",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://dig.chouti.com/publish/links/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "gaoloumi": {
+    "url": "https://gaoloumi.cc/",
+    "type": "Social",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "succeed",
+        "url": "https://gaoloumi.cc/forum.php?mod=ajax&inajax=yes&infloat=register&handlekey=register&ajaxmenu=1&action=checkusername&username=%s",
+        "existUsername": "billy_2009",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://gaoloumi.cc/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "zol": {
+    "url": "https://my.zol.com.cn/",
+    "type": "Social",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "user-namebox",
+        "url": "https://my.zol.com.cn/%s/",
+        "existUsername": "lo62ir",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://my.zol.com.cn/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "producthunt": {
+    "url": "https://www.producthunt.com/",
+    "type": "Programmer",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.producthunt.com/@%s",
+        "existUsername": "aaronoleary",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.producthunt.com/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "yystv": {
+    "url": "https://www.yystv.cn/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "email, phone",
+        "nonExistRegex": "\\\\u7528\\\\u6237\\\\u4e0d\\\\u5b58\\\\u5728",
+        "url": "https://www.yystv.cn/account/send_forget_passw",
+        "nonExistUsername": "youga777888",
+        "body": "name=%s&verify=",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        "userPage": "https://www.yystv.cn/"
       }
     ],
     "login": {

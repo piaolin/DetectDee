@@ -23,6 +23,7 @@ type detectArgsType struct {
 	isNSFW    bool
 	precisely bool
 	retry     int
+	file      string
 	//unique    bool
 }
 
@@ -46,6 +47,7 @@ func init() {
 	detectCmd.Flags().BoolVar(&detectArgs.isNSFW, "nsfw", false, "Include checking of NSFW sites from default list.")
 	detectCmd.Flags().IntVarP(&detectArgs.retry, "retry", "r", 3, "Retry times after request failed")
 	detectCmd.Flags().BoolVar(&detectArgs.precisely, "precisely", false, "Check precisely")
+	detectCmd.Flags().StringVarP(&detectArgs.file, "file", "f", "data.json", "Site data file")
 
 	//detectCmd.Flags().BoolVar(&detectArgs.unique, "unique", false, "Make new requests client for each site")
 	rootCmd.AddCommand(detectCmd)
@@ -66,7 +68,7 @@ func detect(_ *cobra.Command, _ []string) {
 	}
 
 	log.Debugln(detectArgs)
-	siteData, err := ioutil.ReadFile("data.json")
+	siteData, err := ioutil.ReadFile(detectArgs.file)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -176,10 +178,15 @@ func detectSite(name, site string, siteBody gjson.Result) {
 			rep, err = utils.Requests(url, body, detectArgs.proxy, header, detectArgs.timeout)
 			if err != nil {
 				retryTimes += 1
-				log.Errorf(reqErrorInfo, name, site, url, retryTimes, detectArgs.retry)
+				log.Debugf(reqErrorInfo, name, site, url, retryTimes, detectArgs.retry)
 				time.Sleep(time.Duration(sleepMap[site]) * time.Second)
 				continue
 			}
+			break
+		}
+
+		if retryTimes == detectArgs.retry {
+			log.Infof(reqErrorInfo, name, site, url, retryTimes, detectArgs.retry)
 			break
 		}
 
