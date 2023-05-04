@@ -3,6 +3,7 @@ package cmd
 import (
 	"DetectDee/utils"
 	"fmt"
+	"github.com/go-resty/resty/v2"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/tidwall/gjson"
@@ -21,6 +22,7 @@ type detectArgsType struct {
 	timeout   int
 	isNSFW    bool
 	precisely bool
+	retry     int
 	//unique    bool
 }
 
@@ -29,7 +31,8 @@ var (
 	wg           sync.WaitGroup
 	existInfo    = "[+] %-15s %-15s: %s\n"
 	nonExistInfo = "[-] %-15s %-15s: non exists\n"
-	sleepTable   = make(map[string]int64)
+	reqErrorInfo = "[!] %-15s %-15s: %s requests error, retry %d/%d\n"
+	sleepMap     = make(map[string]int64)
 	sleepChannel = make(map[string]chan bool)
 )
 
@@ -39,9 +42,11 @@ func init() {
 	detectCmd.Flags().StringSliceVarP(&detectArgs.site, "site", "s", []string{}, "Limit analysis to just the listed sites. Add multiple options to specify more than one site.")
 	detectCmd.Flags().BoolVarP(&detectArgs.check, "check", "c", false, "self-check")
 	detectCmd.Flags().StringVarP(&detectArgs.proxy, "proxy", "p", "", "Make requests over a proxy. e.g. socks5://127.0.0.1:1080")
-	detectCmd.Flags().IntVarP(&detectArgs.timeout, "timeout", "t", 60, "Time (in seconds) to wait for response to requests")
+	detectCmd.Flags().IntVarP(&detectArgs.timeout, "timeout", "t", 30, "Time (in seconds) to wait for response to requests")
 	detectCmd.Flags().BoolVar(&detectArgs.isNSFW, "nsfw", false, "Include checking of NSFW sites from default list.")
+	detectCmd.Flags().IntVarP(&detectArgs.retry, "retry", "r", 3, "Retry times after request failed")
 	detectCmd.Flags().BoolVar(&detectArgs.precisely, "precisely", false, "Check precisely")
+
 	//detectCmd.Flags().BoolVar(&detectArgs.unique, "unique", false, "Make new requests client for each site")
 	rootCmd.AddCommand(detectCmd)
 }
@@ -78,9 +83,9 @@ func detect(_ *cobra.Command, _ []string) {
 
 	for site, siteBody := range siteDataMap {
 		// set delay for each requests to site
-		sleepTable[site] = 0
+		sleepMap[site] = 0
 		if sleep := siteBody.Get("sleep"); sleep.Exists() && sleep.Value() != nil {
-			sleepTable[site] = sleep.Int()
+			sleepMap[site] = sleep.Int()
 			sleepChannel[site] = make(chan bool, 1)
 			log.Debugf("Delay %ds before each request to the %s\n", sleep.Int(), site)
 		}
@@ -120,6 +125,7 @@ func detectSite(name, site string, siteBody gjson.Result) {
 
 	detectReq := siteBody.Get("detect").Array()
 
+	retryTimes := 0
 	for index, detectData := range detectReq {
 
 		// set header
@@ -160,14 +166,21 @@ func detectSite(name, site string, siteBody gjson.Result) {
 		// delay
 		if ch, ok := sleepChannel[site]; ok {
 			ch <- true
-			time.Sleep(time.Duration(sleepTable[site]) * time.Second)
+			time.Sleep(time.Duration(sleepMap[site]) * time.Second)
 			<-ch
 		}
 
-		rep, err := utils.Requests(url, body, detectArgs.proxy, header, detectArgs.timeout)
-		if err != nil {
-			log.Errorln(err)
-			continue
+		var rep *resty.Response
+		for retryTimes < detectArgs.retry {
+			var err error
+			rep, err = utils.Requests(url, body, detectArgs.proxy, header, detectArgs.timeout)
+			if err != nil {
+				retryTimes += 1
+				log.Errorf(reqErrorInfo, name, site, url, retryTimes, detectArgs.retry)
+				time.Sleep(time.Duration(sleepMap[site]) * time.Second)
+				continue
+			}
+			break
 		}
 
 		//log.Infoln(rep.Request.Body)

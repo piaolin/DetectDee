@@ -943,7 +943,7 @@
     "isNFSW": false,
     "detect": [
       {
-        "nonExistRegex": "https://certify.alexametrics.com/atrk.gif",
+        "nonExistRegex": "抱歉！我们找不到您想访问的页面",
         "url": "https://leetcode.cn/u/%s/",
         "existUsername": "blue",
         "nonExistUsername": "youga777888",
