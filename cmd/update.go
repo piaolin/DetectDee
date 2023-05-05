@@ -41,7 +41,7 @@ func update(_ *cobra.Command, _ []string) {
 	}
 
 	if _, err := os.Stat(updateArgs.file); err == nil {
-		newFileName := strings.Split(updateArgs.file, ".")[0] + "_" + strings.Replace(time.Now().Format(time.TimeOnly), ":", "", -1) + ".json"
+		newFileName := strings.Split(updateArgs.file, ".")[0] + "_" + strings.Replace(time.Now().Format("15:04:05"), ":", "", -1) + ".json"
 		log.Debugln(newFileName)
 		err := os.Rename(updateArgs.file, newFileName)
 		if err != nil {
