@@ -121,7 +121,7 @@ Here are some things we would appreciate your help on:
 2. ![](https://www.google.com/s2/favicons?domain=https://www.infoq.cn/) [infoQ](https://www.infoq.cn/)
 3. ![](https://www.google.com/s2/favicons?domain=https://www.twle.cn/) [twle](https://www.twle.cn/)
 4. ![](https://www.google.com/s2/favicons?domain=https://quizlet.com/) [Quizlet](https://quizlet.com/)
-5. ![](https://www.google.com/s2/favicons?domain=https://gitee) [Gitee](https://gitee)
+5. ![](https://www.google.com/s2/favicons?domain=https://gitee.com) [Gitee](https://gitee.com)
 6. ![](https://www.google.com/s2/favicons?domain=https://leetcode.com/) [Leetcode](https://leetcode.com/)
 7. ![](https://www.google.com/s2/favicons?domain=https://leetcode.cn/) [Leetcode-CN](https://leetcode.cn/)
 8. ![](https://www.google.com/s2/favicons?domain=https://forum.sublimetext.com/) [SublimeForum](https://forum.sublimetext.com/)
