@@ -46,6 +46,11 @@ Global Flags:
 
 ```
 
+Please update the data for the first time
+```shell
+./DetectDee update
+```
+
 To search for only one user:
 ```shell
 ./DetectDee detect -n piaolin

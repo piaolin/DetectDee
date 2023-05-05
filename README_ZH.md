@@ -43,6 +43,11 @@ Global Flags:
   -v, --verbose   verbose output
 ```
 
+首次使用请更新支持网站数据
+```shell
+./DetectDee update
+```
+
 单一用户名搜索:
 ```shell
 ./DetectDee detect -n piaolin

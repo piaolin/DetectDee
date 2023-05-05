@@ -1640,7 +1640,7 @@
     "detect": [
       {
         "type": "username",
-        "statusCode": "200",
+        "nonExistRegex": "404 Not Found!",
         "url": "https://ld246.com/member/%s",
         "existUsername": "hyggge",
         "nonExistUsername": "youga777888",
