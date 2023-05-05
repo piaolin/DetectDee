@@ -377,7 +377,7 @@
   },
   "aqniu": {
     "url": "https://www.aqniu.com/",
-    "type": "Social",
+    "type": "CyberSecurity",
     "isNFSW": false,
     "detect": [
       {
@@ -2018,7 +2018,7 @@
     }
   },
   "eastmoney-src": {
-    "url": "https://forum.butian.net",
+    "url": "https://security.eastmoney.com",
     "type": "CyberSecurity",
     "isNFSW": false,
     "detect": [
