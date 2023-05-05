@@ -1708,7 +1708,7 @@
     "detect": [
       {
         "type": "username",
-        "statusCode": "200",
+        "existRegex": "共发表了",
         "url": "https://www.ifanr.com/author/%s",
         "existUsername": "aifan",
         "nonExistUsername": "youga777888",
@@ -1840,7 +1840,7 @@
     "detect": [
       {
         "type": "email, phone",
-        "nonExistRegex": "\\\\u7528\\\\u6237\\\\u4e0d\\\\u5b58\\\\u5728",
+        "nonExistRegex": "[20404|20407]",
         "url": "https://www.yystv.cn/account/send_forget_passw",
         "nonExistUsername": "youga777888",
         "body": "name=%s&verify=",
