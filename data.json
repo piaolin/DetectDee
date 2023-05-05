@@ -40,7 +40,8 @@
         "nonExistRegex": "\\[\\]",
         "url": "https://gitlab.com/api/v4/users?username=%s",
         "existUsername": "blue",
-        "nonExistUsername": "noonewouldeverusethis7"
+        "nonExistUsername": "noonewouldeverusethis7",
+        "userPage": "https://gitlab.com/%s"
       }
     ],
     "login": {
@@ -1281,6 +1282,7 @@
     "url": "https://www.iteye.com/",
     "type": "Programmer",
     "isNFSW": false,
+    "sleep": 2,
     "detect": [
       {
         "type": "username",
@@ -1853,5 +1855,227 @@
       "url": "",
       "successRegex": ""
     }
-  }
+  },
+
+  "bilibili": {
+    "url": "https://www.bilibili.com",
+    "type": "Video",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "google",
+        "searchUrl": "https://www.google.com/search?q=%s",
+        "search": "site:space.bilibili.com%%20%%22%s%%22"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "ichunqiu": {
+    "url": "https://www.ichunqiu.com",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "google",
+        "searchUrl": "https://www.google.com/search?q=%s",
+        "search": "site:www.ichunqiu.com.com%%20%%22%s%%22"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "eastmoney": {
+    "url": "https://www.eastmoney.com",
+    "type": "Social",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "google",
+        "searchUrl": "https://www.google.com/search?q=%s",
+        "search": "site:eastmoney.com%%20%%22%s%%22"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "threatbook": {
+    "url": "https://x.threatbook.com",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "google",
+        "searchUrl": "https://www.google.com/search?q=%s",
+        "search": "site:x.threatbook.com%%20%%22%s%%22"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "baidu-zhidao": {
+    "url": "https://zhidao.baidu.com",
+    "type": "Social",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "google",
+        "searchUrl": "https://www.google.com/search?q=%s",
+        "search": "site:zhidao.baidu.com%%20%%22%s%%22"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "baidu-tieba": {
+    "url": "https://tieba.baidu.com",
+    "type": "Social",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "google",
+        "searchUrl": "https://www.google.com/search?q=%s",
+        "search": "site:tieba.baidu.com%%20%%22%s%%22"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "anquanke": {
+    "url": "https://www.anquanke.com",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "google",
+        "searchUrl": "https://www.google.com/search?q=%s",
+        "search": "site:www.anquanke.com%%20%%22%s%%22"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "secpulse": {
+    "url": "https://www.secpulse.com",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "google",
+        "searchUrl": "https://www.google.com/search?q=%s",
+        "search": "site:www.secpulse.com%%20%%22%s%%22%%20inurl:author"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "xz": {
+    "url": "https://xz.aliyun.com",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "google",
+        "searchUrl": "https://www.google.com/search?q=%s",
+        "search": "site:xz.aliyun.com%%20%%22%s%%22"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "butian": {
+    "url": "https://forum.butian.net",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "google",
+        "searchUrl": "https://www.google.com/search?q=%s",
+        "search": "site:forum.butian.net%%20%%22%s%%22"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "eastmoney-src": {
+    "url": "https://forum.butian.net",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "google",
+        "searchUrl": "https://www.google.com/search?q=%s",
+        "search": "site:security.eastmoney.com%%20%%22%s%%22"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+
+  "ywhack": {
+    "url": "https://forum.ywhack.com/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "用户名已经被他人使用",
+        "url": "https://forum.ywhack.com/ajax.php?infloat=register&handlekey=register&action=checkusername&username=%s&inajax=1&ajaxtarget=returnmessage4",
+        "existUsername": "admin",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://forum.ywhack.com/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "huoxian": {
+    "url": "https://zone.huoxian.cn/",
+    "type": "CyberSecurity",
+    "isNFSW": false,
+    "detect": [
+      {
+        "type": "phone",
+        "existRegex": "true",
+        "url": "https://6p9ocl.authing.cn/api/v2/users/find?key=%s&type=phone&userPoolId=61dbe991401e129d640b1da6",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "ttps://zone.huoxian.cn/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+
 }

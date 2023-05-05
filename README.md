@@ -31,18 +31,19 @@ Usage:
 
 Flags:
   -c, --check          self-check
+  -f, --file string    Site data file (default "data.json")
   -h, --help           help for detect
   -n, --name strings   name[s]
-      --nsfw           Include checking of NSFW sites from default list.
+      --nsfw           Include checking of NSFW sites from default list.        
       --precisely      Check precisely
-  -p, --proxy string   Make requests over a proxy. e.g. socks5://127.0.0.1:1080
-  -s, --site strings   Limit analysis to just the listed sites. Add multiple opt
-ions to specify more than one site.
-  -t, --timeout int    Time (in seconds) to wait for response to requests (defau
-lt 60)
+  -p, --proxy string   Make requests over a proxy. e.g. socks5://127.0.0.1:1080 
+  -r, --retry int      Retry times after request failed (default 3)
+  -s, --site strings   Limit analysis to just the listed sites. Add multiple options to specify more than one site.
+  -t, --timeout int    Time (in seconds) to wait for response to requests (default 10)
 
 Global Flags:
   -v, --verbose   verbose output
+
 ```
 
 To search for only one user:
