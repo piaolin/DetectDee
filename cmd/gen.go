@@ -11,6 +11,7 @@ import (
 
 type genArgsType struct {
 	fileName string
+	data     string
 	//proxy    string
 }
 
@@ -20,6 +21,7 @@ var (
 
 func init() {
 	genCmd.Flags().StringVarP(&genArgs.fileName, "filename", "f", "site.md", "Markdown filename to generate")
+	genCmd.Flags().StringVarP(&genArgs.data, "data", "d", "data.json", "Site data file")
 	//genCmd.Flags().StringVarP(&genArgs.proxy, "proxy", "p", "", "Make requests over a proxy. e.g. socks5://127.0.0.1:1080")
 	rootCmd.AddCommand(genCmd)
 }
@@ -37,7 +39,7 @@ func gen(_ *cobra.Command, _ []string) {
 		log.SetLevel(log.DebugLevel)
 	}
 
-	siteData, err := ioutil.ReadFile("data.json")
+	siteData, err := ioutil.ReadFile(genArgs.data)
 	if err != nil {
 		log.Fatalln(err)
 	}

@@ -28,14 +28,17 @@ type detectArgsType struct {
 }
 
 var (
-	detectArgs   detectArgsType
-	wg           sync.WaitGroup
-	existInfo    = "[+] %-15s %-15s: %s\n"
-	nonExistInfo = "[-] %-15s %-15s: non exists\n"
-	reqErrorInfo = "[!] %-15s %-15s: %s requests error, retry %d/%d\n"
-	sleepMap     = make(map[string]int64)
-	sleepChannel = make(map[string]chan bool)
-	searchInfo   = "[+] %-15s %-15s: Please check in %s\n"
+	detectArgs      detectArgsType
+	wg              sync.WaitGroup
+	nonSiteData     = "[-] There is no site data of %s\n"
+	existInfo       = "[+] %-15s %-15s: %s\n"
+	nonExistInfo    = "[-] %-15s %-15s: non exists\n"
+	reqErrorInfo    = "[!] %-15s %-15s: %s requests error, retry %d/%d\n"
+	sleepMap        = make(map[string]int64)
+	sleepChannel    = make(map[string]chan bool)
+	searchInfo      = "[+] %-15s %-15s: Please check in %s\n"
+	disableSiteInfo = "[!] %-15s %-15s: data of %s is temporarily unavailable\n"
+	nsfwInfo        = "[!] %-15s %-15s: %s is nsfw\n"
 )
 
 func init() {
@@ -80,7 +83,11 @@ func detect(_ *cobra.Command, _ []string) {
 		log.Infoln("Detect to ", detectArgs.site)
 		siteDataMap = make(map[string]gjson.Result)
 		for _, site := range detectArgs.site {
-			siteDataMap[site] = r.Get(strings.ToLower(site))
+			if siteData := r.Get(strings.ToLower(site)); siteData.Exists() {
+				siteDataMap[site] = r.Get(strings.ToLower(site))
+			} else {
+				log.Infof(nonSiteData, site)
+			}
 		}
 	}
 
@@ -113,7 +120,8 @@ func detectSite(name, site string, siteBody gjson.Result) {
 	// flag for precisely mode
 	flag := false
 
-	if !siteBody.Get("isNFSW").Bool() && detectArgs.isNSFW {
+	if siteBody.Get("isNFSW").Bool() && !detectArgs.isNSFW {
+		log.Debugf(nsfwInfo, name, site, site)
 		return
 	}
 
@@ -134,6 +142,11 @@ func detectSite(name, site string, siteBody gjson.Result) {
 
 	detectCount := len(detectReq) - 1
 	for index, detectData := range detectReq {
+
+		if status := detectData.Get("status"); status.Exists() && !status.Bool() {
+			log.Debugf(disableSiteInfo, name, site, site)
+			break
+		}
 		retryTimes := 0
 		if detectUser(name, site, index, retryTimes, detectCount, &flag, detectData) {
 			continue
@@ -209,7 +222,7 @@ func detectUser(name, site string, requestTimes, retryTimes, detectCount int, fl
 	}
 
 	if retryTimes == detectArgs.retry {
-		log.Infof(reqErrorInfo, name, site, url, retryTimes, detectArgs.retry)
+		//log.Infof(reqErrorInfo, name, site, url, retryTimes, detectArgs.retry)
 		return false
 	}
 
@@ -219,7 +232,7 @@ func detectUser(name, site string, requestTimes, retryTimes, detectCount int, fl
 	//
 	//log.Debugln(rep.Request.Header)
 	//
-	//log.Debugln(rep.String())
+	//log.Debugln(rep.Status(), rep.String())
 
 	// statusCode, existRegex must both be true
 	statusCode := detectData.Get("statusCode")

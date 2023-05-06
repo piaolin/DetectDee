@@ -3,7 +3,7 @@
     "url": "https://github.com",
     "nameCheck": "^[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -26,7 +26,7 @@
     "url": "https://gitlab.com/",
     "nameCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -38,6 +38,7 @@
       },
       {
         "nonExistRegex": "\\[\\]",
+        "existRegex": "web_url",
         "url": "https://gitlab.com/api/v4/users?username=%s",
         "existUsername": "blue",
         "nonExistUsername": "noonewouldeverusethis7",
@@ -52,7 +53,7 @@
   "gitee": {
     "url": "https://gitee.com",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -70,13 +71,14 @@
   },
   "googleplay": {
     "url": "https://play.google.com",
-    "type": "CyberSecurity",
-    "isNFSW": false,
+    "type": "Programmer",
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "We're sorry, the requested URL was not found on this server.",
+        "existRegex": "Copyright The Closure Library Authors",
         "url": "https://play.google.com/store/apps/developer?id=%s",
-        "existUsername": "GitHub",
+        "existUsername": "Apple",
         "nonExistUsername": "GitHubeeeeee",
         "userPage": "https://play.google.com/store/apps/developer?id=%s",
         "type": "username"
@@ -90,7 +92,7 @@
   "githubblog": {
     "url": "https://github.io",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -109,7 +111,7 @@
   "v2ex": {
     "url": "https://v2ex.com",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -128,12 +130,13 @@
   "zhihu": {
     "url": "https://www.zhihu.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "url": "https://www.zhihu.com/people/%s",
         "existUsername": "bule",
-        "nonExistRegex": "404 - \u77e5\u4e4e",
+        "nonExistRegex": "404 - \\\\u77e5\\\\u4e4e",
+        "existRegex": "查看详细资料",
         "nonExistUsername": "buleeeeeeeeeeeee",
         "userPage": "https://www.zhihu.com/people/%s",
         "type": "username"
@@ -147,7 +150,7 @@
   "freebuf": {
     "url": "https://www.freebuf.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -166,7 +169,7 @@
   "bugbank": {
     "url": "https://www.bugbank.cn/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -185,7 +188,7 @@
   "hackerone": {
     "url": "https://hackerone.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -204,7 +207,7 @@
   "vulbox": {
     "url": "https://www.vulbox.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "sleep": 3,
     "detect": [
       {
@@ -234,10 +237,11 @@
   "bugku": {
     "url": "https://www.bugku.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
-        "nonExistRegex": "\u62b1\u6b49\uff0c\u60a8\u6307\u5b9a\u7684\u7528\u6237\u7a7a\u95f4\u4e0d\u5b58\u5728",
+        "nonExistRegex": "\\\\u62b1\\\\u6b49\\\\uff0c\\\\u60a8\\\\u6307\\\\u5b9a\\\\u7684\\\\u7528\\\\u6237\\\\u7a7a\\\\u95f4\\\\u4e0d\\\\u5b58\\\\u5728",
+        "existRegex": "的个人资料",
         "url": "https://www.bugku.com/space-username-%s.html",
         "existUsername": "Jimmy",
         "nonExistUsername": "ooooooo_qaaaaaaa",
@@ -253,7 +257,7 @@
   "newbugku": {
     "url": "https://new.bugku.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -272,12 +276,13 @@
   "52pojie": {
     "url": "https://www.52pojie.cn/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "sleep": 1,
     "detect": [
       {
-        "nonExistRegex": "\u62b1\u6b49\uff0c\u60a8\u6307\u5b9a\u7684\u7528\u6237\u7a7a\u95f4\u4e0d\u5b58\u5728",
-        "url": "https://new.bugku.com/forum.php?mod=ajax&inajax=yes&infloat=register&handlekey=register&ajaxmenu=1&action=checkusername&username=%s",
+        "nonExistRegex": "succeed",
+        "existRegex": "showWindow",
+        "url": "https://www.52pojie.cn/forum.php?mod=ajax&inajax=yes&infloat=register&handlekey=register&ajaxmenu=1&action=checkusername&username=%s",
         "existUsername": "youga777",
         "nonExistUsername": "youga777888",
         "header": {
@@ -295,7 +300,7 @@
   "youtube": {
     "url": "https://www.youtube.com/",
     "type": "Video",
-    "isNFSW": false,
+    "isNSFW": false,
     "sleep": 1,
     "detect": [
       {
@@ -317,13 +322,13 @@
   },
   "wikipedia": {
     "url": "https://www.wikipedia.org/",
-    "type": "Video",
-    "isNFSW": false,
+    "type": "Blog",
+    "isNSFW": false,
     "detect": [
       {
-        "nonExistRegex": "centralauth-admin-nonexistent:",
-        "url": "https://en.wikipedia.org/wiki/Special:CentralAuth/%s?uselang=qqx",
-        "existUsername": "Hoadlck",
+        "statusCode": "200",
+        "url": "https://en.wikipedia.org/wiki/User:%s",
+        "existUsername": "Jack",
         "nonExistUsername": "youga777888",
         "userPage": "https://en.wikipedia.org/wiki/User:%s",
         "type": "username"
@@ -336,8 +341,8 @@
   },
   "wordpress": {
     "url": "https://wordpress.com/",
-    "type": "Video",
-    "isNFSW": false,
+    "type": "Blog",
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "wordpress.com</em> doesn&apos;t&nbsp;exist",
@@ -356,7 +361,7 @@
   "reddit": {
     "url": "https://www.reddit.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "Sorry, nobody on Reddit goes by that name.",
@@ -378,17 +383,18 @@
   "aqniu": {
     "url": "https://www.aqniu.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
-        "existRegex": "\u672a\u80fd\u53d1\u9001\u7535\u5b50\u90ae\u4ef6\u3002\u60a8\u7684\u4e3b\u673a\u53ef\u80fd\u672a\u83b7\u6b63\u786e\u914d\u7f6e\u3002",
+        "nonExistRegex": "没有使用此用户名或电子邮件地址的账户。",
+        "existRegex": "未能发送电子邮件。您的主机可能未获正确配置。",
         "url": "https://www.aqniu.com/wp-login.php?action=lostpassword",
         "existUsername": "liuchaoyang",
         "nonExistUsername": "youga777888",
         "header": {
           "Content-Type": "application/x-www-form-urlencoded"
         },
-        "body": "user_login=%s&redirect_to=&wp-submit=%E8%8E%B7%E5%8F%96%E6%96%B0%E5%AF%86%E7%A0%81",
+        "body": "user_login=%s&redirect_to=&wp-submit=%%E8%%8E%%B7%%E5%%8F%%96%%E6%%96%%B0%%E5%%AF%%86%%E7%%A0%%81",
         "userPage": "https://www.aqniu.com/author/%s",
         "type": "username"
       }
@@ -401,7 +407,7 @@
   "quora": {
     "url": "https://www.quora.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -421,7 +427,7 @@
   "virustotal": {
     "url": "https://www.virustotal.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -440,7 +446,7 @@
   "twitter": {
     "url": "https://twitter.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "nameCheck": "^[a-zA-Z0-9_]{1,15}$",
     "sleep": 3,
     "detect": [
@@ -461,7 +467,7 @@
   "twitch": {
     "url": "https://www.twitch.tv/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -480,7 +486,7 @@
   "tryhackme": {
     "url": "https://tryhackme.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "nameCheck": "^[a-zA-Z0-9.]{1,16}$",
     "detect": [
       {
@@ -500,7 +506,7 @@
   "tiktok": {
     "url": "https://tiktok.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -519,7 +525,7 @@
   "telegram": {
     "url": "https://t.me/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "nameCheck": "^[a-zA-Z0-9_]{5,32}$",
     "detect": [
       {
@@ -539,7 +545,7 @@
   "steamgroup": {
     "url": "https://steamcommunity.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "No group could be retrieved for the given URL",
@@ -558,7 +564,7 @@
   "sublimeforum": {
     "url": "https://forum.sublimetext.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -577,7 +583,7 @@
   "spotify": {
     "url": "https://open.spotify.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -599,7 +605,7 @@
   "sourceforge": {
     "url": "https://sourceforge.net/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -618,7 +624,7 @@
   "snapchat": {
     "url": "https://www.snapchat.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "nameCheck": "^[a-z][a-z-_.]{3,15}",
     "detect": [
       {
@@ -638,7 +644,7 @@
   "rubygems": {
     "url": "https://rubygems.org/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "nameCheck": "^[a-zA-Z][a-zA-Z0-9_-]{1,40}",
     "detect": [
       {
@@ -658,7 +664,7 @@
   "pypi": {
     "url": "https://pypi.org/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -677,7 +683,7 @@
   "quizlet": {
     "url": "https://quizlet.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -699,7 +705,7 @@
   "pastebin": {
     "url": "https://pastebin.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "Pastebin.com - Not Found ",
@@ -721,7 +727,7 @@
   "packagist": {
     "url": "https://packagist.org/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "reason=vendor_not_found",
@@ -743,7 +749,7 @@
   "oracle": {
     "url": "https://community.oracle.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -765,7 +771,7 @@
   "opensource": {
     "url": "https://opensource.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -787,7 +793,7 @@
   "nextcloud": {
     "url": "https://nextcloud.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -809,7 +815,7 @@
   "minecraft": {
     "url": "https://minecraft.net/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "Couldn't find any profile with name",
@@ -831,7 +837,7 @@
   "tft": {
     "url": "https://lolchess.gg/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "No search results",
@@ -853,7 +859,7 @@
   "gitbook": {
     "url": "https://gitbook.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -875,7 +881,7 @@
   "hackernews": {
     "url": "https://news.ycombinator.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "No such user.",
@@ -897,7 +903,7 @@
   "hackerrank": {
     "url": "https://hackerrank.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "Something went wrong",
@@ -919,7 +925,7 @@
   "leetcode": {
     "url": "https://leetcode.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -941,7 +947,7 @@
   "leetcode-cn": {
     "url": "https://leetcode.cn/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "抱歉！我们找不到您想访问的页面",
@@ -952,7 +958,8 @@
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"
         },
         "userPage": "https://leetcode.cn/u/%s/",
-        "type": "username"
+        "type": "username",
+        "status": false
       }
     ],
     "login": {
@@ -963,7 +970,7 @@
   "9gag": {
     "url": "https://www.9gag.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -985,7 +992,7 @@
   "csdn": {
     "url": "https://blog.csdn.net/",
     "type": "Blog",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -1007,7 +1014,7 @@
   "cnblogs": {
     "url": "https://www.cnblogs.com/",
     "type": "Blog",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -1029,7 +1036,7 @@
   "oschina": {
     "url": "https://my.oschina.net/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -1051,10 +1058,11 @@
   "segmentfault": {
     "url": "https://segmentfault.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
-        "nonExistRegex": "\u5fae\u4fe1\u626b\u7801\u767b\u5f55",
+        "nonExistRegex": "微信扫码登录",
+        "existRegex": "粉丝数",
         "url": "https://segmentfault.com/u/%s",
         "existUsername": "h_jm",
         "nonExistUsername": "youga777888",
@@ -1073,7 +1081,7 @@
   "trello": {
     "url": "https://trello.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "model not found",
@@ -1095,7 +1103,7 @@
   "seebug": {
     "url": "https://www.seebug.org/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -1118,7 +1126,7 @@
   "sec-wiki": {
     "url": "https://www.sec-wiki.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "sleep": 3,
     "detect": [
       {
@@ -1141,10 +1149,11 @@
   "secrss": {
     "url": "https://www.secrss.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "404 Not Found",
+        "existRegex": "登录",
         "url": "https://www.secrss.com/articles?author=%s",
         "existUsername": "ISACA",
         "nonExistUsername": "youga777888",
@@ -1163,7 +1172,7 @@
   "bugcrowd": {
     "url": "https://bugcrowd.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "statusCode": "200",
@@ -1185,10 +1194,11 @@
   "track": {
     "url": "https://bbs.zkaq.cn/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
-        "nonExistRegex": "\u4e0d\u5b58\u5728\u8be5\u7528\u6237",
+        "existRegex": "用户中心",
+        "nonExistRegex": "不存在该用户",
         "url": "https://bbs.zkaq.cn/u/%s.html",
         "existUsername": "nocircle",
         "nonExistUsername": "youga777888",
@@ -1207,7 +1217,7 @@
   "mozhe": {
     "url": "https://www.mozhe.cn/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "nonExistRegex": "\\\\u53ef\\\\u4ee5\\\\u4f7f\\\\u7528",
@@ -1222,7 +1232,8 @@
           "X-Requested-With": "XMLHttpRequest"
         },
         "userPage": "https://www.mozhe.cn/",
-        "type": "username"
+        "type": "username",
+        "status": false
       }
     ],
     "login": {
@@ -1233,7 +1244,7 @@
   "jarvisoj": {
     "url": "https://www.jarvisoj.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "existRegex": "This username has been used!!",
@@ -1257,7 +1268,7 @@
   "vulfocus": {
     "url": "https://vulfocus.cn/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "existRegex": "\\\\u8be5\\\\u7528\\\\u6237\\\\u5df2\\\\u88ab\\\\u6ce8\\\\u518c",
@@ -1281,7 +1292,7 @@
   "iteye": {
     "url": "https://www.iteye.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "sleep": 2,
     "detect": [
       {
@@ -1304,7 +1315,7 @@
   "unsplash": {
     "url": "https://unsplash.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1326,7 +1337,7 @@
   "seebug-paper": {
     "url": "https://paper.seebug.org/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1348,7 +1359,7 @@
   "douban": {
     "url": "https://www.douban.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1370,7 +1381,7 @@
   "infoq": {
     "url": "https://www.infoq.cn/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1392,7 +1403,7 @@
   "threatpost": {
     "url": "https://threatpost.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1414,7 +1425,7 @@
   "infosecurity-magazine": {
     "url": "https://www.infosecurity-magazine.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1436,7 +1447,7 @@
   "xsssql": {
     "url": "http://www.xsssql.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "sleep": 3,
     "detect": [
       {
@@ -1459,11 +1470,12 @@
   "studygolang": {
     "url": "https://studygolang.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
         "nonExistRegex": "位会员加入了 Go语言中文网。",
+        "existRegex": "注册时间",
         "url": "https://studygolang.com/user/%s",
         "existUsername": "polaris",
         "nonExistUsername": "youga777888",
@@ -1481,7 +1493,7 @@
   "0x00sec": {
     "url": "https://0x00sec.org/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1503,7 +1515,7 @@
   "ruby-china": {
     "url": "https://ruby-china.org/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1525,11 +1537,12 @@
   "tttang": {
     "url": "https://tttang.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
         "nonExistRegex": "404 Not Found",
+        "existRegex": "列表",
         "url": "https://tttang.com/user/%s",
         "existUsername": "巴斯.zznQ",
         "nonExistUsername": "youga777888",
@@ -1547,7 +1560,7 @@
   "t00ls": {
     "url": "https://www.t00ls.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1569,11 +1582,12 @@
   "90sec": {
     "url": "https://forum.90sec.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
         "nonExistRegex": "true",
+        "existRegex": "false",
         "url": "https://forum.90sec.com/u/check_username?username=%s&email=",
         "existUsername": "admin05",
         "nonExistUsername": "youga777888",
@@ -1592,7 +1606,7 @@
   "thehackerworld": {
     "url": "https://www.thehackerworld.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1614,11 +1628,12 @@
   "sspai": {
     "url": "https://sspai.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
         "nonExistRegex": "用户数据不存在",
+        "existRegex": "id",
         "url": "https://sspai.com/api/v1/information/user/activity/page/get?limit=10&offset=0&slug=%s",
         "existUsername": "waychane",
         "nonExistUsername": "youga777888",
@@ -1636,11 +1651,12 @@
   "ld246": {
     "url": "https://ld246.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
         "nonExistRegex": "404 Not Found!",
+        "existRegex": "在线时长",
         "url": "https://ld246.com/member/%s",
         "existUsername": "hyggge",
         "nonExistUsername": "youga777888",
@@ -1658,7 +1674,7 @@
   "qyer": {
     "url": "https://bbs.qyer.com",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1682,7 +1698,7 @@
   "jandan": {
     "url": "http://jandan.net/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1704,7 +1720,7 @@
   "ifanr": {
     "url": "https://www.ifanr.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1726,11 +1742,12 @@
   "twle": {
     "url": "https://www.twle.cn/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
         "nonExistRegex": "Member Not Found",
+        "existRegex": "加入于",
         "url": "https://www.twle.cn/member/%s",
         "existUsername": "yufei",
         "nonExistUsername": "youga777888",
@@ -1748,11 +1765,12 @@
   "chouti": {
     "url": "https://dig.chouti.com/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
         "nonExistRegex": "收到进入热榜消息",
+        "existRegex": "nickSignInAudit",
         "url": "https://dig.chouti.com/users/profile?jid=%s",
         "existUsername": "meigancai",
         "nonExistUsername": "youga777888",
@@ -1770,11 +1788,12 @@
   "gaoloumi": {
     "url": "https://gaoloumi.cc/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
         "nonExistRegex": "succeed",
+        "existRegex": "logging",
         "url": "https://gaoloumi.cc/forum.php?mod=ajax&inajax=yes&infloat=register&handlekey=register&ajaxmenu=1&action=checkusername&username=%s",
         "existUsername": "billy_2009",
         "nonExistUsername": "youga777888",
@@ -1792,7 +1811,7 @@
   "zol": {
     "url": "https://my.zol.com.cn/",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1814,7 +1833,7 @@
   "producthunt": {
     "url": "https://www.producthunt.com/",
     "type": "Programmer",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -1836,7 +1855,7 @@
   "yystv": {
     "url": "https://www.yystv.cn/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "email, phone",
@@ -1856,11 +1875,10 @@
       "successRegex": ""
     }
   },
-
   "bilibili": {
     "url": "https://www.bilibili.com",
     "type": "Video",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "google",
@@ -1876,7 +1894,7 @@
   "ichunqiu": {
     "url": "https://www.ichunqiu.com",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "google",
@@ -1892,7 +1910,7 @@
   "eastmoney": {
     "url": "https://www.eastmoney.com",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "google",
@@ -1908,7 +1926,7 @@
   "threatbook": {
     "url": "https://x.threatbook.com",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "google",
@@ -1924,7 +1942,7 @@
   "baidu-zhidao": {
     "url": "https://zhidao.baidu.com",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "google",
@@ -1940,7 +1958,7 @@
   "baidu-tieba": {
     "url": "https://tieba.baidu.com",
     "type": "Social",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "google",
@@ -1956,7 +1974,7 @@
   "anquanke": {
     "url": "https://www.anquanke.com",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "google",
@@ -1972,7 +1990,7 @@
   "secpulse": {
     "url": "https://www.secpulse.com",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "google",
@@ -1988,7 +2006,7 @@
   "xz": {
     "url": "https://xz.aliyun.com",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "google",
@@ -2004,7 +2022,7 @@
   "butian": {
     "url": "https://forum.butian.net",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "google",
@@ -2020,7 +2038,7 @@
   "eastmoney-src": {
     "url": "https://security.eastmoney.com",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "google",
@@ -2033,11 +2051,10 @@
       "successRegex": ""
     }
   },
-
   "ywhack": {
     "url": "https://forum.ywhack.com/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "username",
@@ -2059,7 +2076,7 @@
   "huoxian": {
     "url": "https://zone.huoxian.cn/",
     "type": "CyberSecurity",
-    "isNFSW": false,
+    "isNSFW": false,
     "detect": [
       {
         "type": "phone",
@@ -2077,5 +2094,5646 @@
       "successRegex": ""
     }
   },
-
+  "3dnews": {
+    "url": "http://forum.3dnews.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "stats_mini",
+        "url": "http://forum.3dnews.ru/member.php?username=%s",
+        "existUsername": "",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "http://forum.3dnews.ru/member.php?username=%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "7cups": {
+    "url": "https://www.7cups.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.7cups.com/@%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.7cups.com/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "8tracks": {
+    "url": "https://8tracks.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "This page has vanished",
+        "url": "https://8tracks.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://8tracks.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "apclips": {
+    "url": "https://apclips.com/",
+    "type": "Video",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "Amateur Porn Content Creators",
+        "url": "https://apclips.com/%s",
+        "existUsername": "onlybbyraq",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://apclips.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "about-me": {
+    "url": "https://about.me/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://about.me/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://about.me/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "academia-edu": {
+    "url": "https://www.academia.edu/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://independent.academia.edu/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://independent.academia.edu/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "airbit": {
+    "url": "https://airbit.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://airbit.com/%s",
+        "existUsername": "airbit",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://airbit.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "airliners": {
+    "url": "https://www.airliners.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.airliners.net/user/%s/profile/photos",
+        "existUsername": "yushinlin",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.airliners.net/user/%s/profile/photos"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "alik-cz": {
+    "url": "https://www.alik.cz/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.alik.cz/u/%s",
+        "existUsername": "julian",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.alik.cz/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "amino": {
+    "url": "https://aminoapps.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://aminoapps.com/u/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://aminoapps.com/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "anilist": {
+    "url": "https://anilist.co/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://anilist.co/graphql",
+        "body": {
+          "query": "query($id:Int,$name:String){User(id:$id,name:$name){id name previousNames{name updatedAt}avatar{large}bannerImage about isFollowing isFollower donatorTier donatorBadge createdAt moderatorRoles isBlocked bans options{profileColor restrictMessagesToFollowing}mediaListOptions{scoreFormat}statistics{anime{count meanScore standardDeviation minutesWatched episodesWatched genrePreview:genres(limit:10,sort:COUNT_DESC){genre count}}manga{count meanScore standardDeviation chaptersRead volumesRead genrePreview:genres(limit:10,sort:COUNT_DESC){genre count}}}stats{activityHistory{date amount level}}favourites{anime{edges{favouriteOrder node{id type status(version:2)format isAdult bannerImage title{userPreferred}coverImage{large}startDate{year}}}}manga{edges{favouriteOrder node{id type status(version:2)format isAdult bannerImage title{userPreferred}coverImage{large}startDate{year}}}}characters{edges{favouriteOrder node{id name{userPreferred}image{large}}}}staff{edges{favouriteOrder node{id name{userPreferred}image{large}}}}studios{edges{favouriteOrder node{id name}}}}}}",
+          "variables": {
+            "name": "%s"
+          }
+        },
+        "existUsername": "Josh",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Content-Type": "application/json;charset=UTF-8"
+        },
+        "userPage": "https://anilist.co/user/%s/",
+        "status": false
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "appledeveloper": {
+    "url": "https://developer.apple.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://developer.apple.com/forums/profile/%s",
+        "existUsername": "lio24d",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://developer.apple.com/forums/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "artstation": {
+    "url": "https://www.artstation.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.artstation.com/%s",
+        "existUsername": "Blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.artstation.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "asciinema": {
+    "url": "https://asciinema.org",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://asciinema.org/~%s",
+        "existUsername": "red",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://asciinema.org/~%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "askfedora": {
+    "url": "https://ask.fedoraproject.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://ask.fedoraproject.org/u/%s",
+        "existUsername": "red",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://ask.fedoraproject.org/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "audiojungle": {
+    "url": "https://audiojungle.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://audiojungle.net/user/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://audiojungle.net/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "autofrage": {
+    "url": "https://www.autofrage.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.autofrage.net/nutzer/%s",
+        "existUsername": "autofrage",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.autofrage.net/nutzer/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "blip-fm": {
+    "url": "https://blip.fm/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://blip.fm/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://blip.fm/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "bandcamp": {
+    "url": "https://www.bandcamp.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.bandcamp.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.bandcamp.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "behance": {
+    "url": "https://www.behance.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.behance.net/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.behance.net/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "bezuzyteczna": {
+    "url": "https://bezuzyteczna.pl",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://bezuzyteczna.pl/uzytkownicy/%s",
+        "existUsername": "Jackson",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://bezuzyteczna.pl/uzytkownicy/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "biggerpockets": {
+    "url": "https://www.biggerpockets.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.biggerpockets.com/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.biggerpockets.com/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "bikemap": {
+    "url": "https://www.bikemap.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.bikemap.net/en/u/%s/routes/created/",
+        "existUsername": "bikemap",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.bikemap.net/en/u/%s/routes/created/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "biohacking": {
+    "url": "https://forum.dangerousthings.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://forum.dangerousthings.com/u/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://forum.dangerousthings.com/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "bitbucket": {
+    "url": "https://bitbucket.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://bitbucket.org/%s/",
+        "existUsername": "white",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://bitbucket.org/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "bitwardenforum": {
+    "url": "https://bitwarden.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://community.bitwarden.com/u/%s/summary",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://community.bitwarden.com/u/%s/summary"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "blogger": {
+    "url": "https://www.blogger.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.blogspot.com",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.blogspot.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "bongacams": {
+    "url": "https://pt.bongacams.com",
+    "type": "Social",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://pt.bongacams.com/profile/%s",
+        "existUsername": "asuna-black",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://pt.bongacams.com/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "bookcrossing": {
+    "url": "https://www.bookcrossing.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.bookcrossing.com/mybookshelf/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.bookcrossing.com/mybookshelf/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "bravecommunity": {
+    "url": "https://community.brave.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://community.brave.com/u/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://community.brave.com/u/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "buymeacoffee": {
+    "url": "https://www.buymeacoffee.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://buymeacoff.ee/%s",
+        "existUsername": "red",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://buymeacoff.ee/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "buzzfeed": {
+    "url": "https://buzzfeed.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://buzzfeed.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://buzzfeed.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "cnet": {
+    "url": "https://www.cnet.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.cnet.com/profiles/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.cnet.com/profiles/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "ctan": {
+    "url": "https://ctan.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://ctan.org/author/%s",
+        "existUsername": "briggs",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://ctan.org/author/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "caddycommunity": {
+    "url": "https://caddy.community/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://caddy.community/u/%s/summary",
+        "existUsername": "taako_magnusen",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://caddy.community/u/%s/summary"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "cartalkcommunity": {
+    "url": "https://community.cartalk.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://community.cartalk.com/u/%s/summary",
+        "existUsername": "always_fixing",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://community.cartalk.com/u/%s/summary"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "championat": {
+    "url": "https://www.championat.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.championat.com/user/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.championat.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "chaos": {
+    "url": "https://chaos.social/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://chaos.social/@%s",
+        "existUsername": "ordnung",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://chaos.social/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "chaturbate": {
+    "url": "https://chaturbate.com",
+    "type": "Social",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://chaturbate.com/%s",
+        "existUsername": "cute18cute",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://chaturbate.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "choicecommunity": {
+    "url": "https://choice.community/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://choice.community/u/%s/summary",
+        "existUsername": "gordon",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://choice.community/u/%s/summary"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "clapper": {
+    "url": "https://clapperapp.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://clapperapp.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://clapperapp.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "cloudflarecommunity": {
+    "url": "https://community.cloudflare.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://community.cloudflare.com/u/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://community.cloudflare.com/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "clubhouse": {
+    "url": "https://www.clubhouse.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.clubhouse.com/@%s",
+        "existUsername": "waniathar",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.clubhouse.com/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "codeforces": {
+    "url": "https://codeforces.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "solved for all time",
+        "url": "https://codeforces.com/profile/%s",
+        "existUsername": "tourist",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://codeforces.com/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "codepen": {
+    "url": "https://codepen.io/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://codepen.io/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://codepen.io/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "coderwall": {
+    "url": "https://coderwall.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://coderwall.com/%s",
+        "existUsername": "hacker",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://coderwall.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "codewars": {
+    "url": "https://www.codewars.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.codewars.com/users/%s",
+        "existUsername": "example",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.codewars.com/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "coinvote": {
+    "url": "https://coinvote.cc/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://coinvote.cc/profile/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://coinvote.cc/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "colourlovers": {
+    "url": "https://www.colourlovers.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.colourlovers.com/lover/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.colourlovers.com/lover/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "coroflot": {
+    "url": "https://coroflot.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.coroflot.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.coroflot.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "crevado": {
+    "url": "https://crevado.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.crevado.com",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.crevado.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "crowdin": {
+    "url": "https://crowdin.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://crowdin.com/profile/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://crowdin.com/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "cryptomatorforum": {
+    "url": "https://community.cryptomator.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://community.cryptomator.org/u/%s",
+        "existUsername": "michael",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://community.cryptomator.org/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "devcommunity": {
+    "url": "https://dev.to/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://dev.to/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://dev.to/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "dailymotion": {
+    "url": "https://www.dailymotion.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.dailymotion.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.dailymotion.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "deviantart": {
+    "url": "https://deviantart.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.deviantart.com",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.deviantart.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "discogs": {
+    "url": "https://www.discogs.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.discogs.com/user/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.discogs.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "discuss-elastic": {
+    "url": "https://discuss.elastic.co/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://discuss.elastic.co/u/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://discuss.elastic.co/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "disqus": {
+    "url": "https://disqus.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://disqus.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://disqus.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "dockerhub": {
+    "url": "https://hub.docker.com/",
+    "type": "Programmer",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://hub.docker.com/v2/orgs/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://hub.docker.com/u/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "eintrachtfrankfurtforum": {
+    "url": "https://community.eintracht.de/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://community.eintracht.de/fans/%s",
+        "existUsername": "mmammu",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://community.eintracht.de/fans/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "envatoforum": {
+    "url": "https://forums.envato.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://forums.envato.com/u/%s",
+        "existUsername": "enabled",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://forums.envato.com/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "erome": {
+    "url": "https://www.erome.com/",
+    "type": "Social",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.erome.com/%s",
+        "existUsername": "bob",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.erome.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "etsy": {
+    "url": "https://www.etsy.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.etsy.com/shop/%s",
+        "existUsername": "JennyKrafts",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.etsy.com/shop/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "exposure": {
+    "url": "https://exposure.co/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.exposure.co/",
+        "existUsername": "jonasjacobsson",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.exposure.co/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "eyeem": {
+    "url": "https://www.eyeem.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.eyeem.com/u/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.eyeem.com/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "f3-cool": {
+    "url": "https://f3.cool/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://f3.cool/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://f3.cool/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "fameswap": {
+    "url": "https://fameswap.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://fameswap.com/user/%s",
+        "existUsername": "fameswap",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://fameswap.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "fandom": {
+    "url": "https://www.fandom.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.fandom.com/u/%s",
+        "existUsername": "Jungypoo",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.fandom.com/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "finanzfrage": {
+    "url": "https://www.finanzfrage.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.finanzfrage.net/nutzer/%s",
+        "existUsername": "finanzfrage",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.finanzfrage.net/nutzer/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "flickr": {
+    "url": "https://www.flickr.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.flickr.com/people/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.flickr.com/people/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "flightradar24": {
+    "url": "https://www.flightradar24.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://my.flightradar24.com/%s",
+        "existUsername": "jebbrooks",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://my.flightradar24.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "flipboard": {
+    "url": "https://flipboard.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://flipboard.com/@%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://flipboard.com/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "fortnitetracker": {
+    "url": "https://fortnitetracker.com/challenges",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://fortnitetracker.com/profile/all/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://fortnitetracker.com/profile/all/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "fosstodon": {
+    "url": "https://fosstodon.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://fosstodon.org/@%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://fosstodon.org/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "freesound": {
+    "url": "https://freesound.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://freesound.org/people/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://freesound.org/people/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "gamespot": {
+    "url": "https://www.gamespot.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.gamespot.com/profile/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.gamespot.com/profile/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "genius-artists": {
+    "url": "https://genius.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://genius.com/artists/%s",
+        "existUsername": "genius",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://genius.com/artists/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "genius-users": {
+    "url": "https://genius.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://genius.com/%s",
+        "existUsername": "genius",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://genius.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "gesundheitsfrage": {
+    "url": "https://www.gesundheitsfrage.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.gesundheitsfrage.net/nutzer/%s",
+        "existUsername": "gutefrage",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.gesundheitsfrage.net/nutzer/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "getmyuni": {
+    "url": "https://getmyuni.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.getmyuni.com/user/%s",
+        "existUsername": "Upneet.Grover17",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.getmyuni.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "giantbomb": {
+    "url": "https://www.giantbomb.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.giantbomb.com/profile/%s/",
+        "existUsername": "bob",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.giantbomb.com/profile/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "giphy": {
+    "url": "https://giphy.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://giphy.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://giphy.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "goodreads": {
+    "url": "https://www.goodreads.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.goodreads.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.goodreads.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "gradle": {
+    "url": "https://gradle.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://plugins.gradle.org/u/%s",
+        "existUsername": "jetbrains",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://plugins.gradle.org/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "gravatar": {
+    "url": "http://en.gravatar.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "http://en.gravatar.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "http://en.gravatar.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "gunsandammo": {
+    "url": "https://gunsandammo.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://forums.gunsandammo.com/profile/%s",
+        "existUsername": "adam",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://forums.gunsandammo.com/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "gutefrage": {
+    "url": "https://www.gutefrage.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.gutefrage.net/nutzer/%s",
+        "existUsername": "gutefrage",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.gutefrage.net/nutzer/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "hackthebox": {
+    "url": "https://forum.hackthebox.eu/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://forum.hackthebox.eu/profile/%s",
+        "existUsername": "angar",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://forum.hackthebox.eu/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "hackaday": {
+    "url": "https://hackaday.io/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://hackaday.io/%s",
+        "existUsername": "adam",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://hackaday.io/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "harvardscholar": {
+    "url": "https://scholar.harvard.edu/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://scholar.harvard.edu/%s",
+        "existUsername": "ousmanekane",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://scholar.harvard.edu/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "hashnode": {
+    "url": "https://hashnode.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://hashnode.com/@%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://hashnode.com/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "hubpages": {
+    "url": "https://hubpages.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://hubpages.com/@%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://hubpages.com/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "icq": {
+    "url": "https://icq.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://icq.im/%s/en",
+        "existUsername": "Micheal",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://icq.im/%s/en"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "irl": {
+    "url": "https://www.irl.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.irl.com/%s",
+        "existUsername": "hacker",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.irl.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "icons8community": {
+    "url": "https://community.icons8.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://community.icons8.com/u/%s/summary",
+        "existUsername": "thefourCraft",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://community.icons8.com/u/%s/summary"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "imgup-cz": {
+    "url": "https://imgup.cz/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://imgup.cz/%s",
+        "existUsername": "adam",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://imgup.cz/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "imgur": {
+    "url": "https://imgur.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://api.imgur.com/account/v1/accounts/%s?client_id=546c25a59c58ad7",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://imgur.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "instructables": {
+    "url": "https://www.instructables.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.instructables.com/member/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.instructables.com/member/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "intigriti": {
+    "url": "https://app.intigriti.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "We didn't find what you're looking for",
+        "url": "https://app.intigriti.com/profile/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://app.intigriti.com/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "ionicforum": {
+    "url": "https://forum.ionicframework.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://forum.ionicframework.com/u/%s",
+        "existUsername": "theblue222",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://forum.ionicframework.com/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "issuu": {
+    "url": "https://issuu.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://issuu.com/%s",
+        "existUsername": "jenny",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://issuu.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "itch-io": {
+    "url": "https://itch.io/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.itch.io/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.itch.io/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "jellyfinweblate": {
+    "url": "https://translate.jellyfin.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://translate.jellyfin.org/user/%s/",
+        "existUsername": "EraYaN",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://translate.jellyfin.org/user/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "jimdo": {
+    "url": "https://jimdosite.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.jimdosite.com",
+        "existUsername": "jenny",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.jimdosite.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "joplinforum": {
+    "url": "https://discourse.joplinapp.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://discourse.joplinapp.org/u/%s",
+        "existUsername": "laurent",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://discourse.joplinapp.org/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "keakr": {
+    "url": "https://www.keakr.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.keakr.com/en/profile/%s",
+        "existUsername": "beats",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.keakr.com/en/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "kaggle": {
+    "url": "https://www.kaggle.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.kaggle.com/%s",
+        "existUsername": "dansbecker",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.kaggle.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "keybase": {
+    "url": "https://keybase.io/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://keybase.io/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://keybase.io/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "lor": {
+    "url": "https://linux.org.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.linux.org.ru/people/%s/profile",
+        "existUsername": "red",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.linux.org.ru/people/%s/profile"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "launchpad": {
+    "url": "https://launchpad.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://launchpad.net/~%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://launchpad.net/~%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "lesswrong": {
+    "url": "https://www.lesswrong.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.lesswrong.com/users/@%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.lesswrong.com/users/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "linktree": {
+    "url": "https://linktr.ee/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://linktr.ee/%s",
+        "existUsername": "anne",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://linktr.ee/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "livejournal": {
+    "url": "https://www.livejournal.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.livejournal.com",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.livejournal.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "lobsters": {
+    "url": "https://lobste.rs/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://lobste.rs/u/%s",
+        "existUsername": "jcs",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://lobste.rs/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "lottiefiles": {
+    "url": "https://lottiefiles.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://lottiefiles.com/%s",
+        "existUsername": "lottiefiles",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://lottiefiles.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "lushstories": {
+    "url": "https://www.lushstories.com/",
+    "type": "Social",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.lushstories.com/profile/%s",
+        "existUsername": "chris_brown",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.lushstories.com/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "mmorpgforum": {
+    "url": "https://forums.mmorpg.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://forums.mmorpg.com/profile/%s",
+        "existUsername": "goku",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://forums.mmorpg.com/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "memrise": {
+    "url": "https://www.memrise.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.memrise.com/user/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.memrise.com/user/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "mixcloud": {
+    "url": "https://www.mixcloud.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.mixcloud.com/%s/",
+        "existUsername": "jenny",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.mixcloud.com/%s/",
+        "status": false
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "modelhub": {
+    "url": "https://www.modelhub.com/",
+    "type": "Social",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.modelhub.com/%s/videos",
+        "existUsername": "secretcrush",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.modelhub.com/%s/videos"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "monkeytype": {
+    "url": "https://monkeytype.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://api.monkeytype.com/users/%s/profile",
+        "existUsername": "Lost_Arrow",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://monkeytype.com/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "motorradfrage": {
+    "url": "https://www.motorradfrage.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.motorradfrage.net/nutzer/%s",
+        "existUsername": "gutefrage",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.motorradfrage.net/nutzer/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "munzee": {
+    "url": "https://www.munzee.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.munzee.com/m/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.munzee.com/m/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "myanimelist": {
+    "url": "https://myanimelist.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://myanimelist.net/profile/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://myanimelist.net/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "myminifactory": {
+    "url": "https://www.myminifactory.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.myminifactory.com/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.myminifactory.com/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "myspace": {
+    "url": "https://myspace.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://myspace.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://myspace.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "naver": {
+    "url": "https://naver.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://blog.naver.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://blog.naver.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "needrom": {
+    "url": "https://www.needrom.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.needrom.com/author/%s/",
+        "existUsername": "needrom",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.needrom.com/author/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "newgrounds": {
+    "url": "https://newgrounds.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.newgrounds.com",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.newgrounds.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "nextcloudforum": {
+    "url": "https://nextcloud.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://help.nextcloud.com/u/%s/summary",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://help.nextcloud.com/u/%s/summary"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "nightbot": {
+    "url": "https://nightbot.tv/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://api.nightbot.tv/1/channels/t/%s",
+        "existUsername": "green",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://nightbot.tv/t/%s/commands"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "nintendolife": {
+    "url": "https://www.nintendolife.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.nintendolife.com/users/%s",
+        "existUsername": "goku",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.nintendolife.com/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "notabug-org": {
+    "url": "https://notabug.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://notabug.org/%s",
+        "existUsername": "red",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://notabug.org/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "nyaa-si": {
+    "url": "https://nyaa.si/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://nyaa.si/user/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://nyaa.si/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "ogusers": {
+    "url": "https://ogu.gg/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://ogu.gg/%s",
+        "existUsername": "ogusers",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://ogu.gg/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "openstreetmap": {
+    "url": "https://www.openstreetmap.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.openstreetmap.org/user/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.openstreetmap.org/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "oraclecommunity": {
+    "url": "https://community.oracle.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://community.oracle.com/people/%s",
+        "existUsername": "dev",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://community.oracle.com/people/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "patreon": {
+    "url": "https://www.patreon.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.patreon.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.patreon.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "periscope": {
+    "url": "https://www.periscope.tv/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.periscope.tv/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.periscope.tv/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "pinkbike": {
+    "url": "https://www.pinkbike.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.pinkbike.com/u/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.pinkbike.com/u/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "playstore": {
+    "url": "https://play.google.com/store",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://play.google.com/store/apps/developer?id=%s",
+        "existUsername": "Facebook",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://play.google.com/store/apps/developer?id=%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "pokemonshowdown": {
+    "url": "https://pokemonshowdown.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://pokemonshowdown.com/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://pokemonshowdown.com/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "polarsteps": {
+    "url": "https://polarsteps.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://polarsteps.com/%s",
+        "existUsername": "james",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://polarsteps.com/%s",
+        "status": false
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "polygon": {
+    "url": "https://www.polygon.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.polygon.com/users/%s",
+        "existUsername": "swiftstickler",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.polygon.com/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "pornhub": {
+    "url": "https://pornhub.com/",
+    "type": "Social",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://pornhub.com/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://pornhub.com/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "promodj": {
+    "url": "http://promodj.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "http://promodj.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "http://promodj.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "rajce-net": {
+    "url": "https://www.rajce.idnes.cz/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.rajce.idnes.cz/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.rajce.idnes.cz/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "rateyourmusic": {
+    "url": "https://rateyourmusic.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://rateyourmusic.com/~%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://rateyourmusic.com/~%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "rcloneforum": {
+    "url": "https://forum.rclone.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://forum.rclone.org/u/%s",
+        "existUsername": "ncw",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://forum.rclone.org/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "redtube": {
+    "url": "https://www.redtube.com/",
+    "type": "Social",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.redtube.com/users/%s",
+        "existUsername": "hacker",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.redtube.com/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "redbubble": {
+    "url": "https://www.redbubble.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.redbubble.com/people/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.redbubble.com/people/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "reisefrage": {
+    "url": "https://www.reisefrage.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.reisefrage.net/nutzer/%s",
+        "existUsername": "reisefrage",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.reisefrage.net/nutzer/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "replit-com": {
+    "url": "https://replit.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://replit.com/@%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://replit.com/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "royalcams": {
+    "url": "https://royalcams.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://royalcams.com/profile/%s",
+        "existUsername": "asuna-black",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://royalcams.com/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "rumble": {
+    "url": "https://rumble.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://rumble.com/user/%s",
+        "existUsername": "John",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://rumble.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "swapd": {
+    "url": "https://swapd.co/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://swapd.co/u/%s",
+        "existUsername": "swapd",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://swapd.co/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "sbazar-cz": {
+    "url": "https://www.sbazar.cz/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.sbazar.cz/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.sbazar.cz/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "scratch": {
+    "url": "https://scratch.mit.edu/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://scratch.mit.edu/users/%s",
+        "existUsername": "griffpatch",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://scratch.mit.edu/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "shitpostbot5000": {
+    "url": "https://www.shitpostbot.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.shitpostbot.com/user/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.shitpostbot.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "shpock": {
+    "url": "https://www.shpock.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.shpock.com/shop/%s/items",
+        "existUsername": "user",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.shpock.com/shop/%s/items"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "sketchfab": {
+    "url": "https://sketchfab.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://sketchfab.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://sketchfab.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "slack": {
+    "url": "https://slack.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.slack.com",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.slack.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "slant": {
+    "url": "https://www.slant.co/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.slant.co/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.slant.co/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "slideshare": {
+    "url": "https://slideshare.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://slideshare.net/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://slideshare.net/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "slides": {
+    "url": "https://slides.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://slides.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://slides.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "smugmug": {
+    "url": "https://smugmug.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.smugmug.com",
+        "existUsername": "winchester",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.smugmug.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "soundcloud": {
+    "url": "https://soundcloud.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://soundcloud.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://soundcloud.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "splice": {
+    "url": "https://splice.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://splice.com/%s",
+        "existUsername": "splice",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://splice.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "splits-io": {
+    "url": "https://splits.io",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://splits.io/users/%s",
+        "existUsername": "cambosteve",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://splits.io/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "sporcle": {
+    "url": "https://www.sporcle.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.sporcle.com/user/%s/people",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.sporcle.com/user/%s/people"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "sportlerfrage": {
+    "url": "https://www.sportlerfrage.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.sportlerfrage.net/nutzer/%s",
+        "existUsername": "sportlerfrage",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.sportlerfrage.net/nutzer/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "sportsru": {
+    "url": "https://www.sports.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.sports.ru/profile/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.sports.ru/profile/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "tldrlegal": {
+    "url": "https://tldrlegal.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://tldrlegal.com/users/%s/",
+        "existUsername": "kevin",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://tldrlegal.com/users/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "traktrain": {
+    "url": "https://traktrain.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://traktrain.com/%s",
+        "existUsername": "traktrain",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://traktrain.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "tellonym-me": {
+    "url": "https://tellonym.me/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://tellonym.me/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://tellonym.me/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "tenor": {
+    "url": "https://tenor.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://tenor.com/users/%s",
+        "existUsername": "red",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://tenor.com/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "themeforest": {
+    "url": "https://themeforest.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://themeforest.net/user/%s",
+        "existUsername": "user",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://themeforest.net/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "tnaflix": {
+    "url": "https://www.tnaflix.com/",
+    "type": "Social",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.tnaflix.com/profile/%s",
+        "existUsername": "hacker",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.tnaflix.com/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "tradingview": {
+    "url": "https://www.tradingview.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.tradingview.com/u/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.tradingview.com/u/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "trakt": {
+    "url": "https://www.trakt.tv/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.trakt.tv/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.trakt.tv/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "trashboxru": {
+    "url": "https://trashbox.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://trashbox.ru/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://trashbox.ru/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "trawelling": {
+    "url": "https://traewelling.de/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://traewelling.de/@%s",
+        "existUsername": "lassestolley",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://traewelling.de/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "tuna": {
+    "url": "https://tuna.voicemod.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://tuna.voicemod.net/user/%s",
+        "existUsername": "bob",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://tuna.voicemod.net/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "tweakers": {
+    "url": "https://tweakers.net",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://tweakers.net/gallery/%s",
+        "existUsername": "femme",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://tweakers.net/gallery/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "ultimate-guitar": {
+    "url": "https://ultimate-guitar.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://ultimate-guitar.com/u/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://ultimate-guitar.com/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "vsco": {
+    "url": "https://vsco.co/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://vsco.co/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://vsco.co/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "vero": {
+    "url": "https://vero.co/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://vero.co/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://vero.co/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "vimeo": {
+    "url": "https://vimeo.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://vimeo.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://vimeo.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "wicgforum": {
+    "url": "https://discourse.wicg.io/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://discourse.wicg.io/u/%s/summary",
+        "existUsername": "stefano",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://discourse.wicg.io/u/%s/summary"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "warriorforum": {
+    "url": "https://www.warriorforum.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.warriorforum.com/members/%s.html",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.warriorforum.com/members/%s.html"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "wattpad": {
+    "url": "https://www.wattpad.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.wattpad.com/user/%s",
+        "existUsername": "Dogstho7951",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.wattpad.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "webnode": {
+    "url": "https://www.webnode.cz/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.webnode.cz/",
+        "existUsername": "radkabalcarova",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.webnode.cz/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "weblate": {
+    "url": "https://hosted.weblate.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://hosted.weblate.org/user/%s/",
+        "existUsername": "adam",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://hosted.weblate.org/user/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "weebly": {
+    "url": "https://weebly.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.weebly.com/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.weebly.com/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "whonixforum": {
+    "url": "https://forums.whonix.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://forums.whonix.org/u/%s/summary",
+        "existUsername": "red",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://forums.whonix.org/u/%s/summary"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "windy": {
+    "url": "https://windy.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://community.windy.com/user/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://community.windy.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "wix": {
+    "url": "https://wix.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.wix.com",
+        "existUsername": "support",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.wix.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "wolframalphaforum": {
+    "url": "https://community.wolfram.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://community.wolfram.com/web/%s/home",
+        "existUsername": "unico",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://community.wolfram.com/web/%s/home"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "wykop": {
+    "url": "https://www.wykop.pl",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.wykop.pl/ludzie/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.wykop.pl/ludzie/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "xboxgamertag": {
+    "url": "https://xboxgamertag.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://xboxgamertag.com/search/%s",
+        "existUsername": "red",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://xboxgamertag.com/search/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "xvideos": {
+    "url": "https://xvideos.com/",
+    "type": "Social",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://xvideos.com/profiles/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://xvideos.com/profiles/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "yandexmusic": {
+    "url": "https://music.yandex",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://music.yandex/users/%s/playlists",
+        "existUsername": "ya.playlist",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://music.yandex/users/%s/playlists"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "youpic": {
+    "url": "https://youpic.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://youpic.com/photographer/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://youpic.com/photographer/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "youporn": {
+    "url": "https://youporn.com",
+    "type": "Social",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://youporn.com/uservids/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://youporn.com/uservids/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "youtubechannel": {
+    "url": "https://www.youtube.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.youtube.com/c/%s",
+        "existUsername": "mkbhd",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.youtube.com/c/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "youtubeuser": {
+    "url": "https://www.youtube.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.youtube.com/user/%s",
+        "existUsername": "pewdiepie",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.youtube.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "akniga": {
+    "url": "https://akniga.org/profile/blue/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://akniga.org/profile/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://akniga.org/profile/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "authorstream": {
+    "url": "http://www.authorstream.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "http://www.authorstream.com/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "http://www.authorstream.com/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "chaos-social": {
+    "url": "https://chaos.social/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://chaos.social/@%s",
+        "existUsername": "rixx",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://chaos.social/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "couchsurfing": {
+    "url": "https://www.couchsurfing.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.couchsurfing.com/people/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.couchsurfing.com/people/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "d3ru": {
+    "url": "https://d3.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://d3.ru/user/%s/posts",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://d3.ru/user/%s/posts"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "dating-ru": {
+    "url": "http://dating.ru",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "http://dating.ru/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "http://dating.ru/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "drive2": {
+    "url": "https://www.drive2.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.drive2.ru/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.drive2.ru/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "egpu": {
+    "url": "https://egpu.io/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://egpu.io/forums/profile/%s/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://egpu.io/forums/profile/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "ebio-gg": {
+    "url": "https:/ebio.gg",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://ebio.gg/%s",
+        "existUsername": "dev",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://ebio.gg/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "eintracht": {
+    "url": "https://eintracht.de",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://community.eintracht.de/fans/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://community.eintracht.de/fans/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "fixya": {
+    "url": "https://www.fixya.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.fixya.com/users/%s",
+        "existUsername": "adam",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.fixya.com/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "fl": {
+    "url": "https://www.fl.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.fl.ru/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.fl.ru/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "geocaching": {
+    "url": "https://www.geocaching.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.geocaching.com/p/default.aspx?u=%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.geocaching.com/p/default.aspx?u=%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "gfycat": {
+    "url": "https://gfycat.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://gfycat.com/@%s",
+        "existUsername": "Test",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://gfycat.com/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "habr": {
+    "url": "https://habr.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://habr.com/ru/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://habr.com/ru/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "hackster": {
+    "url": "https://www.hackster.io",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.hackster.io/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.hackster.io/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "irecommend": {
+    "url": "https://irecommend.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://irecommend.ru/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://irecommend.ru/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "jbzd": {
+    "url": "https://jbzd.com.pl/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://jbzd.com.pl/uzytkownik/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://jbzd.com.pl/uzytkownik/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "kwork": {
+    "url": "https://www.kwork.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://kwork.ru/user/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://kwork.ru/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "last-fm": {
+    "url": "https://last.fm/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://last.fm/user/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://last.fm/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "leasehackr": {
+    "url": "https://forum.leasehackr.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://forum.leasehackr.com/u/%s/summary/",
+        "existUsername": "adam",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://forum.leasehackr.com/u/%s/summary/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "livelib": {
+    "url": "https://www.livelib.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.livelib.ru/reader/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.livelib.ru/reader/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "mastodon-cloud": {
+    "url": "https://mastodon.cloud/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://mastodon.cloud/@%s",
+        "existUsername": "TheAdmin",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://mastodon.cloud/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "mastodon-social": {
+    "url": "https://chaos.social/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://mastodon.social/@%s",
+        "existUsername": "Gargron",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://mastodon.social/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "mastodon-technology": {
+    "url": "https://mastodon.xyz/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://mastodon.technology/@%s",
+        "existUsername": "ashfurrow",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://mastodon.technology/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "mastodon-xyz": {
+    "url": "https://mastodon.xyz/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://mastodon.xyz/@%s",
+        "existUsername": "TheKinrar",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://mastodon.xyz/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "mercadolivre": {
+    "url": "https://www.mercadolivre.com.br",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.mercadolivre.com.br/perfil/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.mercadolivre.com.br/perfil/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "moikrug": {
+    "url": "https://moikrug.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://moikrug.ru/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://moikrug.ru/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "mstdn-io": {
+    "url": "https://mstdn.io/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://mstdn.io/@%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://mstdn.io/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "nairaland-com": {
+    "url": "https://www.nairaland.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.nairaland.com/%s",
+        "existUsername": "red",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.nairaland.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "nnru": {
+    "url": "https://www.nn.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.www.nn.ru/",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.www.nn.ru/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "note": {
+    "url": "https://note.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://note.com/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://note.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "npm": {
+    "url": "https://www.npmjs.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.npmjs.com/~%s",
+        "existUsername": "kennethsweezy",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.npmjs.com/~%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "osu!": {
+    "url": "https://osu.ppy.sh/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://osu.ppy.sh/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://osu.ppy.sh/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "pikabu": {
+    "url": "https://pikabu.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://pikabu.ru/@%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://pikabu.ru/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "pr0gramm": {
+    "url": "https://pr0gramm.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "304",
+        "url": "https://api.polarsteps.com/users/byusername/%s",
+        "existUsername": "Guschtl",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://pr0gramm.com/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "queer-af": {
+    "url": "https://queer.af/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://queer.af/@%s",
+        "existUsername": "erincandescent",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://queer.af/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "satsisru": {
+    "url": "https://satsis.info/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://satsis.info/user/%s",
+        "existUsername": "red",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://satsis.info/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "sessionize": {
+    "url": "https://sessionize.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://sessionize.com/%s",
+        "existUsername": "jason-mayes",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://sessionize.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "skyrock": {
+    "url": "https://skyrock.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://%s.skyrock.com/",
+        "existUsername": "red",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://%s.skyrock.com/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "social-tchncs": {
+    "url": "https://social.tchncs.de/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://social.tchncs.de/@%s",
+        "existUsername": "Milan",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://social.tchncs.de/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "spletnik": {
+    "url": "https://spletnik.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://spletnik.ru/user/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://spletnik.ru/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "svidbook": {
+    "url": "https://www.svidbook.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.svidbook.ru/user/%s",
+        "existUsername": "green",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.svidbook.ru/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "toster": {
+    "url": "https://www.toster.ru/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.toster.ru/user/%s/answers",
+        "existUsername": "adam",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.toster.ru/user/%s/answers"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "uid": {
+    "url": "https://uid.me/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "http://uid.me/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "http://uid.me/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "wiki-vg": {
+    "url": "https://wiki.vg/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://wiki.vg/User:%s",
+        "existUsername": "Auri",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://wiki.vg/User:%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "wykop-pl": {
+    "url": "https://wykop.pl",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.wykop.pl/ludzie/%s",
+        "existUsername": "janusz-nowak",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.wykop.pl/ludzie/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "xhamster": {
+    "url": "https://xhamster.com",
+    "type": "Social",
+    "isNSFW": true,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://xhamster.com/users/%s",
+        "existUsername": "blue",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://xhamster.com/users/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  },
+  "znanylekarz-pl": {
+    "url": "https://znanylekarz.pl",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.znanylekarz.pl/%s",
+        "existUsername": "janusz-nowak",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.znanylekarz.pl/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    }
+  }
 }
