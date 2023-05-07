@@ -71,7 +71,16 @@ var detectCmd = &cobra.Command{
 }
 
 func detect(_ *cobra.Command, _ []string) {
-	log.Infoln("Detect for", detectArgs.name)
+	if len(detectArgs.name) != 0 {
+		log.Infoln("Detect for", detectArgs.name)
+	}
+	if len(detectArgs.email) != 0 {
+		log.Infoln("Detect for", detectArgs.email)
+	}
+	if len(detectArgs.phone) != 0 {
+		log.Infoln("Detect for", detectArgs.phone)
+	}
+
 	if Verbose {
 		log.Infoln("Debug Mode")
 		log.SetLevel(log.DebugLevel)
@@ -135,6 +144,7 @@ func detect(_ *cobra.Command, _ []string) {
 		}
 	}
 	wg.Wait()
+	log.Infoln("[+] Detect completed.")
 }
 
 func detectSite(name, site, nameType string, siteBody gjson.Result) {
