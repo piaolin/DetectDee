@@ -24,6 +24,9 @@ type detectArgsType struct {
 	precisely bool
 	retry     int
 	file      string
+	google    bool
+	email     []string
+	phone     []string
 	//unique    bool
 }
 
@@ -42,16 +45,19 @@ var (
 )
 
 func init() {
-	detectCmd.Flags().StringSliceVarP(&detectArgs.name, "name", "n", []string{}, "name[s]")
+	detectCmd.Flags().StringSliceVarP(&detectArgs.name, "name", "n", []string{}, "name[s], e.g. piaolin,poq79,SomeOneYouLike")
+	detectCmd.Flags().StringSliceVarP(&detectArgs.email, "email", "e", []string{}, "email[s], e.g. mail@gmail.com,45715485@qq.com")
+	detectCmd.Flags().StringSliceVarP(&detectArgs.phone, "phone", "p", []string{}, "phone[s], e.g. 15725753684,13575558962")
 	//_ = detectCmd.MarkFlagRequired("name")
 	detectCmd.Flags().StringSliceVarP(&detectArgs.site, "site", "s", []string{}, "Limit analysis to just the listed sites. Add multiple options to specify more than one site.")
 	detectCmd.Flags().BoolVarP(&detectArgs.check, "check", "c", false, "self-check")
-	detectCmd.Flags().StringVarP(&detectArgs.proxy, "proxy", "p", "", "Make requests over a proxy. e.g. socks5://127.0.0.1:1080")
+	detectCmd.Flags().StringVar(&detectArgs.proxy, "proxy", "", "Make requests over a proxy. e.g. socks5://127.0.0.1:1080")
 	detectCmd.Flags().IntVarP(&detectArgs.timeout, "timeout", "t", 10, "Time (in seconds) to wait for response to requests")
 	detectCmd.Flags().BoolVar(&detectArgs.isNSFW, "nsfw", false, "Include checking of NSFW sites from default list.")
 	detectCmd.Flags().IntVarP(&detectArgs.retry, "retry", "r", 3, "Retry times after request failed")
 	detectCmd.Flags().BoolVar(&detectArgs.precisely, "precisely", false, "Check precisely")
 	detectCmd.Flags().StringVarP(&detectArgs.file, "file", "f", "data.json", "Site data file")
+	detectCmd.Flags().BoolVarP(&detectArgs.google, "google", "g", false, "Show google search result")
 
 	//detectCmd.Flags().BoolVar(&detectArgs.unique, "unique", false, "Make new requests client for each site")
 	rootCmd.AddCommand(detectCmd)
@@ -104,9 +110,26 @@ func detect(_ *cobra.Command, _ []string) {
 	if detectArgs.check {
 		log.Infoln("self check")
 	} else {
+		// detect by name
 		for _, name := range detectArgs.name {
 			for site, siteBody := range siteDataMap {
-				go detectSite(name, site, siteBody)
+				go detectSite(name, site, "username", siteBody)
+				wg.Add(1)
+			}
+		}
+
+		// detect by email
+		for _, email := range detectArgs.email {
+			for site, siteBody := range siteDataMap {
+				go detectSite(email, site, "email", siteBody)
+				wg.Add(1)
+			}
+		}
+
+		// detect by phone
+		for _, phone := range detectArgs.phone {
+			for site, siteBody := range siteDataMap {
+				go detectSite(phone, site, "phone", siteBody)
 				wg.Add(1)
 			}
 		}
@@ -114,7 +137,7 @@ func detect(_ *cobra.Command, _ []string) {
 	wg.Wait()
 }
 
-func detectSite(name, site string, siteBody gjson.Result) {
+func detectSite(name, site, nameType string, siteBody gjson.Result) {
 	defer wg.Done()
 
 	// flag for precisely mode
@@ -126,7 +149,7 @@ func detectSite(name, site string, siteBody gjson.Result) {
 	}
 
 	// Check name
-	if nameCheck := siteBody.Get("nameCheck"); nameCheck.Exists() && len(nameCheck.Str) != 0 {
+	if nameCheck := siteBody.Get("nameCheck"); nameCheck.Exists() && len(nameCheck.Str) != 0 && nameType == "username" {
 		match, err := regexp.MatchString(nameCheck.String(), name)
 		if err != nil {
 			log.Fatalln(err)
@@ -143,12 +166,25 @@ func detectSite(name, site string, siteBody gjson.Result) {
 	detectCount := len(detectReq) - 1
 	for index, detectData := range detectReq {
 
+		// check status
 		if status := detectData.Get("status"); status.Exists() && !status.Bool() {
 			log.Debugf(disableSiteInfo, name, site, site)
 			break
 		}
 		retryTimes := 0
-		if detectUser(name, site, index, retryTimes, detectCount, &flag, detectData) {
+
+		if search := detectData.Get("search"); search.Exists() {
+			// google options
+			if detectArgs.google {
+				searchString := search.String()
+				if strings.Contains(searchString, "%s") {
+					searchString = fmt.Sprintf(searchString, name)
+				}
+				searchUrl := fmt.Sprintf(detectData.Get("searchUrl").String(), searchString)
+				log.Infof(searchInfo, name, site, searchUrl)
+				break
+			}
+		} else if strings.Contains(detectData.Get("type").String(), nameType) && detectUser(name, site, index, retryTimes, detectCount, &flag, detectData) {
 			continue
 		} else {
 			break
@@ -189,14 +225,6 @@ func detectUser(name, site string, requestTimes, retryTimes, detectCount int, fl
 		if strings.Contains(url, "%s") {
 			url = fmt.Sprintf(url, name)
 		}
-	} else if search := detectData.Get("search"); search.Exists() {
-		searchString := search.String()
-		if strings.Contains(searchString, "%s") {
-			searchString = fmt.Sprintf(searchString, name)
-		}
-		searchUrl := fmt.Sprintf(detectData.Get("searchUrl").String(), searchString)
-		log.Infof(searchInfo, name, site, searchUrl)
-		return false
 	} else {
 		log.Fatalln("Why no URL???")
 	}

@@ -30,16 +30,21 @@ Usage:
   DetectDee detect [flags]
 
 Flags:
-  -c, --check          self-check
-  -f, --file string    Site data file (default "data.json")
-  -h, --help           help for detect
-  -n, --name strings   name[s]
-      --nsfw           Include checking of NSFW sites from default list.        
-      --precisely      Check precisely
-  -p, --proxy string   Make requests over a proxy. e.g. socks5://127.0.0.1:1080 
-  -r, --retry int      Retry times after request failed (default 3)
-  -s, --site strings   Limit analysis to just the listed sites. Add multiple options to specify more than one site.
-  -t, --timeout int    Time (in seconds) to wait for response to requests (default 10)
+  -c, --check           self-check
+  -e, --email strings   email[s], e.g. mail@gmail.com,45715485@qq.com
+  -f, --file string     Site data file (default "data.json")
+  -g, --google          Show google search result
+  -h, --help            help for detect
+  -n, --name strings    name[s], e.g. piaolin,poq79,SomeOneYouLike
+      --nsfw            Include checking of NSFW sites from default list.       
+  -p, --phone strings   phone[s], e.g. 15725753684,13575558962
+      --precisely       Check precisely
+      --proxy string    Make requests over a proxy. e.g. socks5://127.0.0.1:1080
+  -r, --retry int       Retry times after request failed (default 3)
+  -s, --site strings    Limit analysis to just the listed sites. Add multiple op
+tions to specify more than one site.
+  -t, --timeout int     Time (in seconds) to wait for response to requests (defa
+ult 10)
 
 Global Flags:
   -v, --verbose   verbose output
@@ -59,6 +64,21 @@ To search for only one user:
 To search for more than one user:
 ```shell
 ./DetectDee detect -n piaolin,blue
+```
+
+To search for email:
+```shell
+./DetectDee detect -e mail@gmail.com,test@163.com
+```
+
+To search for phone:
+```shell
+./DetectDee detect -p 15822575984,13188524682
+```
+
+Show google search(please check yourself):
+```shell
+./DetectDee detect -n piaolin,blue -g
 ```
 
 To search in specified site:
