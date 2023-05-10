@@ -43,6 +43,7 @@ Flags:
 tions to specify more than one site.
   -t, --timeout int     Time (in seconds) to wait for response to requests (defa
 ult 10)
+  -S  --screenshot      screenshot the userpage and save
 
 Global Flags:
   -v, --verbose   verbose output

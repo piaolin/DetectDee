@@ -3,30 +3,32 @@ package cmd
 import (
 	"DetectDee/utils"
 	"fmt"
-	"github.com/go-resty/resty/v2"
-	log "github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
-	"github.com/tidwall/gjson"
 	"io/ioutil"
 	"regexp"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/go-resty/resty/v2"
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
+	"github.com/tidwall/gjson"
 )
 
 type detectArgsType struct {
-	name      []string
-	site      []string
-	check     bool
-	proxy     string
-	timeout   int
-	isNSFW    bool
-	precisely bool
-	retry     int
-	file      string
-	google    bool
-	email     []string
-	phone     []string
+	name       []string
+	site       []string
+	check      bool
+	proxy      string
+	timeout    int
+	isNSFW     bool
+	precisely  bool
+	retry      int
+	file       string
+	google     bool
+	email      []string
+	phone      []string
+	screenshot bool
 	//unique    bool
 }
 
@@ -42,6 +44,8 @@ var (
 	searchInfo      = "[+] %-15s %-15s: Please check in %s\n"
 	disableSiteInfo = "[!] %-15s %-15s: data of %s is temporarily unavailable\n"
 	nsfwInfo        = "[!] %-15s %-15s: %s is nsfw\n"
+	safeFolderName  = "defaultScreenshotFolder"
+	existUserPage   = false
 )
 
 func init() {
@@ -58,6 +62,7 @@ func init() {
 	detectCmd.Flags().BoolVar(&detectArgs.precisely, "precisely", false, "Check precisely")
 	detectCmd.Flags().StringVarP(&detectArgs.file, "file", "f", "data.json", "Site data file")
 	detectCmd.Flags().BoolVarP(&detectArgs.google, "google", "g", false, "Show google search result")
+	detectCmd.Flags().BoolVarP(&detectArgs.screenshot, "screenshot", "S", false, "screenshot the userpage and save")
 
 	//detectCmd.Flags().BoolVar(&detectArgs.unique, "unique", false, "Make new requests client for each site")
 	rootCmd.AddCommand(detectCmd)
@@ -292,20 +297,36 @@ func detectUser(name, site string, requestTimes, retryTimes, detectCount int, fl
 
 	userPage := detectData.Get("userPage").String()
 	if strings.Contains(userPage, "%s") {
+		existUserPage = true
 		userPage = fmt.Sprintf(userPage, name)
+	} else {
+		existUserPage = false
 	}
-
+	if detectArgs.screenshot {
+		safeFolderName = utils.SanitizeFilename(name + "_userpage")
+		utils.CreateDirIfNotExists("./" + safeFolderName)
+	}
 	// precisely mode
 	if !*flag {
 		log.Debugf(nonExistInfo, name, site)
 		return false
 	} else if !detectArgs.precisely {
 		// flag=true && precisely=false
-		log.Infof(existInfo, name, site, userPage)
+		if detectArgs.screenshot && existUserPage {
+			log.Infof(existInfo, name, site, userPage+"   [screenshot]")
+			utils.DoScreenshot(userPage, safeFolderName)
+		} else {
+			log.Infof(existInfo, name, site, userPage)
+		}
 		return false
 	} else if requestTimes == detectCount {
 		// flag=true && precisely=true && last request
-		log.Infof(existInfo, name, site, userPage)
+		if detectArgs.screenshot && existUserPage {
+			log.Infof(existInfo, name, site, userPage+"   [screenshot]")
+			utils.DoScreenshot(userPage, safeFolderName)
+		} else {
+			log.Infof(existInfo, name, site, userPage)
+		}
 		return true
 	} else {
 		return true
