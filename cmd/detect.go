@@ -1,17 +1,19 @@
 package cmd
 
 import (
-	"DetectDee/utils"
 	"fmt"
-	"github.com/go-resty/resty/v2"
-	log "github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
-	"github.com/tidwall/gjson"
 	"io/ioutil"
 	"regexp"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/go-resty/resty/v2"
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
+	"github.com/tidwall/gjson"
+
+	"DetectDee/utils"
 )
 
 type detectArgsType struct {
@@ -27,7 +29,7 @@ type detectArgsType struct {
 	google    bool
 	email     []string
 	phone     []string
-	//unique    bool
+	// unique    bool
 }
 
 var (
@@ -48,7 +50,7 @@ func init() {
 	detectCmd.Flags().StringSliceVarP(&detectArgs.name, "name", "n", []string{}, "name[s], e.g. piaolin,poq79,SomeOneYouLike")
 	detectCmd.Flags().StringSliceVarP(&detectArgs.email, "email", "e", []string{}, "email[s], e.g. mail@gmail.com,45715485@qq.com")
 	detectCmd.Flags().StringSliceVarP(&detectArgs.phone, "phone", "p", []string{}, "phone[s], e.g. 15725753684,13575558962")
-	//_ = detectCmd.MarkFlagRequired("name")
+	// _ = detectCmd.MarkFlagRequired("name")
 	detectCmd.Flags().StringSliceVarP(&detectArgs.site, "site", "s", []string{}, "Limit analysis to just the listed sites. Add multiple options to specify more than one site.")
 	detectCmd.Flags().BoolVarP(&detectArgs.check, "check", "c", false, "self-check")
 	detectCmd.Flags().StringVar(&detectArgs.proxy, "proxy", "", "Make requests over a proxy. e.g. socks5://127.0.0.1:1080")
@@ -59,7 +61,7 @@ func init() {
 	detectCmd.Flags().StringVarP(&detectArgs.file, "file", "f", "data.json", "Site data file")
 	detectCmd.Flags().BoolVarP(&detectArgs.google, "google", "g", false, "Show google search result")
 
-	//detectCmd.Flags().BoolVar(&detectArgs.unique, "unique", false, "Make new requests client for each site")
+	// detectCmd.Flags().BoolVar(&detectArgs.unique, "unique", false, "Make new requests client for each site")
 	rootCmd.AddCommand(detectCmd)
 }
 
@@ -71,7 +73,9 @@ var detectCmd = &cobra.Command{
 }
 
 func detect(_ *cobra.Command, _ []string) {
-	log.Infoln("Detect for", detectArgs.name)
+	log.Infoln("Detect for username", detectArgs.name)
+	log.Infoln("Detect for email", detectArgs.email)
+	log.Infoln("Detect for phone", detectArgs.phone)
 	if Verbose {
 		log.Infoln("Debug Mode")
 		log.SetLevel(log.DebugLevel)
@@ -250,17 +254,17 @@ func detectUser(name, site string, requestTimes, retryTimes, detectCount int, fl
 	}
 
 	if retryTimes == detectArgs.retry {
-		//log.Infof(reqErrorInfo, name, site, url, retryTimes, detectArgs.retry)
+		// log.Infof(reqErrorInfo, name, site, url, retryTimes, detectArgs.retry)
 		return false
 	}
 
-	//log.Infoln(rep.Request.Body)
-	//log.Debugln(rep.Status())
-	//log.Debugln(rep.Proto())
+	// log.Infoln(rep.Request.Body)
+	// log.Debugln(rep.Status())
+	// log.Debugln(rep.Proto())
 	//
-	//log.Debugln(rep.Request.Header)
+	// log.Debugln(rep.Request.Header)
 	//
-	//log.Debugln(rep.Status(), rep.String())
+	// log.Debugln(rep.Status(), rep.String())
 
 	// statusCode, existRegex must both be true
 	statusCode := detectData.Get("statusCode")
