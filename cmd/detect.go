@@ -27,21 +27,25 @@ type detectArgsType struct {
 	google    bool
 	email     []string
 	phone     []string
+	output    string
 	//unique    bool
 }
 
 var (
-	detectArgs      detectArgsType
-	wg              sync.WaitGroup
-	nonSiteData     = "[-] There is no site data of %s\n"
-	existInfo       = "[+] %-15s %-15s: %s\n"
-	nonExistInfo    = "[-] %-15s %-15s: non exists\n"
-	reqErrorInfo    = "[!] %-15s %-15s: %s requests error, retry %d/%d\n"
-	sleepMap        = make(map[string]int64)
-	sleepChannel    = make(map[string]chan bool)
-	searchInfo      = "[+] %-15s %-15s: Please check in %s\n"
-	disableSiteInfo = "[!] %-15s %-15s: data of %s is temporarily unavailable\n"
-	nsfwInfo        = "[!] %-15s %-15s: %s is nsfw\n"
+	detectArgs          detectArgsType
+	wg                  sync.WaitGroup
+	nonSiteData         = "[-] There is no site data of %s\n"
+	existInfo           = "[+] %-15s %-15s: %s\n"
+	nonExistInfo        = "[-] %-15s %-15s: non exists\n"
+	reqErrorInfo        = "[!] %-15s %-15s: %s requests error, retry %d/%d\n"
+	sleepMap            = make(map[string]int64)
+	sleepChannel        = make(map[string]chan bool)
+	searchInfo          = "[+] %-15s %-15s: Please check in %s\n"
+	disableSiteInfo     = "[!] %-15s %-15s: data of %s is temporarily unavailable\n"
+	detectCompletedInfo = "[+] Detect completed, save to %s\n"
+	nsfwInfo            = "[!] %-15s %-15s: %s is nsfw\n"
+	writeContent        = make(chan string)
+	writeDone           = make(chan bool)
 )
 
 func init() {
@@ -58,6 +62,7 @@ func init() {
 	detectCmd.Flags().BoolVar(&detectArgs.precisely, "precisely", false, "Check precisely")
 	detectCmd.Flags().StringVarP(&detectArgs.file, "file", "f", "data.json", "Site data file")
 	detectCmd.Flags().BoolVarP(&detectArgs.google, "google", "g", false, "Show google search result")
+	detectCmd.Flags().StringVarP(&detectArgs.output, "output", "o", "result.txt", "Result file")
 
 	//detectCmd.Flags().BoolVar(&detectArgs.unique, "unique", false, "Make new requests client for each site")
 	rootCmd.AddCommand(detectCmd)
@@ -85,6 +90,8 @@ func detect(_ *cobra.Command, _ []string) {
 		log.Infoln("Debug Mode")
 		log.SetLevel(log.DebugLevel)
 	}
+
+	go utils.WriteToFile(detectArgs.output, writeContent, writeDone)
 
 	log.Debugln(detectArgs)
 	siteData, err := ioutil.ReadFile(detectArgs.file)
@@ -143,8 +150,10 @@ func detect(_ *cobra.Command, _ []string) {
 			}
 		}
 	}
+
 	wg.Wait()
-	log.Infoln("[+] Detect completed.")
+	writeDone <- true
+	log.Infof(detectCompletedInfo, detectArgs.output)
 }
 
 func detectSite(name, site, nameType string, siteBody gjson.Result) {
@@ -312,10 +321,12 @@ func detectUser(name, site string, requestTimes, retryTimes, detectCount int, fl
 	} else if !detectArgs.precisely {
 		// flag=true && precisely=false
 		log.Infof(existInfo, name, site, userPage)
+		writeContent <- fmt.Sprintf(existInfo, name, site, userPage)
 		return false
 	} else if requestTimes == detectCount {
 		// flag=true && precisely=true && last request
 		log.Infof(existInfo, name, site, userPage)
+		writeContent <- fmt.Sprintf(existInfo, name, site, userPage)
 		return true
 	} else {
 		return true
