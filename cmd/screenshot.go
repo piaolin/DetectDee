@@ -152,7 +152,7 @@ func navigate(workerNum int) {
 			log.Errorf("[-] Failed to take (URL:%s) screenshot: %v", urlStr, err)
 			continue
 		}
-		pngFilePath := fmt.Sprintf("./%s/%s.png", screenshotArgs.result, name+"-"+getDomain(urlStr))
+		pngFilePath := fmt.Sprintf("./%s/%s.png", screenshotArgs.result, name)
 		if err := ioutil.WriteFile(pngFilePath, buf, 0644); err != nil {
 			log.Errorf("[-] Failed to write file %v", err)
 			continue
