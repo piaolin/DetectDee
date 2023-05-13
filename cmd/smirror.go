@@ -41,7 +41,7 @@ var (
 func init() {
 	mirrorCmd.Flags().StringVar(&mirrorArgs.proxy, "proxy", "", "Make requests over a proxy. e.g. socks5://127.0.0.1:1080")
 	mirrorCmd.Flags().StringVar(&mirrorArgs.path, "path", "", "Chrome ExecPath")
-	mirrorCmd.Flags().StringVarP(&mirrorArgs.result, "result", "r", "screenshots", "Folder path of the screenshot")
+	mirrorCmd.Flags().StringVarP(&mirrorArgs.result, "dir", "d", "screenshots", "Folder path of the screenshot")
 	mirrorCmd.Flags().BoolVar(&mirrorArgs.chrome, "chrome", false, "Show chrome")
 	mirrorCmd.Flags().IntVarP(&mirrorArgs.thread, "thread", "t", 3, "Chrome number")
 	mirrorCmd.Flags().StringVarP(&mirrorArgs.file, "file", "f", "result.txt", "Url list file")
