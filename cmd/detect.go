@@ -36,6 +36,7 @@ var (
 	wg                  sync.WaitGroup
 	nonSiteData         = "[-] There is no site data of %s\n"
 	existInfo           = "[+] %-15s %-15s: %s\n"
+	existOutputInfo     = "%-15s %-15s: %s\n"
 	nonExistInfo        = "[-] %-15s %-15s: non exists\n"
 	reqErrorInfo        = "[!] %-15s %-15s: %s requests error, retry %d/%d\n"
 	sleepMap            = make(map[string]int64)
@@ -321,12 +322,12 @@ func detectUser(name, site string, requestTimes, retryTimes, detectCount int, fl
 	} else if !detectArgs.precisely {
 		// flag=true && precisely=false
 		log.Infof(existInfo, name, site, userPage)
-		writeContent <- fmt.Sprintf(existInfo, name, site, userPage)
+		writeContent <- fmt.Sprintf(existOutputInfo, name, site, userPage)
 		return false
 	} else if requestTimes == detectCount {
 		// flag=true && precisely=true && last request
 		log.Infof(existInfo, name, site, userPage)
-		writeContent <- fmt.Sprintf(existInfo, name, site, userPage)
+		writeContent <- fmt.Sprintf(existOutputInfo, name, site, userPage)
 		return true
 	} else {
 		return true
