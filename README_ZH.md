@@ -3,6 +3,7 @@
 
 神探狄仁杰: 在[社交网络](site.md)上通过**用户名，电子邮件或电话**搜索社交媒体账户
 ![example.gif](https://s2.loli.net/2023/04/30/FZ1QtKoGud4xVPW.gif)
+![screen.jpg](https://s2.loli.net/2023/05/13/XzV4EGKrbkURHQg.jpg)
 ## 特性
 - 集成**网络安全从业者**常用网站
 - 通过**用户名，电子邮件或电话**查找社交媒体账户
@@ -81,7 +82,34 @@ Global Flags:
 ```shell
 ./DetectDee detect -n piaolin -s github,v2ex
 ```
-
+### 截屏
+截屏功能用于将探测得来的结果进行访问截屏，请注意该功能需要：
+- Chrome
+- 一定时间
+- 一定内存占用
+```shell
+Usage:                                                                         
+  DetectDee screenshot [flags]                                                 
+                                                                               
+Flags:                                                                         
+      --chrome         Show chrome                                             
+  -d, --dir string     Folder path of the screenshot (default "screenshots")   
+  -f, --file string    Url list file (default "result.txt")                    
+  -h, --help           help for screenshot                                     
+      --path string    Chrome ExecPath                                         
+      --proxy string   Make requests over a proxy. e.g. socks5://127.0.0.1:1080
+  -t, --thread int     Chrome number (default 3)                               
+      --timeout int    Timeout (default 60)                                    
+                                                                               
+Global Flags:                                                                  
+  -v, --verbose   verbose output
+```
+对detect得到结果进行截屏
+```shell
+./DetectDee screenshot
+```
+![result.jpg](https://s2.loli.net/2023/05/13/OWRDnU98TyCdceN.jpg)
+![screen.jpg](https://s2.loli.net/2023/05/13/XzV4EGKrbkURHQg.jpg)
 ## 贡献
 希望您能帮助我们开发“神探狄仁杰”，您的每一份提交都会得到我的重视。
 

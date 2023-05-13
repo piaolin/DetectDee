@@ -3,6 +3,7 @@
 
 DetectDee: Hunt down social media accounts by **username, email or phone** across [social networks](site.md)
 ![example.gif](https://s2.loli.net/2023/04/30/FZ1QtKoGud4xVPW.gif)
+![screen.jpg](https://s2.loli.net/2023/05/13/XzV4EGKrbkURHQg.jpg)
 ## Feat
 - Includes sites frequently used by **CyberSecurity practitioners**
 - Hunt down social media accounts by **username, email or phone**
@@ -85,7 +86,35 @@ To search in specified site:
 ```shell
 ./DetectDee detect -n piaolin -s github,v2ex
 ```
+### Screenshot
+The screenshot function is used to screenshot the results of detect. Note that this function requires:
+- Chrome
+- A period of time
+- A bit of memory usage
+```shell
+Usage:                                                                         
+  DetectDee screenshot [flags]                                                 
+                                                                               
+Flags:                                                                         
+      --chrome         Show chrome                                             
+  -d, --dir string     Folder path of the screenshot (default "screenshots")   
+  -f, --file string    Url list file (default "result.txt")                    
+  -h, --help           help for screenshot                                     
+      --path string    Chrome ExecPath                                         
+      --proxy string   Make requests over a proxy. e.g. socks5://127.0.0.1:1080
+  -t, --thread int     Chrome number (default 3)                               
+      --timeout int    Timeout (default 60)                                    
+                                                                               
+Global Flags:                                                                  
+  -v, --verbose   verbose output
+```
 
+Screenshot the results of detect
+```shell
+./DetectDee screenshot
+```
+![result.jpg](https://s2.loli.net/2023/05/13/OWRDnU98TyCdceN.jpg)
+![screen.jpg](https://s2.loli.net/2023/05/13/XzV4EGKrbkURHQg.jpg)
 ## Contributing
 We would love to have you help us with the development of DetectDee. Each and every contribution is greatly valued!
 
