@@ -19,7 +19,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-type mirrorArgsType struct {
+type screenshotArgsType struct {
 	proxy   string
 	chrome  bool
 	thread  int
@@ -30,8 +30,8 @@ type mirrorArgsType struct {
 }
 
 var (
-	mirrorArgs              mirrorArgsType
-	mirrorWg                sync.WaitGroup
+	screenshotArgs          screenshotArgsType
+	screenshotWg            sync.WaitGroup
 	targets                 = make(chan string, 1000)
 	execPathNotFound        = "[-] Chrome executable file not found, please install Chrome or specify the chrome.exe path with --path"
 	urlFileReadError        = "[-] failed to read targets file:%v"
@@ -39,35 +39,35 @@ var (
 )
 
 func init() {
-	mirrorCmd.Flags().StringVar(&mirrorArgs.proxy, "proxy", "", "Make requests over a proxy. e.g. socks5://127.0.0.1:1080")
-	mirrorCmd.Flags().StringVar(&mirrorArgs.path, "path", "", "Chrome ExecPath")
-	mirrorCmd.Flags().StringVarP(&mirrorArgs.result, "dir", "d", "screenshots", "Folder path of the screenshot")
-	mirrorCmd.Flags().BoolVar(&mirrorArgs.chrome, "chrome", false, "Show chrome")
-	mirrorCmd.Flags().IntVarP(&mirrorArgs.thread, "thread", "t", 3, "Chrome number")
-	mirrorCmd.Flags().StringVarP(&mirrorArgs.file, "file", "f", "result.txt", "Url list file")
-	mirrorCmd.Flags().IntVar(&mirrorArgs.timeout, "timeout", 60, "Timeout")
-	rootCmd.AddCommand(mirrorCmd)
+	screenshotCmd.Flags().StringVar(&screenshotArgs.proxy, "proxy", "", "Make requests over a proxy. e.g. socks5://127.0.0.1:1080")
+	screenshotCmd.Flags().StringVar(&screenshotArgs.path, "path", "", "Chrome ExecPath")
+	screenshotCmd.Flags().StringVarP(&screenshotArgs.result, "dir", "d", "screenshots", "Folder path of the screenshot")
+	screenshotCmd.Flags().BoolVar(&screenshotArgs.chrome, "chrome", false, "Show chrome")
+	screenshotCmd.Flags().IntVarP(&screenshotArgs.thread, "thread", "t", 3, "Chrome number")
+	screenshotCmd.Flags().StringVarP(&screenshotArgs.file, "file", "f", "result.txt", "Url list file")
+	screenshotCmd.Flags().IntVar(&screenshotArgs.timeout, "timeout", 60, "Timeout")
+	rootCmd.AddCommand(screenshotCmd)
 }
 
-var mirrorCmd = &cobra.Command{
-	Use:   "mirror",
-	Short: "mirror data.json using github",
+var screenshotCmd = &cobra.Command{
+	Use:   "screenshot",
+	Short: "screenshot data.json using github",
 	Long:  ``,
-	Run:   mirror,
+	Run:   screenshot,
 }
 
-func mirror(_ *cobra.Command, _ []string) {
+func screenshot(_ *cobra.Command, _ []string) {
 	if Verbose {
 		log.Infoln("Debug Mode")
 		log.SetLevel(log.DebugLevel)
 	}
-	file, err := os.Open(mirrorArgs.file)
+	file, err := os.Open(screenshotArgs.file)
 	if err != nil {
 		log.Errorf(urlFileReadError, err)
 		return
 	}
 	defer file.Close()
-	err = CreateDirIfNotExists(mirrorArgs.result)
+	err = CreateDirIfNotExists(screenshotArgs.result)
 	if err != nil {
 		log.Errorf(createResultFolderError, err)
 		return
@@ -80,37 +80,37 @@ func mirror(_ *cobra.Command, _ []string) {
 			targets <- scanner.Text()
 		}
 	}
-	for i := 1; i < mirrorArgs.thread+1; i++ {
+	for i := 1; i < screenshotArgs.thread+1; i++ {
 		go navigate(i)
-		mirrorWg.Add(1)
+		screenshotWg.Add(1)
 	}
-	mirrorWg.Wait()
+	screenshotWg.Wait()
 }
 
 func navigate(workerNum int) {
-	defer mirrorWg.Done()
+	defer screenshotWg.Done()
 
 	// create context
 	opts := append(chromedp.DefaultExecAllocatorOptions[:],
-		chromedp.Flag("headless", !mirrorArgs.chrome),
-		chromedp.ProxyServer(mirrorArgs.proxy),
+		chromedp.Flag("headless", !screenshotArgs.chrome),
+		chromedp.ProxyServer(screenshotArgs.proxy),
 		chromedp.Flag("mute-audio", true),
 		chromedp.IgnoreCertErrors,
 		chromedp.DisableGPU,
 		chromedp.NoFirstRun,
-		chromedp.ExecPath(mirrorArgs.path),
+		chromedp.ExecPath(screenshotArgs.path),
 		chromedp.WindowSize(1920, 1080),
 		chromedp.NoDefaultBrowserCheck,
 		chromedp.NoSandbox,
 	)
 
-	if mirrorArgs.proxy != "" {
-		opts = append(opts, chromedp.Flag("proxy-server", mirrorArgs.proxy))
+	if screenshotArgs.proxy != "" {
+		opts = append(opts, chromedp.Flag("proxy-server", screenshotArgs.proxy))
 	}
 
 	ctx, cancel := chromedp.NewExecAllocator(context.Background(), opts...)
 
-	ctx, cancel = context.WithTimeout(ctx, time.Duration(mirrorArgs.timeout)*time.Second)
+	ctx, cancel = context.WithTimeout(ctx, time.Duration(screenshotArgs.timeout)*time.Second)
 
 	ctx, cancel = chromedp.NewContext(ctx)
 
@@ -138,7 +138,7 @@ func navigate(workerNum int) {
 			log.Errorf("[-] Failed to take (URL:%s) screenshot: %v", url, err)
 			continue
 		}
-		pngFilePath := fmt.Sprintf("./%s/%s.png", mirrorArgs.result, getDomain(url))
+		pngFilePath := fmt.Sprintf("./%s/%s.png", screenshotArgs.result, getDomain(url))
 		if err := ioutil.WriteFile(pngFilePath, buf, 0644); err != nil {
 			log.Errorf("[-] Failed to write file %v", err)
 			continue
