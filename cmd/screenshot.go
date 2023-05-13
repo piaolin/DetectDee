@@ -169,7 +169,7 @@ func fullScreenshot(urlstr string, quality int64, res *[]byte) chromedp.Tasks {
 	return chromedp.Tasks{
 		chromedp.Navigate(urlstr),
 		//chromedp.WaitVisible("style"),
-		//chromedp.Sleep(5 * time.Second),
+		chromedp.Sleep(1 * time.Second),
 		//chromedp.OuterHTML(`document.querySelector("body")`, &htmlContent, chromedp.ByJSPath),
 		chromedp.ActionFunc(func(ctx context.Context) error {
 			_, _, _, _, _, contentSize, err := page.GetLayoutMetrics().Do(ctx)
