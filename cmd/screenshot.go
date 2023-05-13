@@ -121,15 +121,15 @@ func navigate(workerNum int) {
 
 	ctx, cancel := chromedp.NewExecAllocator(context.Background(), opts...)
 
-	ctx, cancel = context.WithTimeout(ctx, time.Duration(screenshotArgs.timeout)*time.Second)
+	//ctx, cancel = context.WithTimeout(ctx, time.Duration(screenshotArgs.timeout)*time.Second)
 
 	ctx, cancel = chromedp.NewContext(ctx)
 
-	// Check
+	// Check & Make Browser not close
 	err := chromedp.Run(
 		ctx,
 		chromedp.Tasks{
-			chromedp.Navigate("about:blank"),
+			chromedp.Navigate("https://github.com/piaolin"),
 		},
 	)
 	if err != nil {
@@ -148,6 +148,9 @@ func navigate(workerNum int) {
 
 		log.Debugf("[Worker%2d] starting screenshot task %s,remaining tasks:%d\n", workerNum, urlStr, len(targets))
 		var buf []byte
+		//ctx, cancel = chromedp.NewContext(
+		//	ctx,
+		//)
 		if err := chromedp.Run(ctx, fullScreenshot(urlStr, 100, &buf)); err != nil {
 			log.Errorf("[-] Failed to take (URL:%s) screenshot: %v", urlStr, err)
 			continue
@@ -157,9 +160,13 @@ func navigate(workerNum int) {
 			log.Errorf("[-] Failed to write file %v", err)
 			continue
 		}
+
+		//if err := page.Close().Do(cdp.WithExecutor(ctx, chromedp.FromContext(ctx).Target)); err != nil {
+		//	log.Errorln(err)
+		//}
+
 		log.Infof("[+] screenshot success %s", urlStr)
 		log.Debugf("[Worker%2d] finished screenshot task %s,remaining tasks:%d\n", workerNum, urlStr, len(targets))
-
 	}
 
 	defer cancel()
