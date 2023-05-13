@@ -3,49 +3,49 @@ package cmd
 import (
 	"DetectDee/utils"
 	"fmt"
+	"github.com/go-resty/resty/v2"
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
+	"github.com/tidwall/gjson"
 	"io/ioutil"
 	"regexp"
 	"strings"
 	"sync"
 	"time"
-
-	"github.com/go-resty/resty/v2"
-	log "github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
-	"github.com/tidwall/gjson"
 )
 
 type detectArgsType struct {
-	name       []string
-	site       []string
-	check      bool
-	proxy      string
-	timeout    int
-	isNSFW     bool
-	precisely  bool
-	retry      int
-	file       string
-	google     bool
-	email      []string
-	phone      []string
-	screenshot bool
+	name      []string
+	site      []string
+	check     bool
+	proxy     string
+	timeout   int
+	isNSFW    bool
+	precisely bool
+	retry     int
+	file      string
+	google    bool
+	email     []string
+	phone     []string
+	output    string
 	//unique    bool
 }
 
 var (
-	detectArgs      detectArgsType
-	wg              sync.WaitGroup
-	nonSiteData     = "[-] There is no site data of %s\n"
-	existInfo       = "[+] %-15s %-15s: %s\n"
-	nonExistInfo    = "[-] %-15s %-15s: non exists\n"
-	reqErrorInfo    = "[!] %-15s %-15s: %s requests error, retry %d/%d\n"
-	sleepMap        = make(map[string]int64)
-	sleepChannel    = make(map[string]chan bool)
-	searchInfo      = "[+] %-15s %-15s: Please check in %s\n"
-	disableSiteInfo = "[!] %-15s %-15s: data of %s is temporarily unavailable\n"
-	nsfwInfo        = "[!] %-15s %-15s: %s is nsfw\n"
-	safeFolderName  = "defaultScreenshotFolder"
-	existUserPage   = false
+	detectArgs          detectArgsType
+	wg                  sync.WaitGroup
+	nonSiteData         = "[-] There is no site data of %s\n"
+	existInfo           = "[+] %-15s %-15s: %s\n"
+	nonExistInfo        = "[-] %-15s %-15s: non exists\n"
+	reqErrorInfo        = "[!] %-15s %-15s: %s requests error, retry %d/%d\n"
+	sleepMap            = make(map[string]int64)
+	sleepChannel        = make(map[string]chan bool)
+	searchInfo          = "[+] %-15s %-15s: Please check in %s\n"
+	disableSiteInfo     = "[!] %-15s %-15s: data of %s is temporarily unavailable\n"
+	detectCompletedInfo = "[+] Detect completed, save to %s\n"
+	nsfwInfo            = "[!] %-15s %-15s: %s is nsfw\n"
+	writeContent        = make(chan string)
+	writeDone           = make(chan bool)
 )
 
 func init() {
@@ -62,7 +62,7 @@ func init() {
 	detectCmd.Flags().BoolVar(&detectArgs.precisely, "precisely", false, "Check precisely")
 	detectCmd.Flags().StringVarP(&detectArgs.file, "file", "f", "data.json", "Site data file")
 	detectCmd.Flags().BoolVarP(&detectArgs.google, "google", "g", false, "Show google search result")
-	detectCmd.Flags().BoolVarP(&detectArgs.screenshot, "screenshot", "S", false, "screenshot the userpage and save")
+	detectCmd.Flags().StringVarP(&detectArgs.output, "output", "o", "result.txt", "Result file")
 
 	//detectCmd.Flags().BoolVar(&detectArgs.unique, "unique", false, "Make new requests client for each site")
 	rootCmd.AddCommand(detectCmd)
@@ -76,11 +76,22 @@ var detectCmd = &cobra.Command{
 }
 
 func detect(_ *cobra.Command, _ []string) {
-	log.Infoln("Detect for", detectArgs.name)
+	if len(detectArgs.name) != 0 {
+		log.Infoln("Detect for", detectArgs.name)
+	}
+	if len(detectArgs.email) != 0 {
+		log.Infoln("Detect for", detectArgs.email)
+	}
+	if len(detectArgs.phone) != 0 {
+		log.Infoln("Detect for", detectArgs.phone)
+	}
+
 	if Verbose {
 		log.Infoln("Debug Mode")
 		log.SetLevel(log.DebugLevel)
 	}
+
+	go utils.WriteToFile(detectArgs.output, writeContent, writeDone)
 
 	log.Debugln(detectArgs)
 	siteData, err := ioutil.ReadFile(detectArgs.file)
@@ -139,7 +150,10 @@ func detect(_ *cobra.Command, _ []string) {
 			}
 		}
 	}
+
 	wg.Wait()
+	writeDone <- true
+	log.Infof(detectCompletedInfo, detectArgs.output)
 }
 
 func detectSite(name, site, nameType string, siteBody gjson.Result) {
@@ -297,36 +311,22 @@ func detectUser(name, site string, requestTimes, retryTimes, detectCount int, fl
 
 	userPage := detectData.Get("userPage").String()
 	if strings.Contains(userPage, "%s") {
-		existUserPage = true
 		userPage = fmt.Sprintf(userPage, name)
-	} else {
-		existUserPage = false
 	}
-	if detectArgs.screenshot {
-		safeFolderName = utils.SanitizeFilename(name + "_userpage")
-		utils.CreateDirIfNotExists("./" + safeFolderName)
-	}
+
 	// precisely mode
 	if !*flag {
 		log.Debugf(nonExistInfo, name, site)
 		return false
 	} else if !detectArgs.precisely {
 		// flag=true && precisely=false
-		if detectArgs.screenshot && existUserPage {
-			log.Infof(existInfo, name, site, userPage+"   [screenshot]")
-			utils.DoScreenshot(userPage, safeFolderName)
-		} else {
-			log.Infof(existInfo, name, site, userPage)
-		}
+		log.Infof(existInfo, name, site, userPage)
+		writeContent <- fmt.Sprintf(existInfo, name, site, userPage)
 		return false
 	} else if requestTimes == detectCount {
 		// flag=true && precisely=true && last request
-		if detectArgs.screenshot && existUserPage {
-			log.Infof(existInfo, name, site, userPage+"   [screenshot]")
-			utils.DoScreenshot(userPage, safeFolderName)
-		} else {
-			log.Infof(existInfo, name, site, userPage)
-		}
+		log.Infof(existInfo, name, site, userPage)
+		writeContent <- fmt.Sprintf(existInfo, name, site, userPage)
 		return true
 	} else {
 		return true
