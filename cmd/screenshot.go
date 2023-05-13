@@ -32,7 +32,7 @@ type screenshotArgsType struct {
 var (
 	screenshotArgs          screenshotArgsType
 	screenshotWg            sync.WaitGroup
-	targets                 = make(chan string, 1000)
+	targets                 = make(chan []string, 10)
 	execPathNotFound        = "[-] Chrome executable file not found, please install Chrome or specify the chrome.exe path with --path"
 	urlFileReadError        = "[-] failed to read targets file:%v"
 	createResultFolderError = "[-] failed to create result folder:%v"
@@ -61,30 +61,41 @@ func screenshot(_ *cobra.Command, _ []string) {
 		log.Infoln("Debug Mode")
 		log.SetLevel(log.DebugLevel)
 	}
-	file, err := os.Open(screenshotArgs.file)
-	if err != nil {
-		log.Errorf(urlFileReadError, err)
-		return
-	}
-	defer file.Close()
-	err = CreateDirIfNotExists(screenshotArgs.result)
+
+	go parseFile(screenshotArgs.file)
+
+	err := CreateDirIfNotExists(screenshotArgs.result)
 	if err != nil {
 		log.Errorf(createResultFolderError, err)
 		return
 	}
 	log.Infoln("[+] starting screenshot tasks")
 
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		if scanner.Text() != "" {
-			targets <- scanner.Text()
-		}
-	}
 	for i := 1; i < screenshotArgs.thread+1; i++ {
 		go navigate(i)
 		screenshotWg.Add(1)
 	}
 	screenshotWg.Wait()
+}
+
+func parseFile(file string) {
+	f, err := os.Open(file)
+	if err != nil {
+		log.Errorf(urlFileReadError, err)
+		return
+	}
+	defer f.Close()
+
+	scanner := bufio.NewScanner(f)
+	for scanner.Scan() {
+		if scanner.Text() != "" {
+			tmp := strings.Split(scanner.Text(), ": ")
+			name := strings.Split(strings.TrimSpace(tmp[0]), " ")
+
+			target := []string{fmt.Sprintf("%s-%s", name[0], name[len(name)-1]), tmp[1]}
+			targets <- target
+		}
+	}
 }
 
 func navigate(workerNum int) {
@@ -131,20 +142,23 @@ func navigate(workerNum int) {
 
 	// Run
 	for len(targets) > 0 {
-		url := <-targets
-		log.Debugf("[Worker%2d] starting screenshot task %s,remaining tasks:%d\n", workerNum, url, len(targets))
+		target := <-targets
+		name := target[0]
+		urlStr := target[1]
+
+		log.Debugf("[Worker%2d] starting screenshot task %s,remaining tasks:%d\n", workerNum, urlStr, len(targets))
 		var buf []byte
-		if err := chromedp.Run(ctx, fullScreenshot(url, 100, &buf)); err != nil {
-			log.Errorf("[-] Failed to take (URL:%s) screenshot: %v", url, err)
+		if err := chromedp.Run(ctx, fullScreenshot(urlStr, 100, &buf)); err != nil {
+			log.Errorf("[-] Failed to take (URL:%s) screenshot: %v", urlStr, err)
 			continue
 		}
-		pngFilePath := fmt.Sprintf("./%s/%s.png", screenshotArgs.result, getDomain(url))
+		pngFilePath := fmt.Sprintf("./%s/%s.png", screenshotArgs.result, name+"-"+getDomain(urlStr))
 		if err := ioutil.WriteFile(pngFilePath, buf, 0644); err != nil {
 			log.Errorf("[-] Failed to write file %v", err)
 			continue
 		}
-		log.Infof("[+] screenshot success %s", url)
-		log.Debugf("[Worker%2d] finished screenshot task %s,remaining tasks:%d\n", workerNum, url, len(targets))
+		log.Infof("[+] screenshot success %s", urlStr)
+		log.Debugf("[Worker%2d] finished screenshot task %s,remaining tasks:%d\n", workerNum, urlStr, len(targets))
 
 	}
 
@@ -155,7 +169,7 @@ func fullScreenshot(urlstr string, quality int64, res *[]byte) chromedp.Tasks {
 	return chromedp.Tasks{
 		chromedp.Navigate(urlstr),
 		//chromedp.WaitVisible("style"),
-		chromedp.Sleep(5 * time.Second),
+		//chromedp.Sleep(5 * time.Second),
 		//chromedp.OuterHTML(`document.querySelector("body")`, &htmlContent, chromedp.ByJSPath),
 		chromedp.ActionFunc(func(ctx context.Context) error {
 			_, _, _, _, _, contentSize, err := page.GetLayoutMetrics().Do(ctx)
