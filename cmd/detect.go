@@ -36,7 +36,7 @@ var (
 	wg                  sync.WaitGroup
 	nonSiteData         = "[-] There is no site data of %s\n"
 	existInfo           = "[+] %-15s %-15s: %s\n"
-	existOutputInfo     = "%-15s %-15s: %s\n"
+	existOutputInfo     = "%s, %s, %s\n"
 	nonExistInfo        = "[-] %-15s %-15s: non exists\n"
 	reqErrorInfo        = "[!] %-15s %-15s: %s requests error, retry %d/%d\n"
 	sleepMap            = make(map[string]int64)
@@ -163,7 +163,7 @@ func detectSite(name, site, nameType string, siteBody gjson.Result) {
 	// flag for precisely mode
 	flag := false
 
-	if siteBody.Get("isNFSW").Bool() && !detectArgs.isNSFW {
+	if siteBody.Get("isNSFW").Bool() && !detectArgs.isNSFW {
 		log.Debugf(nsfwInfo, name, site, site)
 		return
 	}
@@ -226,7 +226,6 @@ func detectUser(name, site string, requestTimes, retryTimes, detectCount int, fl
 			strValue := fmt.Sprintf("%v", value)
 			header[strKey] = strValue
 		}
-
 	}
 
 	// if body is set, set method to post
