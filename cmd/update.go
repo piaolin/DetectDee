@@ -2,12 +2,8 @@ package cmd
 
 import (
 	"DetectDee/utils"
-	"fmt"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	"os"
-	"strings"
-	"time"
 )
 
 type updateArgsType struct {
@@ -40,19 +36,18 @@ func update(_ *cobra.Command, _ []string) {
 		log.SetLevel(log.DebugLevel)
 	}
 
-	if _, err := os.Stat(updateArgs.file); err == nil {
-		newFileName := strings.Split(updateArgs.file, ".")[0] + "_" + strings.Replace(time.Now().Format("15:04:05"), ":", "", -1) + ".json"
-		log.Debugln(newFileName)
-		err := os.Rename(updateArgs.file, newFileName)
-		if err != nil {
-			log.Fatalln(err)
-		}
+	newFileName, err := utils.RenameFileByTime(updateArgs.file)
+	if err != nil {
+		log.Fatal(err)
 	}
 
-	err := utils.DownloadFile(updateArgs.file, updateArgs.url)
+	err = utils.DownloadFile(updateArgs.file, updateArgs.url)
 	if err != nil {
-		fmt.Println("Error downloading file: ", err)
-		return
+		// if download error, restore filename
+		if newFileName != updateArgs.file {
+			_ = utils.RestoreFilename(newFileName)
+		}
+		log.Fatalln("Error downloading file: ", err)
 	}
 
 	log.Infof("[+] download file to %s\n", updateArgs.file)

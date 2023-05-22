@@ -1,11 +1,10 @@
 package cmd
 
 import (
-	"bufio"
+	"DetectDee/utils"
 	"context"
 	"fmt"
 	"io/ioutil"
-	"net/url"
 	"os"
 	"strings"
 	"sync"
@@ -29,9 +28,8 @@ type screenshotArgsType struct {
 var (
 	screenshotArgs          screenshotArgsType
 	screenshotWg            sync.WaitGroup
-	targets                 = make(chan []string, 10)
+	screenshotTargets       = make(chan []string, 10)
 	execPathNotFound        = "[-] Chrome executable file not found, please install Chrome or specify the chrome.exe path with --path"
-	urlFileReadError        = "[-] failed to read targets file:%v"
 	createResultFolderError = "[-] failed to create result folder:%v"
 )
 
@@ -59,9 +57,14 @@ func screenshot(_ *cobra.Command, _ []string) {
 		log.SetLevel(log.DebugLevel)
 	}
 
-	go parseFile(screenshotArgs.file)
+	targetList, err := utils.ParseResult(screenshotArgs.file)
+	if err != nil {
+		return
+	}
 
-	err := CreateDirIfNotExists(screenshotArgs.result)
+	go utils.AddTarget(targetList, screenshotTargets)
+
+	err = CreateDirIfNotExists(screenshotArgs.result)
 	if err != nil {
 		log.Errorf(createResultFolderError, err)
 		return
@@ -75,42 +78,11 @@ func screenshot(_ *cobra.Command, _ []string) {
 	screenshotWg.Wait()
 }
 
-func parseFile(file string) {
-	f, err := os.Open(file)
-	if err != nil {
-		log.Errorf(urlFileReadError, err)
-		return
-	}
-	defer f.Close()
-
-	scanner := bufio.NewScanner(f)
-	for scanner.Scan() {
-		if scanner.Text() != "" {
-			tmp := strings.Split(scanner.Text(), ": ")
-			name := strings.Split(strings.TrimSpace(tmp[0]), " ")
-
-			target := []string{fmt.Sprintf("%s-%s", name[0], name[len(name)-1]), tmp[1]}
-			targets <- target
-		}
-	}
-}
-
 func navigate(workerNum int) {
 	defer screenshotWg.Done()
 
 	// create context
-	opts := append(chromedp.DefaultExecAllocatorOptions[:],
-		chromedp.Flag("headless", !screenshotArgs.chrome),
-		chromedp.ProxyServer(screenshotArgs.proxy),
-		chromedp.Flag("mute-audio", true),
-		chromedp.IgnoreCertErrors,
-		chromedp.DisableGPU,
-		chromedp.NoFirstRun,
-		chromedp.ExecPath(screenshotArgs.path),
-		chromedp.WindowSize(1920, 1080),
-		chromedp.NoDefaultBrowserCheck,
-		chromedp.NoSandbox,
-	)
+	opts := append(chromedp.DefaultExecAllocatorOptions[:], chromedp.Flag("headless", !screenshotArgs.chrome), chromedp.ProxyServer(screenshotArgs.proxy), chromedp.Flag("mute-audio", true), chromedp.IgnoreCertErrors, chromedp.DisableGPU, chromedp.NoFirstRun, chromedp.ExecPath(screenshotArgs.path), chromedp.WindowSize(1920, 1080), chromedp.NoDefaultBrowserCheck, chromedp.NoSandbox)
 
 	if screenshotArgs.proxy != "" {
 		opts = append(opts, chromedp.Flag("proxy-server", screenshotArgs.proxy))
@@ -123,12 +95,9 @@ func navigate(workerNum int) {
 	ctx, cancel = chromedp.NewContext(ctx)
 
 	// Check & Make Browser not close
-	err := chromedp.Run(
-		ctx,
-		chromedp.Tasks{
-			chromedp.Navigate("https://github.com/piaolin"),
-		},
-	)
+	err := chromedp.Run(ctx, chromedp.Tasks{
+		chromedp.Navigate("https://github.com/piaolin"),
+	})
 	if err != nil {
 		if strings.Contains(err.Error(), "executable file not found") {
 			log.Fatalln(execPathNotFound)
@@ -138,12 +107,13 @@ func navigate(workerNum int) {
 	}
 
 	// Run
-	for len(targets) > 0 {
-		target := <-targets
+	for len(screenshotTargets) > 0 {
+		target := <-screenshotTargets
 		name := target[0]
-		urlStr := target[1]
+		site := target[1]
+		urlStr := target[2]
 
-		log.Debugf("[Worker%2d] starting screenshot task %s,remaining tasks:%d\n", workerNum, urlStr, len(targets))
+		log.Debugf("[Worker%2d] starting screenshot task %s,remaining tasks:%d\n", workerNum, urlStr, len(screenshotTargets))
 		var buf []byte
 		//ctx, cancel = chromedp.NewContext(
 		//	ctx,
@@ -152,7 +122,7 @@ func navigate(workerNum int) {
 			log.Errorf("[-] Failed to take (URL:%s) screenshot: %v", urlStr, err)
 			continue
 		}
-		pngFilePath := fmt.Sprintf("./%s/%s.png", screenshotArgs.result, name)
+		pngFilePath := fmt.Sprintf("./%s/%s-%s.png", screenshotArgs.result, name, site)
 		if err := ioutil.WriteFile(pngFilePath, buf, 0644); err != nil {
 			log.Errorf("[-] Failed to write file %v", err)
 			continue
@@ -163,7 +133,7 @@ func navigate(workerNum int) {
 		//}
 
 		log.Infof("[+] screenshot success %s", urlStr)
-		log.Debugf("[Worker%2d] finished screenshot task %s,remaining tasks:%d\n", workerNum, urlStr, len(targets))
+		log.Debugf("[Worker%2d] finished screenshot task %s,remaining tasks:%d\n", workerNum, urlStr, len(screenshotTargets))
 	}
 
 	defer cancel()
@@ -171,12 +141,9 @@ func navigate(workerNum int) {
 
 func fullScreenshot(urlstr string, quality int, res *[]byte) chromedp.Tasks {
 	return chromedp.Tasks{
-		chromedp.Navigate(urlstr),
-		//chromedp.WaitVisible("style"),
-		chromedp.Sleep(1 * time.Second),
-		//chromedp.OuterHTML(`document.querySelector("body")`, &htmlContent, chromedp.ByJSPath),
-		chromedp.FullScreenshot(res, quality),
-		//chromedp.ActionFunc(func(ctx context.Context) error {
+		chromedp.Navigate(urlstr),             //chromedp.WaitVisible("style"),
+		chromedp.Sleep(1 * time.Second),       //chromedp.OuterHTML(`document.querySelector("body")`, &htmlContent, chromedp.ByJSPath),
+		chromedp.FullScreenshot(res, quality), //chromedp.ActionFunc(func(ctx context.Context) error {
 		//	_, _, _, _, _, contentSize, err := page.GetLayoutMetrics().Do(ctx)
 		//	if err != nil {
 		//		return err
@@ -209,15 +176,6 @@ func fullScreenshot(urlstr string, quality int, res *[]byte) chromedp.Tasks {
 		//	return nil
 		//}),
 	}
-}
-
-func getDomain(urlstr string) string {
-	u, err := url.Parse(urlstr)
-	if err != nil {
-		fmt.Println(err)
-		return "getdomain_error"
-	}
-	return u.Hostname()
 }
 
 func CreateDirIfNotExists(dirName string) error {
