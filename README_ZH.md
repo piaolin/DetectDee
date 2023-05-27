@@ -2,7 +2,7 @@
 <font color="red">*严正声明：本文与本工具仅限于技术讨论与分享，严禁用于非法途径。</font>
 
 神探狄仁杰: 在[社交网络](site.md)上通过**用户名，电子邮件或电话**搜索社交媒体账户
-![example.gif](https://s2.loli.net/2023/04/30/FZ1QtKoGud4xVPW.gif)
+![example.gif](https://s2.loli.net/2023/05/28/gpxRJqvWr21Ifmh.gif)
 ![screen.jpg](https://s2.loli.net/2023/05/13/XzV4EGKrbkURHQg.jpg)
 ## 特性
 - 集成**网络安全从业者**常用网站
@@ -25,6 +25,8 @@ go run .
 [中文文档](README_ZH.md)
 ### 探测
 ```text
+Hunt down social media accounts by username, email or phone across social networks
+
 Usage:
   DetectDee detect [flags]
 
@@ -35,15 +37,15 @@ Flags:
   -g, --google          Show google search result
   -h, --help            help for detect
   -n, --name strings    name[s], e.g. piaolin,poq79,SomeOneYouLike
-      --nsfw            Include checking of NSFW sites from default list.       
+      --nsfw            Include checking of NSFW sites from default list.
+  -o, --output string   Result file (default "result.txt")
   -p, --phone strings   phone[s], e.g. 15725753684,13575558962
       --precisely       Check precisely
       --proxy string    Make requests over a proxy. e.g. socks5://127.0.0.1:1080
   -r, --retry int       Retry times after request failed (default 3)
-  -s, --site strings    Limit analysis to just the listed sites. Add multiple op
-tions to specify more than one site.
-  -t, --timeout int     Time (in seconds) to wait for response to requests (defa
-ult 10)
+  -s, --site strings    Limit analysis to just the listed sites. Add multiple options to specify more than one site.
+  -t, --timeout int     Time (in seconds) to wait for response to requests (default 10)
+      --token string    chatgpt api token
 
 Global Flags:
   -v, --verbose   verbose output
@@ -63,6 +65,12 @@ Global Flags:
 ```shell
 ./DetectDee detect -n piaolin,blue
 ```
+
+多用户名搜索，并使用ChatGPT对结果进行用户画像(需要ChatGPT Token):
+```shell
+./DetectDee detect -n piaolin,blue --token {ChatGPT Token}
+```
+
 邮箱搜索:
 ```shell
 ./DetectDee detect -e mail@gmail.com,test@163.com
