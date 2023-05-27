@@ -20,6 +20,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "gitlab": {
@@ -48,6 +51,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "gitee": {
@@ -67,6 +73,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "googleplay": {
@@ -87,6 +96,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "githubblog": {
@@ -106,6 +118,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "v2ex": {
@@ -125,6 +140,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "zhihu": {
@@ -145,6 +163,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "freebuf": {
@@ -164,6 +185,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "bugbank": {
@@ -183,6 +207,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "hackerone": {
@@ -202,6 +229,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "vulbox": {
@@ -232,6 +262,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "bugku": {
@@ -252,6 +285,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "newbugku": {
@@ -271,6 +307,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "52pojie": {
@@ -295,6 +334,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "youtube": {
@@ -318,6 +360,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "wikipedia": {
@@ -337,6 +382,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "wordpress": {
@@ -356,6 +404,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "reddit": {
@@ -378,6 +429,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "aqniu": {
@@ -402,6 +456,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "quora": {
@@ -422,6 +479,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "virustotal": {
@@ -441,6 +501,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "ES"
     }
   },
   "twitter": {
@@ -462,6 +525,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "twitch": {
@@ -481,6 +547,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "tryhackme": {
@@ -501,6 +570,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "tiktok": {
@@ -520,6 +592,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "KY"
     }
   },
   "telegram": {
@@ -540,6 +615,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "steamgroup": {
@@ -559,6 +637,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "sublimeforum": {
@@ -578,6 +659,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "spotify": {
@@ -600,6 +684,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "SE"
     }
   },
   "sourceforge": {
@@ -619,6 +706,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "snapchat": {
@@ -639,6 +729,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "rubygems": {
@@ -659,6 +752,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "pypi": {
@@ -678,6 +774,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "quizlet": {
@@ -700,6 +799,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "pastebin": {
@@ -722,6 +824,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "packagist": {
@@ -744,6 +849,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "oracle": {
@@ -766,6 +874,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "opensource": {
@@ -788,6 +899,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "nextcloud": {
@@ -810,6 +924,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "minecraft": {
@@ -832,6 +949,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "tft": {
@@ -854,6 +974,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "gitbook": {
@@ -876,6 +999,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "hackernews": {
@@ -898,6 +1024,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "hackerrank": {
@@ -920,6 +1049,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "leetcode": {
@@ -942,6 +1074,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "leetcode-cn": {
@@ -965,6 +1100,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "9gag": {
@@ -987,6 +1125,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "csdn": {
@@ -1009,6 +1150,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "cnblogs": {
@@ -1031,6 +1175,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "oschina": {
@@ -1053,6 +1200,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "segmentfault": {
@@ -1076,6 +1226,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "trello": {
@@ -1098,6 +1251,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "AU"
     }
   },
   "seebug": {
@@ -1121,6 +1277,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "sec-wiki": {
@@ -1144,6 +1303,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "secrss": {
@@ -1167,6 +1329,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "bugcrowd": {
@@ -1189,6 +1354,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "track": {
@@ -1212,6 +1380,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "mozhe": {
@@ -1239,6 +1410,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "jarvisoj": {
@@ -1263,6 +1437,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "vulfocus": {
@@ -1287,6 +1464,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "iteye": {
@@ -1310,6 +1490,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "unsplash": {
@@ -1332,6 +1515,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CA"
     }
   },
   "seebug-paper": {
@@ -1354,6 +1540,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "douban": {
@@ -1376,6 +1565,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "infoq": {
@@ -1398,6 +1590,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "threatpost": {
@@ -1420,6 +1615,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "infosecurity-magazine": {
@@ -1442,6 +1640,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "xsssql": {
@@ -1466,6 +1667,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "studygolang": {
@@ -1489,6 +1693,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "0x00sec": {
@@ -1511,6 +1718,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "NL"
     }
   },
   "ruby-china": {
@@ -1533,6 +1743,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "tttang": {
@@ -1556,6 +1769,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "t00ls": {
@@ -1578,6 +1794,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "90sec": {
@@ -1602,6 +1821,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "thehackerworld": {
@@ -1624,6 +1846,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "sspai": {
@@ -1647,6 +1872,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "ld246": {
@@ -1670,6 +1898,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "qyer": {
@@ -1694,6 +1925,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "jandan": {
@@ -1716,6 +1950,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "ifanr": {
@@ -1738,6 +1975,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "twle": {
@@ -1761,6 +2001,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "chouti": {
@@ -1784,6 +2027,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "gaoloumi": {
@@ -1807,6 +2053,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "zol": {
@@ -1829,6 +2078,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "producthunt": {
@@ -1851,6 +2103,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "yystv": {
@@ -1874,6 +2129,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "bilibili": {
@@ -1890,6 +2148,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "ichunqiu": {
@@ -1906,6 +2167,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "eastmoney": {
@@ -1922,6 +2186,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "threatbook": {
@@ -1938,6 +2205,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "baidu-zhidao": {
@@ -1954,6 +2224,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "baidu-tieba": {
@@ -1970,6 +2243,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "anquanke": {
@@ -1986,6 +2262,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "secpulse": {
@@ -2002,6 +2281,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "xz": {
@@ -2018,6 +2300,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "butian": {
@@ -2034,6 +2319,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "eastmoney-src": {
@@ -2050,6 +2338,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "ywhack": {
@@ -2072,6 +2363,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "huoxian": {
@@ -2093,6 +2387,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
     }
   },
   "3dnews": {
@@ -2115,6 +2412,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "7cups": {
@@ -2137,6 +2437,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "8tracks": {
@@ -2159,6 +2462,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "apclips": {
@@ -2181,6 +2487,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "about-me": {
@@ -2203,6 +2512,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "academia-edu": {
@@ -2225,6 +2537,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "airbit": {
@@ -2247,6 +2562,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "airliners": {
@@ -2269,6 +2587,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "alik-cz": {
@@ -2291,6 +2612,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CZ"
     }
   },
   "amino": {
@@ -2313,6 +2637,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "anilist": {
@@ -2343,6 +2670,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "appledeveloper": {
@@ -2365,6 +2695,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "artstation": {
@@ -2387,6 +2720,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "asciinema": {
@@ -2409,6 +2745,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "askfedora": {
@@ -2431,6 +2770,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "audiojungle": {
@@ -2453,6 +2795,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "AU"
     }
   },
   "autofrage": {
@@ -2475,6 +2820,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "blip-fm": {
@@ -2497,6 +2845,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "bandcamp": {
@@ -2519,6 +2870,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "behance": {
@@ -2541,6 +2895,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "bezuzyteczna": {
@@ -2563,6 +2920,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "PL"
     }
   },
   "biggerpockets": {
@@ -2585,6 +2945,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "bikemap": {
@@ -2607,6 +2970,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "AT"
     }
   },
   "biohacking": {
@@ -2629,6 +2995,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "bitbucket": {
@@ -2651,6 +3020,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "AU"
     }
   },
   "bitwardenforum": {
@@ -2673,6 +3045,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "blogger": {
@@ -2695,6 +3070,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "bongacams": {
@@ -2717,6 +3095,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "bookcrossing": {
@@ -2739,6 +3120,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "bravecommunity": {
@@ -2761,6 +3145,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "buymeacoffee": {
@@ -2783,6 +3170,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "buzzfeed": {
@@ -2805,6 +3195,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "cnet": {
@@ -2827,6 +3220,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "ctan": {
@@ -2849,6 +3245,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "caddycommunity": {
@@ -2871,6 +3270,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "cartalkcommunity": {
@@ -2893,6 +3295,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "championat": {
@@ -2915,6 +3320,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "chaos": {
@@ -2937,6 +3345,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "chaturbate": {
@@ -2959,6 +3370,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "choicecommunity": {
@@ -2981,6 +3395,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "clapper": {
@@ -3003,6 +3420,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "cloudflarecommunity": {
@@ -3025,6 +3445,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "clubhouse": {
@@ -3047,6 +3470,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "codeforces": {
@@ -3069,6 +3495,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IE"
     }
   },
   "codepen": {
@@ -3091,6 +3520,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "coderwall": {
@@ -3113,6 +3545,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "codewars": {
@@ -3135,6 +3570,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "coinvote": {
@@ -3157,6 +3595,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "colourlovers": {
@@ -3179,6 +3620,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "coroflot": {
@@ -3201,6 +3645,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "crevado": {
@@ -3223,6 +3670,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "crowdin": {
@@ -3245,6 +3695,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "cryptomatorforum": {
@@ -3267,6 +3720,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "devcommunity": {
@@ -3289,6 +3745,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "dailymotion": {
@@ -3311,6 +3770,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "deviantart": {
@@ -3333,6 +3795,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "discogs": {
@@ -3355,6 +3820,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "discuss-elastic": {
@@ -3377,6 +3845,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "disqus": {
@@ -3399,6 +3870,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "dockerhub": {
@@ -3421,6 +3895,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "eintrachtfrankfurtforum": {
@@ -3443,6 +3920,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "envatoforum": {
@@ -3465,6 +3945,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "AU"
     }
   },
   "erome": {
@@ -3487,6 +3970,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "etsy": {
@@ -3509,6 +3995,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "exposure": {
@@ -3531,6 +4020,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "eyeem": {
@@ -3553,6 +4045,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "f3-cool": {
@@ -3575,6 +4070,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "fameswap": {
@@ -3597,6 +4095,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "fandom": {
@@ -3619,6 +4120,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CA"
     }
   },
   "finanzfrage": {
@@ -3641,6 +4145,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "flickr": {
@@ -3663,6 +4170,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "flightradar24": {
@@ -3685,6 +4195,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "flipboard": {
@@ -3707,6 +4220,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "fortnitetracker": {
@@ -3729,6 +4245,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "fosstodon": {
@@ -3751,6 +4270,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "freesound": {
@@ -3773,6 +4295,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "ES"
     }
   },
   "gamespot": {
@@ -3795,6 +4320,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CA"
     }
   },
   "genius-artists": {
@@ -3817,6 +4345,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "genius-users": {
@@ -3839,6 +4370,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "gesundheitsfrage": {
@@ -3861,6 +4395,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "getmyuni": {
@@ -3883,6 +4420,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "giantbomb": {
@@ -3905,6 +4445,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CA"
     }
   },
   "giphy": {
@@ -3927,6 +4470,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "goodreads": {
@@ -3949,6 +4495,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "gradle": {
@@ -3971,6 +4520,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "gravatar": {
@@ -3993,6 +4545,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "gunsandammo": {
@@ -4015,6 +4570,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "gutefrage": {
@@ -4037,6 +4595,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "hackthebox": {
@@ -4059,6 +4620,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "EU"
     }
   },
   "hackaday": {
@@ -4081,6 +4645,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "harvardscholar": {
@@ -4103,6 +4670,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "hashnode": {
@@ -4125,6 +4695,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "hubpages": {
@@ -4147,6 +4720,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "icq": {
@@ -4169,6 +4745,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "irl": {
@@ -4191,6 +4770,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "icons8community": {
@@ -4213,6 +4795,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "imgup-cz": {
@@ -4235,6 +4820,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CZ"
     }
   },
   "imgur": {
@@ -4257,6 +4845,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "instructables": {
@@ -4279,6 +4870,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "intigriti": {
@@ -4301,6 +4895,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "ionicforum": {
@@ -4323,6 +4920,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "issuu": {
@@ -4345,6 +4945,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "itch-io": {
@@ -4367,6 +4970,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "jellyfinweblate": {
@@ -4389,6 +4995,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CA"
     }
   },
   "jimdo": {
@@ -4411,6 +5020,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "joplinforum": {
@@ -4433,6 +5045,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "keakr": {
@@ -4455,6 +5070,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "kaggle": {
@@ -4477,6 +5095,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "keybase": {
@@ -4499,6 +5120,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "lor": {
@@ -4521,6 +5145,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "launchpad": {
@@ -4543,6 +5170,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "lesswrong": {
@@ -4565,6 +5195,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "linktree": {
@@ -4587,6 +5220,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "EE"
     }
   },
   "livejournal": {
@@ -4609,6 +5245,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "lobsters": {
@@ -4631,6 +5270,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "lottiefiles": {
@@ -4653,6 +5295,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "lushstories": {
@@ -4675,6 +5320,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "mmorpgforum": {
@@ -4697,6 +5345,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "SE"
     }
   },
   "memrise": {
@@ -4719,6 +5370,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "mixcloud": {
@@ -4742,6 +5396,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "modelhub": {
@@ -4764,6 +5421,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "monkeytype": {
@@ -4786,6 +5446,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "motorradfrage": {
@@ -4808,6 +5471,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "munzee": {
@@ -4830,6 +5496,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "myanimelist": {
@@ -4852,6 +5521,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "myminifactory": {
@@ -4874,6 +5546,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "myspace": {
@@ -4896,6 +5571,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "naver": {
@@ -4918,6 +5596,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "needrom": {
@@ -4940,6 +5621,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "newgrounds": {
@@ -4962,6 +5646,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CA"
     }
   },
   "nextcloudforum": {
@@ -4984,6 +5671,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "nightbot": {
@@ -5006,6 +5696,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "nintendolife": {
@@ -5028,6 +5721,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "notabug-org": {
@@ -5050,6 +5746,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "NL"
     }
   },
   "nyaa-si": {
@@ -5072,6 +5771,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "si"
     }
   },
   "ogusers": {
@@ -5094,7 +5796,11 @@
     "login": {
       "url": "",
       "successRegex": ""
-    }
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    },
+    "status": false
   },
   "openstreetmap": {
     "url": "https://www.openstreetmap.org/",
@@ -5116,6 +5822,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "oraclecommunity": {
@@ -5138,6 +5847,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "patreon": {
@@ -5160,6 +5872,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "periscope": {
@@ -5182,6 +5897,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "pinkbike": {
@@ -5204,6 +5922,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "playstore": {
@@ -5226,6 +5947,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "pokemonshowdown": {
@@ -5248,6 +5972,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "polarsteps": {
@@ -5271,6 +5998,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "polygon": {
@@ -5293,6 +6023,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "pornhub": {
@@ -5315,6 +6048,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "promodj": {
@@ -5337,6 +6073,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "rajce-net": {
@@ -5359,6 +6098,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CZ"
     }
   },
   "rateyourmusic": {
@@ -5381,6 +6123,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "rcloneforum": {
@@ -5403,6 +6148,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CA"
     }
   },
   "redtube": {
@@ -5425,6 +6173,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "redbubble": {
@@ -5447,6 +6198,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "reisefrage": {
@@ -5469,6 +6223,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "replit-com": {
@@ -5491,6 +6248,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "royalcams": {
@@ -5513,6 +6273,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "rumble": {
@@ -5535,6 +6298,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CA"
     }
   },
   "swapd": {
@@ -5557,6 +6323,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "sbazar-cz": {
@@ -5579,6 +6348,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CZ"
     }
   },
   "scratch": {
@@ -5601,6 +6373,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "shitpostbot5000": {
@@ -5623,6 +6398,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "shpock": {
@@ -5645,6 +6423,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "AT"
     }
   },
   "sketchfab": {
@@ -5667,6 +6448,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "slack": {
@@ -5689,6 +6473,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "slant": {
@@ -5711,6 +6498,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "slideshare": {
@@ -5733,6 +6523,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "slides": {
@@ -5755,6 +6548,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "smugmug": {
@@ -5777,6 +6573,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "soundcloud": {
@@ -5799,6 +6598,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "splice": {
@@ -5821,6 +6623,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "splits-io": {
@@ -5843,6 +6648,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "sporcle": {
@@ -5865,6 +6673,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "sportlerfrage": {
@@ -5887,6 +6698,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "sportsru": {
@@ -5909,6 +6723,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "tldrlegal": {
@@ -5931,6 +6748,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "traktrain": {
@@ -5953,6 +6773,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "tellonym-me": {
@@ -5975,6 +6798,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "tenor": {
@@ -5997,6 +6823,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "themeforest": {
@@ -6019,6 +6848,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "AU"
     }
   },
   "tnaflix": {
@@ -6041,6 +6873,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CY"
     }
   },
   "tradingview": {
@@ -6063,6 +6898,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "trakt": {
@@ -6085,6 +6923,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "trashboxru": {
@@ -6107,6 +6948,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "trawelling": {
@@ -6129,6 +6973,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "tuna": {
@@ -6151,6 +6998,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "ES"
     }
   },
   "tweakers": {
@@ -6173,6 +7023,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "NL"
     }
   },
   "ultimate-guitar": {
@@ -6195,6 +7048,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "vsco": {
@@ -6217,6 +7073,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "vero": {
@@ -6239,6 +7098,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "vimeo": {
@@ -6261,6 +7123,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "wicgforum": {
@@ -6283,6 +7148,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "warriorforum": {
@@ -6305,6 +7173,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "wattpad": {
@@ -6327,6 +7198,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "webnode": {
@@ -6349,6 +7223,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CZ"
     }
   },
   "weblate": {
@@ -6371,6 +7248,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CZ"
     }
   },
   "weebly": {
@@ -6393,6 +7273,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "whonixforum": {
@@ -6415,6 +7298,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "windy": {
@@ -6437,6 +7323,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CZ"
     }
   },
   "wix": {
@@ -6459,6 +7348,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "wolframalphaforum": {
@@ -6481,6 +7373,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "wykop": {
@@ -6503,6 +7398,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "PL"
     }
   },
   "xboxgamertag": {
@@ -6525,6 +7423,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "GB"
     }
   },
   "xvideos": {
@@ -6547,6 +7448,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CZ"
     }
   },
   "yandexmusic": {
@@ -6569,6 +7473,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "youpic": {
@@ -6591,6 +7498,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "youporn": {
@@ -6613,6 +7523,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "youtubechannel": {
@@ -6635,6 +7548,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "youtubeuser": {
@@ -6657,6 +7573,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "akniga": {
@@ -6679,6 +7598,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "IS"
     }
   },
   "authorstream": {
@@ -6701,6 +7623,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "chaos-social": {
@@ -6723,6 +7648,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "couchsurfing": {
@@ -6745,6 +7673,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "d3ru": {
@@ -6767,6 +7698,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "dating-ru": {
@@ -6789,6 +7723,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "drive2": {
@@ -6811,6 +7748,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "egpu": {
@@ -6833,6 +7773,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "ebio-gg": {
@@ -6843,18 +7786,21 @@
       {
         "type": "username",
         "statusCode": "200",
-        "url": "https://ebio.gg/%s",
+        "url": "https://ebio.gg/@%s",
         "existUsername": "dev",
         "nonExistUsername": "youga777888",
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
         },
-        "userPage": "https://ebio.gg/%s"
+        "userPage": "https://ebio.gg/@%s"
       }
     ],
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "eintracht": {
@@ -6877,6 +7823,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "fixya": {
@@ -6899,6 +7848,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "fl": {
@@ -6921,6 +7873,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "geocaching": {
@@ -6943,6 +7898,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "gfycat": {
@@ -6965,6 +7923,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "habr": {
@@ -6987,6 +7948,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "hackster": {
@@ -7009,6 +7973,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "irecommend": {
@@ -7031,6 +7998,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "jbzd": {
@@ -7053,6 +8023,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "PL"
     }
   },
   "kwork": {
@@ -7075,6 +8048,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "last-fm": {
@@ -7097,6 +8073,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "UK"
     }
   },
   "leasehackr": {
@@ -7119,6 +8098,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "livelib": {
@@ -7141,6 +8123,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "mastodon-cloud": {
@@ -7163,6 +8148,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "JP"
     }
   },
   "mastodon-social": {
@@ -7185,6 +8173,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "mastodon-technology": {
@@ -7207,6 +8198,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "mastodon-xyz": {
@@ -7229,6 +8223,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "mercadolivre": {
@@ -7251,6 +8248,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "BR"
     }
   },
   "moikrug": {
@@ -7273,6 +8273,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "mstdn-io": {
@@ -7295,6 +8298,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "nairaland-com": {
@@ -7317,6 +8323,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "nnru": {
@@ -7339,6 +8348,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "note": {
@@ -7361,6 +8373,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "npm": {
@@ -7383,6 +8398,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "osu!": {
@@ -7405,6 +8423,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "AU"
     }
   },
   "pikabu": {
@@ -7427,6 +8448,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "pr0gramm": {
@@ -7449,6 +8473,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "queer-af": {
@@ -7471,6 +8498,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "satsisru": {
@@ -7493,6 +8523,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "UA"
     }
   },
   "sessionize": {
@@ -7515,6 +8548,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "HR"
     }
   },
   "skyrock": {
@@ -7537,6 +8573,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "FR"
     }
   },
   "social-tchncs": {
@@ -7559,6 +8598,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "DE"
     }
   },
   "spletnik": {
@@ -7581,6 +8623,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "svidbook": {
@@ -7603,6 +8648,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "toster": {
@@ -7625,6 +8673,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "RU"
     }
   },
   "uid": {
@@ -7647,6 +8698,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "wiki-vg": {
@@ -7669,6 +8723,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
     }
   },
   "wykop-pl": {
@@ -7691,6 +8748,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "PL"
     }
   },
   "xhamster": {
@@ -7713,6 +8773,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CY"
     }
   },
   "znanylekarz-pl": {
@@ -7735,6 +8798,9 @@
     "login": {
       "url": "",
       "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "PL"
     }
   }
 }

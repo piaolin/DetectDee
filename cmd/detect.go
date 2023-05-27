@@ -9,6 +9,7 @@ import (
 	"github.com/tidwall/gjson"
 	"io/ioutil"
 	"regexp"
+	"sort"
 	"strings"
 	"sync"
 	"time"
@@ -29,6 +30,7 @@ type detectArgsType struct {
 	phone     []string
 	output    string
 	//unique    bool
+	token string
 }
 
 var (
@@ -47,6 +49,9 @@ var (
 	nsfwInfo            = "[!] %-15s %-15s: %s is nsfw\n"
 	writeContent        = make(chan string)
 	writeDone           = make(chan bool)
+	whoisMap            sync.Map
+	detectResultMap     sync.Map
+	chatgptUserLabel    = "[+] %s ChatgptUserLabel: %s\n"
 )
 
 func init() {
@@ -64,6 +69,7 @@ func init() {
 	detectCmd.Flags().StringVarP(&detectArgs.file, "file", "f", "data.json", "Site data file")
 	detectCmd.Flags().BoolVarP(&detectArgs.google, "google", "g", false, "Show google search result")
 	detectCmd.Flags().StringVarP(&detectArgs.output, "output", "o", "result.txt", "Result file")
+	detectCmd.Flags().StringVar(&detectArgs.token, "token", "", "chatgpt api token")
 
 	//detectCmd.Flags().BoolVar(&detectArgs.unique, "unique", false, "Make new requests client for each site")
 	rootCmd.AddCommand(detectCmd)
@@ -114,8 +120,21 @@ func detect(_ *cobra.Command, _ []string) {
 		}
 	}
 
+	for _, v := range detectArgs.name {
+		whoisMap.Store(v, make(map[string]int))
+		detectResultMap.Store(v, make([][]string, 0))
+	}
+	for _, v := range detectArgs.email {
+		whoisMap.Store(v, make(map[string]int))
+		detectResultMap.Store(v, make([][]string, 0))
+	}
+	for _, v := range detectArgs.phone {
+		whoisMap.Store(v, make(map[string]int))
+		detectResultMap.Store(v, make([][]string, 0))
+	}
+
+	// set delay for each requests to site
 	for site, siteBody := range siteDataMap {
-		// set delay for each requests to site
 		sleepMap[site] = 0
 		if sleep := siteBody.Get("sleep"); sleep.Exists() && sleep.Value() != nil {
 			sleepMap[site] = sleep.Int()
@@ -154,6 +173,53 @@ func detect(_ *cobra.Command, _ []string) {
 
 	wg.Wait()
 	writeDone <- true
+
+	fmt.Println()
+
+	for _, name := range detectArgs.name {
+
+		type registrantCountry struct {
+			registrantCountry string
+			count             int
+		}
+
+		tmpMap, _ := whoisMap.Load(name)
+		userWhoisMap, _ := tmpMap.(map[string]int)
+
+		var country []registrantCountry
+		for k, v := range userWhoisMap {
+			country = append(country, registrantCountry{k, v})
+		}
+
+		sort.Slice(country, func(i, j int) bool {
+			return country[i].count > country[j].count // 降序
+		})
+		log.Infof("[+] %s Registrant Country: %v", name, country)
+
+	}
+	//tmpList, _ := detectResultMap.Load("piaolin")
+	//userResultList, _ := tmpList.([][]string)
+	//log.Infoln(userResultList)
+
+	if detectArgs.token != "" {
+
+		for _, name := range detectArgs.name {
+			tmpList, _ := detectResultMap.Load(name)
+			userResultList, _ := tmpList.([][]string)
+			urls := ""
+			for _, v := range userResultList {
+				urls += v[2]
+				urls += ", "
+			}
+			userLabel, err := utils.ChatUserLabel(detectArgs.token, urls)
+			if err != nil {
+				log.Debugln("[-] ", err)
+			} else {
+				log.Infof(chatgptUserLabel, name, userLabel.Choices[0].Message.Content)
+			}
+		}
+	}
+
 	log.Infof(detectCompletedInfo, detectArgs.output)
 }
 
@@ -162,6 +228,8 @@ func detectSite(name, site, nameType string, siteBody gjson.Result) {
 
 	// flag for precisely mode
 	flag := false
+
+	url := siteBody.Get("url").String()
 
 	if siteBody.Get("isNSFW").Bool() && !detectArgs.isNSFW {
 		log.Debugf(nsfwInfo, name, site, site)
@@ -180,6 +248,8 @@ func detectSite(name, site, nameType string, siteBody gjson.Result) {
 			return
 		}
 	}
+
+	whoisData := siteBody.Get("whois")
 
 	detectReq := siteBody.Get("detect").Array()
 
@@ -204,7 +274,7 @@ func detectSite(name, site, nameType string, siteBody gjson.Result) {
 				log.Infof(searchInfo, name, site, searchUrl)
 				break
 			}
-		} else if strings.Contains(detectData.Get("type").String(), nameType) && detectUser(name, site, index, retryTimes, detectCount, &flag, detectData) {
+		} else if strings.Contains(detectData.Get("type").String(), nameType) && detectUser(name, site, url, index, retryTimes, detectCount, &flag, detectData, whoisData) {
 			continue
 		} else {
 			break
@@ -212,7 +282,7 @@ func detectSite(name, site, nameType string, siteBody gjson.Result) {
 	}
 }
 
-func detectUser(name, site string, requestTimes, retryTimes, detectCount int, flag *bool, detectData gjson.Result) bool {
+func detectUser(name, site, originalUrl string, requestTimes, retryTimes, detectCount int, flag *bool, detectData gjson.Result, whoisData gjson.Result) bool {
 
 	// set header
 	header := make(map[string]string)
@@ -321,14 +391,38 @@ func detectUser(name, site string, requestTimes, retryTimes, detectCount int, fl
 	} else if !detectArgs.precisely {
 		// flag=true && precisely=false
 		log.Infof(existInfo, name, site, userPage)
+		writeWhois(name, site, whoisData)
+		writeResult(name, site, originalUrl)
 		writeContent <- fmt.Sprintf(existOutputInfo, name, site, userPage)
 		return false
 	} else if requestTimes == detectCount {
 		// flag=true && precisely=true && last request
 		log.Infof(existInfo, name, site, userPage)
+		writeWhois(name, site, whoisData)
+		writeResult(name, site, originalUrl)
 		writeContent <- fmt.Sprintf(existOutputInfo, name, site, userPage)
 		return true
 	} else {
 		return true
 	}
+}
+
+func writeResult(name, site, url string) {
+	tmpList, _ := detectResultMap.Load(name)
+	userResultList, _ := tmpList.([][]string)
+	userResultList = append(userResultList, []string{name, site, url})
+	detectResultMap.Store(name, userResultList)
+}
+
+func writeWhois(name, site string, whoisData gjson.Result) {
+	tmpMap, _ := whoisMap.Load(name)
+	userWhoisMap, _ := tmpMap.(map[string]int)
+
+	registrantCountry := whoisData.Get("RegistrantCountry").String()
+	if _, ok := userWhoisMap[registrantCountry]; ok {
+		userWhoisMap[registrantCountry] += 1
+	} else {
+		userWhoisMap[registrantCountry] = 1
+	}
+
 }
