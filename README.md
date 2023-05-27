@@ -2,7 +2,7 @@
 <font color="red">*Disclaimer: This article and this tool are for technical discussion and sharing only. Illegal use is strictly prohibited.</font>
 
 DetectDee: Hunt down social media accounts by **username, email or phone** across [social networks](site.md)
-![example.gif](https://s2.loli.net/2023/04/30/FZ1QtKoGud4xVPW.gif)
+![example.gif](https://s2.loli.net/2023/05/28/gpxRJqvWr21Ifmh.gif)
 ![screen.jpg](https://s2.loli.net/2023/05/13/XzV4EGKrbkURHQg.jpg)
 ## Feat
 - Includes sites frequently used by **CyberSecurity practitioners**
@@ -27,6 +27,8 @@ go run .
 [中文文档](README_ZH.md)
 ### Detect
 ```text
+Hunt down social media accounts by username, email or phone across social networks
+
 Usage:
   DetectDee detect [flags]
 
@@ -37,15 +39,15 @@ Flags:
   -g, --google          Show google search result
   -h, --help            help for detect
   -n, --name strings    name[s], e.g. piaolin,poq79,SomeOneYouLike
-      --nsfw            Include checking of NSFW sites from default list.       
+      --nsfw            Include checking of NSFW sites from default list.
+  -o, --output string   Result file (default "result.txt")
   -p, --phone strings   phone[s], e.g. 15725753684,13575558962
       --precisely       Check precisely
       --proxy string    Make requests over a proxy. e.g. socks5://127.0.0.1:1080
   -r, --retry int       Retry times after request failed (default 3)
-  -s, --site strings    Limit analysis to just the listed sites. Add multiple op
-tions to specify more than one site.
-  -t, --timeout int     Time (in seconds) to wait for response to requests (defa
-ult 10)
+  -s, --site strings    Limit analysis to just the listed sites. Add multiple options to specify more than one site.
+  -t, --timeout int     Time (in seconds) to wait for response to requests (default 10)
+      --token string    chatgpt api token
 
 Global Flags:
   -v, --verbose   verbose output
@@ -65,6 +67,11 @@ To search for only one user:
 To search for more than one user:
 ```shell
 ./DetectDee detect -n piaolin,blue
+```
+
+To search for more than one user and use ChatGPT for user tagging of results(need ChatGPT token):
+```shell
+./DetectDee detect -n piaolin,blue --token {ChatGPT Token}
 ```
 
 To search for email:
