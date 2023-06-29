@@ -7792,7 +7792,8 @@
         "header": {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
         },
-        "userPage": "https://ebio.gg/@%s"
+        "userPage": "https://ebio.gg/@%s",
+        "status": false
       }
     ],
     "login": {
@@ -8802,5 +8803,496 @@
     "whois": {
       "RegistrantCountry": "PL"
     }
+  },
+  "newsmth": {
+    "url": "https://www.newsmth.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "0500",
+        "existRegex": "face_url",
+        "url": "https://www.newsmth.net/nForum/user/query/%s.json",
+        "existUsername": "TDK1",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "X-Requested-With": "XMLHttpRequest"
+        },
+        "userPage": "https://www.newsmth.net/nForum/user/query/%s.json"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+  "bbspku": {
+    "url": "https://bbs.pku.edu.cn/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "avatar_frame",
+        "url": "https://bbs.pku.edu.cn/v2/ajax/get_userinfo_by_names.php",
+        "existUsername": "moony",
+        "nonExistUsername": "youga777888",
+        "body": "names=\%5B\%22%s\%22\%5D",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "X-Requested-With": "XMLHttpRequest"
+        },
+        "userPage": "https://bbs.pku.edu.cn/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "fishpi": {
+    "url": "https://fishpi.cn/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://fishpi.cn/member/%s",
+        "existUsername": "csfwff",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://fishpi.cn/member/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "ali213": {
+    "url": "https://game.ali213.net/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "抱歉，您指定的用户空间不存在",
+        "url": "https://game.ali213.net/space-username-%s.html",
+        "existUsername": "freedomboy1979",
+        "nonExistUsername": "youga777888",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://game.ali213.net/space-username-%s.html"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "4399": {
+    "url": "https://www.4399.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "用户名已被注册",
+        "nonExistRegex": "0",
+        "url": "https://ptlogin.4399.com/ptlogin/isExist.do?username=%s&appId=u4399&regMode=reg_normal&v=2",
+        "existUsername": "123123",
+        "nonExistUsername": "1231pixn123",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.4399.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+  "7k7k": {
+    "url": "https://web.7k7k.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "\\\\u7528\\\\u6237\\\\u5df2\\\\u5b58\\\\u5728\\\\uff01",
+        "nonExistRegex": "\\\\u7528\\\\u6237\\\\u540d\\\\u53ef\\\\u7528\\\\uff01",
+        "url": "https://web.7k7k.com/source/core_Post.php",
+        "existUsername": "123123",
+        "nonExistUsername": "1231pixn123",
+        "body": "param=%s&name=name",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "X-Requested-With": "XMLHttpRequest"
+        },
+        "userPage": "https://web.7k7k.com/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "doc88": {
+    "url": "https://www.doc88.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "1",
+        "nonExistRegex": "0",
+        "url": "https://www.doc88.com/member.php?act=check&username=%s",
+        "existUsername": "123123",
+        "nonExistUsername": "12x31pixn123",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.doc88.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "huazhu": {
+    "url": "https://m.huazhu.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "phone",
+        "nonExistRegex": "未找到与该手机号绑定的账户",
+        "url": "https://m.huazhu.com/api/public/sendCodeNoLogin?param=%s",
+        "body": "{}",
+        "existUsername": "123123",
+        "nonExistUsername": "13188554520",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "userPage": "https://m.huazhu.com",
+        "status": false
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "1point3acres": {
+    "url": "https://www.1point3acres.com",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "alert_error",
+        "url": "https://www.1point3acres.com/bbs/space-username-%s.html",
+        "existUsername": "luckymeteor666",
+        "nonExistUsername": "luckymeta123eor666",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.1point3acres.com/bbs/space-username-%s.html"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "okjike": {
+    "url": "https://web.okjike.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "phone",
+        "nonExistRegex": "Expected a value of type",
+        "url": "https://web-api.okjike.com/api/graphql",
+        "body": "{\"operationName\":\"GetSmsCode\",\"variables\":{\"mobilePhoneNumber\":\"%s\",\"areaCode\":\"+86\"},\"query\":\"mutation GetSmsCode($mobilePhoneNumber: String!, $areaCode: String!) {\\n  getSmsCode(action: PHONE_MIX_LOGIN, mobilePhoneNumber: $mobilePhoneNumber, areaCode: $areaCode) {\\n    action\\n    __typename\\n  }\\n}\\n\"}\n",
+        "existUsername": "123123",
+        "nonExistUsername": "13188554520",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "userPage": "https://web.okjike.com/",
+        "sleep": 10
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+
+  "cstis": {
+    "url": "https://cstis.cn",
+    "type": "CyberSecurity",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "email",
+        "nonExistRegex": "\\\\u6b64\\\\u90ae\\\\u7bb1\\\\u4e0d\\\\u5b58\\\\u5728",
+        "url": "https://cstis.cn/ts/getcode?email=%s&type=2",
+        "nonExistUsername": "13188554520@qq.com",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://cstis.cn/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "dzone": {
+    "url": "https://dzone.com",
+    "type": "Programmer",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "exists",
+        "url": "https://dzone.com/services/widget/users-registration/validateUsername",
+        "existUsername": "Jade_Rubick",
+        "nonExistUsername": "Jade_Rubickaa",
+        "body": "{\"username\":\"%s\"}",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Content-Type": "application/json",
+          "Accept": "application/json, text/plain, */*",
+          "Cookie": "TH_CSRF=8995242996830184179",
+          "X-Th-Csrf": "8995242996830184179"
+        },
+        "userPage": "https://dzone.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+  "dalao": {
+    "url": "https://dalao.net/",
+    "type": "Programmer",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "password",
+        "nonExistRegex": "email",
+        "url": "https://dalao.net/user-login.htm",
+        "existUsername": "不讲李",
+        "nonExistUsername": "Jade_Rubickaa",
+        "body": "email=%s&password=4297f44b13955235245b2497399d7a93",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "X-Requested-With": "XMLHttpRequest"
+        },
+        "userPage": "https://dalao.net/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "medium": {
+    "url": "https://medium.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "<h2 class=\"fs b ft fu fv fw fx\"><span class=\"fn\">404</span></h2>",
+        "url": "https://medium.com/@%s",
+        "existUsername": "james_73717",
+        "nonExistUsername": "james_737171",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://medium.com/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "matters": {
+    "url": "https://matters.town/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "styles_errorMessage",
+        "url": "https://matters.town/@%s",
+        "existUsername": "LuzWu222",
+        "nonExistUsername": "LuzWu2221",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://matters.town/@%s",
+        "sleep": 3
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "0xffff": {
+    "url": "https://0xffff.one/",
+    "type": "Programmer",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://0xffff.one/u/%s",
+        "existUsername": "ryan4yin",
+        "nonExistUsername": "ryan4yin1x",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://0xffff.one/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "optzmx": {
+    "url": "http://www.optzmx.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "email",
+        "nonExistRegex": "succeed",
+        "url": "http://www.optzmx.com/forum.php?mod=ajax&inajax=yes&infloat=register&handlekey=register&ajaxmenu=1&action=checkemail&email=%s",
+        "existUsername": "admin@admin.com",
+        "nonExistUsername": "admin@admin.com",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "http://www.optzmx.com/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "qsnctf": {
+    "url": "https://bbs.qsnctf.com/",
+    "type": "CyberSecurity",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "该用户名已注册，请更换用户名",
+        "url": "https://bbs.qsnctf.com/forum.php?mod=ajax&inajax=yes&infloat=register&handlekey=register&ajaxmenu=1&action=checkusername&username=%s",
+        "existUsername": "6Fgenshin",
+        "nonExistUsername": "6Fgenshin12331",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://bbs.qsnctf.com"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
   }
+
 }

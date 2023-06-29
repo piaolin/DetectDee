@@ -176,6 +176,8 @@ Here are some things we would appreciate your help on:
 37. ![](https://www.google.com/s2/favicons?domain=https://tttang.com/) [tttang](https://tttang.com/)
 38. ![](https://www.google.com/s2/favicons?domain=https://tryhackme.com/) [TryHackMe](https://tryhackme.com/)
 39. ![](https://www.google.com/s2/favicons?domain=https://www.aqniu.com/) [aqniu](https://www.aqniu.com/)
+40. ![](https://www.google.com/s2/favicons?domain=https://cstis.cn)[cstis](https://cstis.cn)
+41. ![](https://www.google.com/s2/favicons?domain=https://bbs.qsnctf.com/)[qsnctf](https://bbs.qsnctf.com/)
 
 ### Programmer
 1. ![](https://www.google.com/s2/favicons?domain=https://opensource.com/) [OpenSource](https://opensource.com/)
@@ -208,6 +210,9 @@ Here are some things we would appreciate your help on:
 28. ![](https://www.google.com/s2/favicons?domain=https://pastebin.com/) [Pastebin](https://pastebin.com/)
 29. ![](https://www.google.com/s2/favicons?domain=https://community.oracle.com/) [Oracle](https://community.oracle.com/)
 30. ![](https://www.google.com/s2/favicons?domain=https://hub.docker.com/) [dockerhub](https://hub.docker.com/)
+31. ![](https://www.google.com/s2/favicons?domain=https://dzone.com)[dzone](https://dzone.com)
+32. ![](https://www.google.com/s2/favicons?domain=https://dalao.net/)[dalao](https://dalao.net)
+33. ![](https://www.google.com/s2/favicons?domain=https://0xffff.one/)[0xffff](https://0xffff.one)
 
 ### Social
 1. ![](https://www.google.com/s2/favicons?domain=https://dig.chouti.com/) [Chouti](https://dig.chouti.com/)
@@ -218,7 +223,7 @@ Here are some things we would appreciate your help on:
 6. ![](https://www.google.com/s2/favicons?domain=https://steamcommunity.com/) [SteamGroup](https://steamcommunity.com/)
 7. ![](https://www.google.com/s2/favicons?domain=http://jandan.net/) [Jandan](http://jandan.net/)
 8. ![](https://www.google.com/s2/favicons?domain=https://my.zol.com.cn/) [Zol](https://my.zol.com.cn/)
-9.  ![](https://www.google.com/s2/favicons?domain=https://www.zhihu.com/) [Zhihu](https://www.zhihu.com/)
+9. ![](https://www.google.com/s2/favicons?domain=https://www.zhihu.com/) [Zhihu](https://www.zhihu.com/)
 10. ![](https://www.google.com/s2/favicons?domain=https://www.ifanr.com/) [iFanr](https://www.ifanr.com/)
 11. ![](https://www.google.com/s2/favicons?domain=https://www.snapchat.com/) [Snapchat](https://www.snapchat.com/)
 12. ![](https://www.google.com/s2/favicons?domain=https://www.reddit.com/) [Reddit](https://www.reddit.com/)
@@ -490,6 +495,18 @@ Here are some things we would appreciate your help on:
 278. ![](https://www.google.com/s2/favicons?domain=https://www.shitpostbot.com/) [shitpostbot5000](https://www.shitpostbot.com/)
 279. ![](https://www.google.com/s2/favicons?domain=https://windy.com/) [windy](https://windy.com/)
 280. ![](https://www.google.com/s2/favicons?domain=https://habr.com/) [habr](https://habr.com/)
+281. ![](https://www.google.com/s2/favicons?domain=https://www.newsmth.net/)[newsmth](https://www.newsmth.net/)
+282. ![](https://www.google.com/s2/favicons?domain=https://bbs.pku.edu.cn/)[bbspku](https://bbs.pku.edu.cn/)
+283. ![](https://www.google.com/s2/favicons?domain=https://fishpi.cn/)[fishpi](https://fishpi.cn/)
+284. ![](https://www.google.com/s2/favicons?domain=https://game.ali213.net/)[ali213](https://game.ali213.net/)
+285. ![](https://www.google.com/s2/favicons?domain=https://www.4399.com)[4399](https://www.4399.com)
+286. ![](https://www.google.com/s2/favicons?domain=https://web.7k7k.com/)[7k7k](https://web.7k7k.com/)
+287. ![](https://www.google.com/s2/favicons?domain=https://www.doc88.com/)[doc88](https://www.doc88.com/)
+288. ![](https://www.google.com/s2/favicons?domain=https://www.1point3acres.com)[1point3acres](https://www.1point3acres.com)
+289. ![](https://www.google.com/s2/favicons?domain=https://web.okjike.com/)[okjike](https://web.okjike.com/)
+290. ![](https://www.google.com/s2/favicons?domain=https://medium.com/)[medium](https://medium.com/)
+291. ![](https://www.google.com/s2/favicons?domain=https://matters.town/)[matters](https://matters.town/)
+292. ![](https://www.google.com/s2/favicons?domain=http://www.optzmx.com)[optzmx](http://www.optzmx.com)
 
 ### Video
 1. ![](https://www.google.com/s2/favicons?domain=https://www.bilibili.com) [Bilibili](https://www.bilibili.com)

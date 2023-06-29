@@ -172,6 +172,9 @@ Global Flags:
 37. ![](https://www.google.com/s2/favicons?domain=https://tttang.com/) [跳跳糖](https://tttang.com/)
 38. ![](https://www.google.com/s2/favicons?domain=https://tryhackme.com/) [TryHackMe](https://tryhackme.com/)
 39. ![](https://www.google.com/s2/favicons?domain=https://www.aqniu.com/) [安全牛](https://www.aqniu.com/)
+40. ![](https://www.google.com/s2/favicons?domain=https://cstis.cn)[工业和信息化部网络安全威胁和漏洞信息共享平台](https://cstis.cn)
+41. ![](https://www.google.com/s2/favicons?domain=https://bbs.qsnctf.com/)[青少年CTF论坛](https://bbs.qsnctf.com/)
+
 
 ### Programmer
 1. ![](https://www.google.com/s2/favicons?domain=https://opensource.com/) [OpenSource](https://opensource.com/)
@@ -204,6 +207,9 @@ Global Flags:
 28. ![](https://www.google.com/s2/favicons?domain=https://pastebin.com/) [Pastebin](https://pastebin.com/)
 29. ![](https://www.google.com/s2/favicons?domain=https://community.oracle.com/) [Oracle](https://community.oracle.com/)
 30. ![](https://www.google.com/s2/favicons?domain=https://hub.docker.com/) [dockerhub](https://hub.docker.com/)
+31. ![](https://www.google.com/s2/favicons?domain=https://dzone.com)[dzone](https://dzone.com)
+32. ![](https://www.google.com/s2/favicons?domain=https://dalao.net/)[大佬论坛](https://dalao.net)
+33. ![](https://www.google.com/s2/favicons?domain=https://0xffff.one/)[0xffff](https://0xffff.one)
 
 ### Social
 1. ![](https://www.google.com/s2/favicons?domain=https://dig.chouti.com/) [抽屉热榜](https://dig.chouti.com/)
@@ -214,7 +220,7 @@ Global Flags:
 6. ![](https://www.google.com/s2/favicons?domain=https://steamcommunity.com/) [SteamGroup](https://steamcommunity.com/)
 7. ![](https://www.google.com/s2/favicons?domain=http://jandan.net/) [煎蛋](http://jandan.net/)
 8. ![](https://www.google.com/s2/favicons?domain=https://my.zol.com.cn/) [中关村在线](https://my.zol.com.cn/)
-9.  ![](https://www.google.com/s2/favicons?domain=https://www.zhihu.com/) [知乎](https://www.zhihu.com/)
+9. ![](https://www.google.com/s2/favicons?domain=https://www.zhihu.com/) [知乎](https://www.zhihu.com/)
 10. ![](https://www.google.com/s2/favicons?domain=https://www.ifanr.com/) [爱范儿](https://www.ifanr.com/)
 11. ![](https://www.google.com/s2/favicons?domain=https://www.snapchat.com/) [Snapchat](https://www.snapchat.com/)
 12. ![](https://www.google.com/s2/favicons?domain=https://www.reddit.com/) [Reddit](https://www.reddit.com/)
@@ -486,6 +492,19 @@ Global Flags:
 278. ![](https://www.google.com/s2/favicons?domain=https://www.shitpostbot.com/) [shitpostbot5000](https://www.shitpostbot.com/)
 279. ![](https://www.google.com/s2/favicons?domain=https://windy.com/) [windy](https://windy.com/)
 280. ![](https://www.google.com/s2/favicons?domain=https://habr.com/) [habr](https://habr.com/)
+281. ![](https://www.google.com/s2/favicons?domain=https://www.newsmth.net/)[水木社区](https://www.newsmth.net/)
+282. ![](https://www.google.com/s2/favicons?domain=https://bbs.pku.edu.cn/)[北大未名](https://bbs.pku.edu.cn/)
+283. ![](https://www.google.com/s2/favicons?domain=https://fishpi.cn/)[摸鱼派](https://fishpi.cn/)
+284. ![](https://www.google.com/s2/favicons?domain=https://game.ali213.net/)[游侠NETSHOW论坛](https://game.ali213.net/)
+285. ![](https://www.google.com/s2/favicons?domain=https://www.4399.com)[4399](https://www.4399.com)
+286. ![](https://www.google.com/s2/favicons?domain=https://web.7k7k.com/)[7k7k](https://web.7k7k.com/)
+287. ![](https://www.google.com/s2/favicons?domain=https://www.doc88.com/)[道客巴巴](https://www.doc88.com/)
+288. ![](https://www.google.com/s2/favicons?domain=https://www.1point3acres.com)[一亩三分地](https://www.1point3acres.com)
+289. ![](https://www.google.com/s2/favicons?domain=https://web.okjike.com/)[即刻](https://web.okjike.com/)
+290. ![](https://www.google.com/s2/favicons?domain=https://medium.com/)[medium](https://medium.com/)
+291. ![](https://www.google.com/s2/favicons?domain=https://matters.town/)[matters](https://matters.town/)
+292. ![](https://www.google.com/s2/favicons?domain=http://www.optzmx.com)[吾爱光设](http://www.optzmx.com)
+
 
 ### Video
 1. ![](https://www.google.com/s2/favicons?domain=https://www.bilibili.com) [哔哩哔哩](https://www.bilibili.com)
