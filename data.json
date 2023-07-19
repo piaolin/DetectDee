@@ -9293,6 +9293,501 @@
     "whois": {
       "RegistrantCountry": "CN"
     }
-  }
+  },
 
+  "cnodejs": {
+    "url": "https://cnodejs.org/",
+    "type": "Programmer",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://cnodejs.org/user/%s",
+        "existUsername": "leapon",
+        "nonExistUsername": "leaponasdf",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://cnodejs.org/user/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "react-china": {
+    "url": "http://react-china.org/",
+    "type": "Programmer",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "http://react-china.org/u/%s",
+        "existUsername": "makshow",
+        "nonExistUsername": "makshow123",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "http://react-china.org/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+
+  "xiaozhuanlan": {
+    "url": "https://xiaozhuanlan.com/",
+    "type": "Programmer",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "404 - 小专栏",
+        "url": "https://xiaozhuanlan.com/u/%s",
+        "existUsername": "biudesign",
+        "nonExistUsername": "biudesignasdf",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://xiaozhuanlan.com/u/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN"
+    }
+  },
+  "classcentral": {
+    "url": "https://www.classcentral.com/",
+    "type": "Programmer",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.classcentral.com/@%s",
+        "existUsername": "jack",
+        "nonExistUsername": "jackrose",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "Accept-Language": "en-US,en;q=0.9"
+        },
+        "userPage": "https://www.classcentral.com/@%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "pinterest": {
+    "url": "https://www.pinterest.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "existRegex": "pinterestapp:followers",
+
+        "url": "https://www.pinterest.com/%s/",
+        "existUsername": "hardlysamie",
+        "nonExistUsername": "hardlysasdfamie",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.pinterest.com/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "opensea": {
+    "url": "https://opensea.io/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://opensea.io/%s",
+        "existUsername": "BYOPContracts",
+        "nonExistUsername": "BYOPContracasdfts",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://opensea.io/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "instagram": {
+    "url": "https://www.instagram.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.instagram.com/api/v1/users/web_profile_info/?username=%s",
+        "existUsername": "zengshuohui",
+        "nonExistUsername": "zengshuohuxixasdf",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+          "X-Ig-App-Id": "936619743392459"
+        },
+        "userPage": "https://www.instagram.com/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+  "rottentomatoes": {
+    "url": "https://www.rottentomatoes.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.rottentomatoes.com/critics/%s/movies",
+        "existUsername": "kimber-myers",
+        "nonExistUsername": "kimber-myxxxers",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.rottentomatoes.com/critics/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "openclipart": {
+    "url": "https://openclipart.org/",
+    "type": "Socail",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "This artist does not exist",
+        "url": "https://openclipart.org/artist/%s",
+        "existUsername": "revzack",
+        "nonExistUsername": "revzackasd",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://openclipart.org/artist/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "thenextweb": {
+    "url": "https://thenextweb.com/",
+    "type": "Programmer",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://thenextweb.com/author/%s",
+        "existUsername": "linnea",
+        "nonExistUsername": "linnea123",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://thenextweb.com/author/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "theverge": {
+    "url": "https://www.theverge.com/",
+    "type": "Socail",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.theverge.com/authors/%s",
+        "existUsername": "",
+        "nonExistUsername": "",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.theverge.com/authors/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "engadget": {
+    "url": "https://www.engadget.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.engadget.com/about/editors/%s/",
+        "existUsername": "igor-bonifacic",
+        "nonExistUsername": "igor-bonifacicxx",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.engadget.com/about/editors/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "techcrunch": {
+    "url": "https://techcrunch.com/",
+    "type": "CyberSecurity",
+    "isNSFW": false,
+    "sleep": 3,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://techcrunch.com/author/%s/",
+        "existUsername": "zack-whittaker",
+        "nonExistUsername": "zack-whittakerasdf",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://techcrunch.com/author/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "kickstarter": {
+    "url": "https://www.kickstarter.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.kickstarter.com/profile/%s",
+        "existUsername": "microcosmpublishing",
+        "nonExistUsername": "microcosmpublishingasdf",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.kickstarter.com/profile/%s",
+        "status": false
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "freepik": {
+    "url": "https://www.freepik.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://www.freepik.com/author/%s",
+        "existUsername": "rawpixel-com",
+        "nonExistUsername": "rawpixel-comasdf",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.freepik.com/author/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+  "gettyimages": {
+    "url": "https://www.gettyimages.hk/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "nonExistRegex": "返回結果為零",
+        "url": "https://www.gettyimages.hk/search/photographer?photographer=%s",
+        "existUsername": "Klaus Vedfelt",
+        "nonExistUsername": "Klaus Vedfeltaaa",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://www.gettyimages.hk/search/photographer?photographer=%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "CN-HK"
+    }
+  },
+
+
+  "wikivoyage": {
+    "url": "https://en.wikivoyage.org/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://en.wikivoyage.org/wiki/User:%s",
+        "existUsername": "Veracious",
+        "nonExistUsername": "Veraciousasdf",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://en.wikivoyage.org/wiki/User:%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+  "arstechnica": {
+    "url": "https://arstechnica.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://arstechnica.com/author/%s/",
+        "existUsername": "stephenclark",
+        "nonExistUsername": "stephenclarkasdf",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://arstechnica.com/author/%s/"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  },
+
+  "dribbble": {
+    "url": "https://dribbble.com/",
+    "type": "Social",
+    "isNSFW": false,
+    "detect": [
+      {
+        "type": "username",
+        "statusCode": "200",
+        "url": "https://dribbble.com/%s",
+        "existUsername": "odamastudio",
+        "nonExistUsername": "odamastudioxasd",
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+        },
+        "userPage": "https://dribbble.com/%s"
+      }
+    ],
+    "login": {
+      "url": "",
+      "successRegex": ""
+    },
+    "whois": {
+      "RegistrantCountry": "US"
+    }
+  }
 }
