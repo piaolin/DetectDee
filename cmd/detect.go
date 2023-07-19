@@ -194,7 +194,9 @@ func detect(_ *cobra.Command, _ []string) {
 		sort.Slice(country, func(i, j int) bool {
 			return country[i].count > country[j].count // 降序
 		})
-		log.Infof("[+] %s Registrant Country: %v", name, country)
+		if len(country) != 0 {
+			log.Infof("[+] %s Registrant Country: %v", name, country)
+		}
 
 	}
 	//tmpList, _ := detectResultMap.Load("piaolin")

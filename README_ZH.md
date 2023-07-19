@@ -174,6 +174,7 @@ Global Flags:
 39. ![](https://www.google.com/s2/favicons?domain=https://www.aqniu.com/) [安全牛](https://www.aqniu.com/)
 40. ![](https://www.google.com/s2/favicons?domain=https://cstis.cn)[工业和信息化部网络安全威胁和漏洞信息共享平台](https://cstis.cn)
 41. ![](https://www.google.com/s2/favicons?domain=https://bbs.qsnctf.com/)[青少年CTF论坛](https://bbs.qsnctf.com/)
+42. ![](https://www.google.com/s2/favicons?domain=https://techcrunch.com/) [techcrunch](https://techcrunch.com/)
 
 
 ### Programmer
@@ -210,6 +211,11 @@ Global Flags:
 31. ![](https://www.google.com/s2/favicons?domain=https://dzone.com)[dzone](https://dzone.com)
 32. ![](https://www.google.com/s2/favicons?domain=https://dalao.net/)[大佬论坛](https://dalao.net)
 33. ![](https://www.google.com/s2/favicons?domain=https://0xffff.one/)[0xffff](https://0xffff.one)
+34. ![](https://www.google.com/s2/favicons?domain=https://thenextweb.com/) [thenextweb](https://thenextweb.com/)
+35. ![](https://www.google.com/s2/favicons?domain=https://cnodejs.org/) [cnodejs](https://cnodejs.org/)
+36. ![](https://www.google.com/s2/favicons?domain=http://react-china.org/) [react-china](http://react-china.org/)
+37. ![](https://www.google.com/s2/favicons?domain=https://xiaozhuanlan.com/) [xiaozhuanlan](https://xiaozhuanlan.com/)
+38. ![](https://www.google.com/s2/favicons?domain=https://www.classcentral.com/) [classcentral](https://www.classcentral.com/)
 
 ### Social
 1. ![](https://www.google.com/s2/favicons?domain=https://dig.chouti.com/) [抽屉热榜](https://dig.chouti.com/)
@@ -504,6 +510,19 @@ Global Flags:
 290. ![](https://www.google.com/s2/favicons?domain=https://medium.com/)[medium](https://medium.com/)
 291. ![](https://www.google.com/s2/favicons?domain=https://matters.town/)[matters](https://matters.town/)
 292. ![](https://www.google.com/s2/favicons?domain=http://www.optzmx.com)[吾爱光设](http://www.optzmx.com)
+293. ![](https://www.google.com/s2/favicons?domain=https://www.pinterest.com/) [pinterest](https://www.pinterest.com/)
+294. ![](https://www.google.com/s2/favicons?domain=https://opensea.io/) [opensea](https://opensea.io/)
+295. ![](https://www.google.com/s2/favicons?domain=https://www.instagram.com/) [instagram](https://www.instagram.com/)
+296. ![](https://www.google.com/s2/favicons?domain=https://www.rottentomatoes.com/) [rottentomatoes](https://www.rottentomatoes.com/)
+297. ![](https://www.google.com/s2/favicons?domain=https://openclipart.org/) [openclipart](https://openclipart.org/)
+298. ![](https://www.google.com/s2/favicons?domain=https://www.theverge.com/) [theverge](https://www.theverge.com/)
+299. ![](https://www.google.com/s2/favicons?domain=https://www.engadget.com/) [engadget](https://www.engadget.com/)
+300. ![](https://www.google.com/s2/favicons?domain=https://www.kickstarter.com/) [kickstarter](https://www.kickstarter.com/)
+301. ![](https://www.google.com/s2/favicons?domain=https://www.freepik.com/) [freepik](https://www.freepik.com/)
+302. ![](https://www.google.com/s2/favicons?domain=https://www.gettyimages.hk/) [gettyimages](https://www.gettyimages.hk/)
+303. ![](https://www.google.com/s2/favicons?domain=https://en.wikivoyage.org/) [wikivoyage](https://en.wikivoyage.org/)
+304. ![](https://www.google.com/s2/favicons?domain=https://arstechnica.com/) [arstechnica](https://arstechnica.com/)
+305. ![](https://www.google.com/s2/favicons?domain=https://dribbble.com/) [dribbble](https://dribbble.com/)
 
 
 ### Video
